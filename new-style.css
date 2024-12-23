@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Urbanist:300,400,600,700');
 
-.guestResult {
+.guestResult,
+.rr_cancel_reserv {
     display: none;
 }
 
@@ -498,5 +499,56 @@
 
     .rr_places_desc {
         display: block;
+    }
+
+    .rr_cancel_reserv {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: white;
+        z-index: 999999;
+    }
+
+    .rr__form {
+        margin-top: 40px;
+    }
+
+    .rr_form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .rr_form input {
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #000;
+        border-radius: 0;
+        font-size: 14px;
+    }
+
+    .rr_form label {
+        text-transform: capitalize;
+        font-size: 14px;
+        text-align: left;
+        font-weight: bold;
+        letter-spacing: 0;
+    }
+
+    .rr_form label span {
+        color: red;
+    }
+
+    .rr_cancel_reserv-send {
+        background-color: black;
+        color: white;
+        padding: 15px;
+        border: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        width: 100%;
     }
 }
