@@ -425,11 +425,16 @@
         right: 0px;
         left: 0px;
         bottom: 0px;
+        text-align: center;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
     }
 
     .rr_map_sidebar {
         display: block !important;
         top: initial;
+        background: transparent;
     }
 
     .rr_map_title {
@@ -448,11 +453,47 @@
     }
 
     .rr__t_close_mobile,
-    .rr__t_close {
+    .rr__t_close,
+    .rr_category.map_category,
+    .rr_map_category_title,
+    .rr_places_res {
         display: none;
     }
 
     .rr_map_sidebar_open {
         display: block;
+    }
+
+    .rr_map_category {
+        bottom: initial;
+        top: 55px;
+        height: 120px;
+        box-shadow: none;
+        pointer-events: initial;
+        flex-direction: row;
+        background: transparent;
+    }
+
+    .rr_places {
+        padding: 0;
+        width: 100%;
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex: initial;
+    }
+
+    .rr_places_container {
+        flex: initial;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .rr_places_item {
+        display: inline-block;
+        width: 200px;
+        /* Set item width */
     }
 }
