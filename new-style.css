@@ -494,6 +494,9 @@
     .rr_places_item {
         display: inline-block;
         width: 200px;
-        /* Set item width */
+    }
+
+    .rr_places_desc {
+        display: block;
     }
 }
