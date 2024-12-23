@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'RRicon';
+    src: url('../fonts/icomoon.eot?xmxiha');
+    src: url('../fonts/icomoon.eot?xmxiha#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?xmxiha') format('truetype'), url('../fonts/icomoon.woff?xmxiha') format('woff'), url('../fonts/icomoon.svg?xmxiha#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'RRicon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-down-arrow:before {
+    content: "\e900";
+}
+
+.icon-less:before {
+    content: "\e901";
+}
+
+.icon-price-tag:before {
+    content: "\e902";
+}
+
+.icon-tag:before {
+    content: "\e903";
+}
+
+.icon-tag-1:before {
+    content: "\e904";
+}
+
+.icon-baby-boy:before {
+    content: "\e905";
+}
+
+.icon-reception-bell:before {
+    content: "\e906";
+}
+
+.icon-reserved:before {
+    content: "\e907";
+}
+
+.icon-analysis:before {
+    content: "\e908";
+}
+
+.icon-user:before {
+    content: "\e909";
+}
+
+.icon-room-key:before {
+    content: "\e90a";
+}
+
+.icon-add:before {
+    content: "\e90b";
+}
+
+.icon-settings:before {
+    content: "\e90c";
+}
+
+.icon-award:before {
+    content: "\e90d";
+}
+
+.icon-moon:before {
+    content: "\e90e";
+}
+
+.icon-24-hours:before {
+    content: "\e90f";
+}
+
+.icon-bed:before {
+    content: "\e910";
+}
+
+.icon-hotel-bell-ringing:before {
+    content: "\e911";
+}
+
+.icon-cross-out:before {
+    content: "\e912";
+}
+
+.icon-megaphone:before {
+    content: "\e913";
+}
+
+.icon-checked:before {
+    content: "\e914";
+}
+
+.icon-appointment:before {
+    content: "\e915";
+}
+
+.icon-confirm-schedule:before {
+    content: "\e916";
+}
+
+.icon-star:before {
+    content: "\e917";
+}
+
+.icon-team:before {
+    content: "\e918";
+}
+
+.icon-booking:before {
+    content: "\e919";
+}

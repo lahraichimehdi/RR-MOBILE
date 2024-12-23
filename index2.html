@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RR</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://api.globres.io/RealRate/assets/lib/css/star-rating-svg.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://api.globres.io/RealRate/assets/structures/BB/v2/style.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://api.globres.io/RealRate/h/60669/BB/v2/css/custom_colors.css"
+    /> -->
+    <script src="https://api.globres.io/RealRate/assets/lib/js/leaflet.js?rr"></script>
+    <script src="https://api.globres.io/RealRate/assets/lib/js/jquery.daterangepicker.min.js"></script>
+    <!-- <script src="https://api.globres.io/RealRate/assets/js/BB.js"></script> -->
+    <link rel="stylesheet" href="new-style.css" />
+  </head>
+  <body>
+    <div
+      class="rr__container synxis rr_large open"
+      translate="no"
+      data-realrate-lang="RR_Lang_EN"
+    >
+      <!-- FULL MAP -->
+      <div class="rr_map_extend">
+        <div class="rr__t_close">
+          <svg
+            class="rr__action_map rr__extend rrClkEv"
+            rr-actionname="RR - Close Map"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 40 40"
+            style="enable-background: new 0 0 40 40"
+            xml:space="preserve"
+          >
+            <style type="text/css">
+              .st0 {
+                fill: #808387;
+              }
+            </style>
+            <g>
+              <g>
+                <path
+                  class="st0"
+                  d="M8.03,8.31L8.03,8.31c0.23-0.23,0.59-0.23,0.82,0l6.68,6.68c0.23,0.23,0.23,0.59,0,0.82l0,0                            c-0.23,0.23-0.59,0.23-0.82,0L8.03,9.13C7.8,8.9,7.8,8.54,8.03,8.31z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M9.89,14.85h5.16c0.32,0,0.58,0.26,0.58,0.58v0c0,0.32-0.26,0.58-0.58,0.58H9.89c-0.32,0-0.58-0.26-0.58-0.58                            v0C9.31,15.11,9.57,14.85,9.89,14.85z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M15.74,10.16v5.16c0,0.32-0.26,0.58-0.58,0.58h0c-0.32,0-0.58-0.26-0.58-0.58v-5.16                            c0-0.32,0.26-0.58,0.58-0.58h0C15.48,9.58,15.74,9.84,15.74,10.16z"
+                ></path>
+              </g>
+              <g>
+                <path
+                  class="st0"
+                  d="M30.81,31.08L30.81,31.08c-0.23,0.23-0.59,0.23-0.82,0l-6.68-6.68c-0.23-0.23-0.23-0.59,0-0.82l0,0                            c0.23-0.23,0.59-0.23,0.82,0l6.68,6.68C31.03,30.49,31.03,30.85,30.81,31.08z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M28.95,24.54H23.8c-0.32,0-0.58-0.26-0.58-0.58v0c0-0.32,0.26-0.58,0.58-0.58h5.16                            c0.32,0,0.58,0.26,0.58,0.58v0C29.53,24.28,29.27,24.54,28.95,24.54z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M23.1,29.24v-5.16c0-0.32,0.26-0.58,0.58-0.58h0c0.32,0,0.58,0.26,0.58,0.58v5.16c0,0.32-0.26,0.58-0.58,0.58                            h0C23.36,29.81,23.1,29.55,23.1,29.24z"
+                ></path>
+              </g>
+              <g>
+                <path
+                  class="st0"
+                  d="M8.03,31.09L8.03,31.09c-0.23-0.23-0.23-0.59,0-0.82l6.68-6.68c0.23-0.23,0.59-0.23,0.82,0l0,0                            c0.23,0.23,0.23,0.59,0,0.82l-6.68,6.68C8.63,31.31,8.26,31.31,8.03,31.09z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M14.58,29.23v-5.16c0-0.32,0.26-0.58,0.58-0.58h0c0.32,0,0.58,0.26,0.58,0.58v5.16                            c0,0.32-0.26,0.58-0.58,0.58h0C14.84,29.81,14.58,29.55,14.58,29.23z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M9.88,23.38h5.16c0.32,0,0.58,0.26,0.58,0.58l0,0c0,0.32-0.26,0.58-0.58,0.58H9.88                            c-0.32,0-0.58-0.26-0.58-0.58l0,0C9.3,23.64,9.56,23.38,9.88,23.38z"
+                ></path>
+              </g>
+              <g>
+                <path
+                  class="st0"
+                  d="M30.8,8.31L30.8,8.31c0.23,0.23,0.23,0.59,0,0.82l-6.68,6.68c-0.23,0.23-0.59,0.23-0.82,0l0,0                            c-0.23-0.23-0.23-0.59,0-0.82l6.68-6.68C30.21,8.08,30.58,8.08,30.8,8.31z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M24.26,10.16v5.16c0,0.32-0.26,0.58-0.58,0.58h0c-0.32,0-0.58-0.26-0.58-0.58v-5.16                            c0-0.32,0.26-0.58,0.58-0.58h0C24,9.59,24.26,9.84,24.26,10.16z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M28.96,16.02H23.8c-0.32,0-0.58-0.26-0.58-0.58v0c0-0.32,0.26-0.58,0.58-0.58h5.16                            c0.32,0,0.58,0.26,0.58,0.58v0C29.54,15.76,29.28,16.02,28.96,16.02z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="rr_map_sidebar_open">
+          <span>Places Near the Hotel</span>
+          <span class="rr__t_close_desktop">
+            <svg
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              ></path>
+            </svg>
+          </span>
+        </div>
+        <div class="rr_map_sidebar">
+          <div class="rr_map_title">
+            <span class="rr__t_close_desktop">
+              <svg
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              >
+                <path
+                  d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                ></path>
+              </svg>
+            </span>
+            <span>Places Near the Hotel</span>
+            <span class="rr__t_close_desktop_left rr_hide">
+              <img
+                src="https://api.globres.io/RealRate/assets/img/BB/ic_menu_burger_w.png"
+                alt=""
+              />
+            </span>
+            <span class="rr__t_close_mobile">
+              <svg
+                x="0px"
+                y="0px"
+                viewBox="0 0 42 42"
+                style="enable-background: new 0 0 42 42"
+                xml:space="preserve"
+              >
+                <polygon
+                  class="st0"
+                  points="42,19 23,19 23,0 19,0 19,19 0,19 0,23 19,23 19,42 23,42 23,23 42,23 "
+                ></polygon>
+              </svg>
+            </span>
+          </div>
+          <div class="rr_map_category">
+            <div class="rr_map_category_title">Categories :</div>
+            <div class="rr_category map_category">
+              <div class="select-box">
+                <div class="select-box__current" tabindex="1">
+                  <div class="select-box__value">
+                    <input
+                      class="select-box__input"
+                      type="radio"
+                      id="1"
+                      value="1"
+                      name="categories"
+                      checked="checked"
+                    />
+                    <p class="select-box__input-text">All categories</p>
+                  </div>
+                  <div class="select-box__value">
+                    <input
+                      class="select-box__input"
+                      type="radio"
+                      id="12"
+                      value="museum"
+                      name="categories"
+                    />
+                    <p class="select-box__input-text">museum</p>
+                  </div>
+                  <img
+                    class="select-box__icon"
+                    src="https://api.globres.io/RealRate/assets/img/BB/arrow.svg"
+                    alt="Arrow Icon"
+                    aria-hidden="true"
+                  />
+                </div>
+                <ul class="select-box__list">
+                  <li>
+                    <label
+                      class="select-box__option"
+                      for="1"
+                      aria-hidden="aria-hidden"
+                    >
+                      <img
+                        src="https://api.globres.io/RealRate/assets/img/BB/all_cat_icon.png"
+                        alt="all"
+                      />
+                      All categories
+                    </label>
+                  </li>
+                  <li data-c-id="617694bbf8e4e25af370e202" data-c-name="museum">
+                    <label
+                      class="select-box__option"
+                      for="12"
+                      aria-hidden="aria-hidden"
+                    >
+                      <img
+                        loading="eager"
+                        src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
+                      />
+                      museum
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- places  -->
+            <div class="rr_places">
+              <div class="rr_places_res"><span>--</span> Place (s)</div>
+              <div class="rr_places_container"></div>
+            </div>
+            <div class="rr_loader rr_hide">
+              <img
+                src="https://api.globres.io/RealRate/assets/img/BB/arrows.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          id="maps_big"
+          class="show_maps leaflet-container leaflet-touch leaflet-retina leaflet-safari leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          tabindex="0"
+        >
+          <div class="rr_menu_burger">
+            <img
+              src="https://api.globres.io/RealRate/assets/img/BB/ic_menu_burger_w.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="leaflet-pane leaflet-map-pane"
+            style="transform: translate3d(0px, 63px, 0px)"
+          >
+            <div class="leaflet-pane leaflet-tile-pane">
+              <div class="leaflet-layer" style="z-index: 1; opacity: 1">
+                <div
+                  class="leaflet-tile-container leaflet-zoom-animated"
+                  style="
+                    z-index: 18;
+                    transform: translate3d(0px, 0px, 0px) scale(1);
+                  "
+                >
+                  <img
+                    alt=""
+                    role="presentation"
+                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/16/22954/34319"
+                    class="leaflet-tile leaflet-tile-loaded"
+                    style="
+                      width: 256px;
+                      height: 256px;
+                      transform: translate3d(-55px, 234px, 0px);
+                      opacity: 1;
+                    "
+                  /><img
+                    alt=""
+                    role="presentation"
+                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/16/22954/34320"
+                    class="leaflet-tile leaflet-tile-loaded"
+                    style="
+                      width: 256px;
+                      height: 256px;
+                      transform: translate3d(201px, 234px, 0px);
+                      opacity: 1;
+                    "
+                  /><img
+                    alt=""
+                    role="presentation"
+                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/16/22953/34319"
+                    class="leaflet-tile leaflet-tile-loaded"
+                    style="
+                      width: 256px;
+                      height: 256px;
+                      transform: translate3d(-55px, -22px, 0px);
+                      opacity: 1;
+                    "
+                  /><img
+                    alt=""
+                    role="presentation"
+                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/16/22953/34320"
+                    class="leaflet-tile leaflet-tile-loaded"
+                    style="
+                      width: 256px;
+                      height: 256px;
+                      transform: translate3d(201px, -22px, 0px);
+                      opacity: 1;
+                    "
+                  /><img
+                    alt=""
+                    role="presentation"
+                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/16/22955/34319"
+                    class="leaflet-tile leaflet-tile-loaded"
+                    style="
+                      width: 256px;
+                      height: 256px;
+                      transform: translate3d(-55px, 490px, 0px);
+                      opacity: 1;
+                    "
+                  /><img
+                    alt=""
+                    role="presentation"
+                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/16/22955/34320"
+                    class="leaflet-tile leaflet-tile-loaded"
+                    style="
+                      width: 256px;
+                      height: 256px;
+                      transform: translate3d(201px, 490px, 0px);
+                      opacity: 1;
+                    "
+                  /><img
+                    alt=""
+                    role="presentation"
+                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/16/22952/34319"
+                    class="leaflet-tile leaflet-tile-loaded"
+                    style="
+                      width: 256px;
+                      height: 256px;
+                      transform: translate3d(-55px, -278px, 0px);
+                      opacity: 1;
+                    "
+                  /><img
+                    alt=""
+                    role="presentation"
+                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/16/22952/34320"
+                    class="leaflet-tile leaflet-tile-loaded"
+                    style="
+                      width: 256px;
+                      height: 256px;
+                      transform: translate3d(201px, -278px, 0px);
+                      opacity: 1;
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leaflet-pane leaflet-overlay-pane"></div>
+            <div class="leaflet-pane leaflet-shadow-pane"></div>
+            <div class="leaflet-pane leaflet-marker-pane">
+              <img
+                src="https://uploads.globres.io/flags/map-icons/default-marker.png"
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
+                alt=""
+                tabindex="0"
+                style="
+                  margin-left: -16px;
+                  margin-top: -37px;
+                  width: 30px;
+                  height: 45px;
+                  transform: translate3d(170px, 340px, 0px);
+                  z-index: 340;
+                "
+              />
+            </div>
+            <div class="leaflet-pane leaflet-tooltip-pane"></div>
+            <div class="leaflet-pane leaflet-popup-pane">
+              <div
+                class="leaflet-popup leaflet-zoom-animated"
+                style="
+                  opacity: 1;
+                  transform: translate3d(170px, 310px, 0px);
+                  bottom: -7px;
+                  left: -120px;
+                "
+              >
+                <div class="leaflet-popup-content-wrapper">
+                  <div class="leaflet-popup-content" style="width: 241px">
+                    <div class="popupHotel">
+                      <div class="rr_popup_txt">
+                        <div class="rr_popup_info">
+                          <div class="rr_popup_header">
+                            <div class="rr__place_name">
+                              <div class="rr_popup_title">Our location</div>
+                            </div>
+                          </div>
+                          <div class="rr__place_desc">Open 24/7</div>
+                          <a
+                            class="rr__place_go rrClkEv"
+                            rr-actionname="RR - Form Submits"
+                            href="https://be.synxis.com/?hotel=60669&amp;arrive=2024-12-20&amp;depart=2024-12-21&amp;segment=DIRECPCT&amp;adult=1&amp;child=0&amp;room=1&amp;ChildAges=&amp;currency=CHF&amp;locale=EN-US&amp;configcode=Engimatt&amp;level=hotel&amp;themecode=&amp;promo="
+                            target="_blank"
+                            >Book Direct now</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="leaflet-popup-tip-container">
+                  <div class="leaflet-popup-tip"></div>
+                </div>
+                <a
+                  class="leaflet-popup-close-button"
+                  role="button"
+                  aria-label="Close popup"
+                  href="#close"
+                  ><span aria-hidden="true">×</span></a
+                >
+              </div>
+            </div>
+            <div
+              class="leaflet-proxy leaflet-zoom-animated"
+              style="
+                transform: translate3d(8.78589e6px, 5.87627e6px, 0px)
+                  scale(32768);
+              "
+            ></div>
+          </div>
+          <div class="leaflet-control-container">
+            <div class="leaflet-top leaflet-left"></div>
+            <div class="leaflet-top leaflet-right"></div>
+            <div class="leaflet-bottom leaflet-left"></div>
+            <div class="leaflet-bottom leaflet-right">
+              <div class="leaflet-control-zoom leaflet-bar leaflet-control">
+                <a
+                  class="leaflet-control-zoom-in"
+                  href="#"
+                  title="Zoom in"
+                  role="button"
+                  aria-label="Zoom in"
+                  aria-disabled="false"
+                  ><span aria-hidden="true">+</span></a
+                ><a
+                  class="leaflet-control-zoom-out"
+                  href="#"
+                  title="Zoom out"
+                  role="button"
+                  aria-label="Zoom out"
+                  aria-disabled="false"
+                  ><span aria-hidden="true">−</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FULL MAP -->
+      <div class="rr__close_layer"></div>
+
+      <form
+        action="https://reservations.travelclick.com/60669"
+        method="get"
+        id="booking__form"
+        target="_blank"
+      >
+        <input type="hidden" name="Hotel" value="60669" />
+        <input type="hidden" name="Locale" value="EN-US" />
+        <input type="hidden" name="Currency" value="CHF" />
+        <input type="hidden" name="Shell" value="60669-1" />
+        <input type="hidden" name="Chain" value="" />
+        <input type="hidden" name="Dest" value="" />
+        <input type="hidden" name="template" value="" />
+        <input
+          type="hidden"
+          name="start"
+          class="second_step"
+          value="availresults"
+        />
+        <input type="hidden" name="Arrive" value="2024-12-20" />
+        <input
+          type="hidden"
+          name="Depart"
+          value="2024-12-21"
+          class="rrDefEv"
+          rr-actionname="CALENDAR-DATE_UPDATED"
+        />
+        <div
+          class="rr__container_body RealRate-BB-container"
+          style="transform: scale(1)"
+        >
+          <!-- close button -->
+          <span
+            rr-actionname="RR - Close RR"
+            class="rr__container_close rr__close booking__close rrClkEv"
+          >
+            <span class="bar animate open"></span>
+          </span>
+          <button class="rr__container_menu_button rr__menu_button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <g
+                data-name="vuesax/linear/menu"
+                transform="translate(-684 -380)"
+              >
+                <g id="menu">
+                  <path
+                    id="Vector"
+                    d="M0,0H18"
+                    transform="translate(687 387)"
+                    fill="none"
+                    stroke="#292d32"
+                    stroke-linecap="round"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    id="Vector-2"
+                    data-name="Vector"
+                    d="M0,0H18"
+                    transform="translate(687 392)"
+                    fill="none"
+                    stroke="#292d32"
+                    stroke-linecap="round"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    id="Vector-3"
+                    data-name="Vector"
+                    d="M0,0H18"
+                    transform="translate(687 397)"
+                    fill="none"
+                    stroke="#292d32"
+                    stroke-linecap="round"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    id="Vector-4"
+                    data-name="Vector"
+                    d="M0,0H24V24H0Z"
+                    transform="translate(684 380)"
+                    fill="none"
+                    opacity="0"
+                  />
+                </g>
+              </g>
+            </svg>
+          </button>
+          <!-- end close button -->
+          <div class="rr__container_body--body">
+            <div class="rr__container_body--left">
+              <div class="rr__infos__stay">
+                <div class="rr__date__col Arrival">
+                  <div class="rr__label"><label>Arrival date </label></div>
+                  <div class="rr__date__item">
+                    <span class="RRicon RRicon-booking"></span>
+                    <span class="rr__date__item--day Booking__date__item--Day"
+                      >20</span
+                    >
+                    <div class="rr__date__item--time">
+                      <span
+                        class="rr__date__item--month Booking__date__item--Month"
+                        >Dec</span
+                      >
+                      <span
+                        class="rr__date__item--year Booking__date__item--year"
+                      >
+                        2024</span
+                      >
+                      <span class="rr__date__item--week">Friday</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rr__date__col Departure">
+                  <div class="rr__label"><label>Departure date </label></div>
+                  <div class="rr__date__item">
+                    <span class="RRicon RRicon-booking"></span>
+                    <span class="rr__date__item--day Booking__date__item--Day"
+                      >21</span
+                    >
+                    <div class="rr__date__item--time">
+                      <span
+                        class="rr__date__item--month Booking__date__item--Month"
+                        >Dec</span
+                      >
+                      <span
+                        class="rr__date__item--year Booking__date__item--year"
+                      >
+                        2024</span
+                      >
+                      <span class="rr__date__item--week">Saturday</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rr__guests__col Rooms">
+                  <div class="rr__editGuest multiRooms">
+                    <div
+                      class="rr__editGuest--info rr_setAge setAge_cloned rr_hide"
+                    >
+                      <div class="rr__editGuest-label">
+                        <span
+                          >Age of child
+                          <span class="order_child_val">1</span></span
+                        >
+                      </div>
+                      <div class="rr__editGuest-container child_age">
+                        <span class="RRicon RRicon-less"></span>
+                        <div class="rr__editGuest_value">
+                          <span class="rr__editGuest_less_1year rr_hide"
+                            >&lt;</span
+                          >
+                          <span class="rr__editGuest_val">1</span>
+                          <span>year(s)</span>
+                        </div>
+                        <span class="RRicon RRicon-add"></span>
+                      </div>
+                    </div>
+                    <div class="rr__editGuest--header">
+                      <!-- <span class="hd_rooms_total">0</span> room(s) - <span class="hd_guests_total">0</span> adult(s) - <span class="hd_childs_total">0</span> child(s) -->
+                      <span>Room Occupancy</span>
+                      <div class="rr__close_multiRoom mr_v2">
+                        <span class="RRicon RRicon-add"></span>
+                      </div>
+                    </div>
+                    <div class="rr__editGuest--body rr__details_room">
+                      <div class="rr__editGuest-item rr__roomLine">
+                        <div class="rr__editGuest-top">
+                          <div
+                            class="rr__lineRoom-numOfRoom rr__roomLine-numOfRoom"
+                          >
+                            <span>Room</span>
+                            <span class="order_room_val">1</span>
+                          </div>
+                          <div class="rr__delete_room">Remove</div>
+                        </div>
+                        <div class="rr__editGuest-bottom">
+                          <div class="rr__editGuest--info rr__lineRoom">
+                            <div class="rr__editGuest-container adults">
+                              <span class="RRicon RRicon-less"></span>
+                              <div class="rr__editGuest_value">
+                                <span class="rr__editGuest_val">1</span>
+                                <span>Adult(s)</span>
+                              </div>
+                              <span class="RRicon RRicon-add"></span>
+                            </div>
+                            <div
+                              class="rr__editGuest-container children rr_hide"
+                            >
+                              <span class="RRicon RRicon-less"></span>
+                              <div class="rr__editGuest_value">
+                                <span class="rr__editGuest_val">0</span>
+                                <span
+                                  class="rr__editGuest_label"
+                                  data-one-c="Child"
+                                  data-multi-c="Children"
+                                  >Child</span
+                                >
+                              </div>
+                              <span class="RRicon RRicon-add"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rr__editGuest--footer">
+                      <button
+                        type="button"
+                        class="rr__add_room rr__roomLine-add"
+                      >
+                        + Add a Room
+                      </button>
+                      <button type="button" class="rr__edit_apply">
+                        Apply
+                      </button>
+                    </div>
+                  </div>
+                  <div class="rr__label"><label>Rooms</label></div>
+                  <div class="rr__guests__item Booking__guests__item">
+                    <input
+                      type="hidden"
+                      name="rooms"
+                      value="1"
+                      id="RealRate-BB-rooms-selector"
+                      room-detail='{"1":{"room":1,"adults":1,"childs":0}}'
+                    />
+                    <div
+                      class="rr__room__qty--down Booking__guests__item--down rrDefEv"
+                      rr-actionname="ROOM_UPDATED"
+                      data-min-val="1"
+                    >
+                      <span class="RRicon RRicon-less"></span>
+                    </div>
+                    <div class="rr__guests__item--room value">1</div>
+                    <div
+                      class="rr__room__qty--up Booking__guests__item--up rrDefEv"
+                      rr-actionname="ROOM_UPDATED"
+                      data-max-val="10"
+                    >
+                      <span class="RRicon RRicon-add"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rr__guests__col Adults">
+                  <div class="rr__label"><label>Adults</label></div>
+                  <div class="rr__guests__item Booking__guests__item">
+                    <input
+                      type="hidden"
+                      name="adult"
+                      value="1"
+                      class="guest_check rrDefEv"
+                      id="RealRate-BB-adult-selector"
+                      rr-actionname="ADULT_UPDATED"
+                    />
+                    <div
+                      class="rr__guests__item--down Booking__guests__item--down"
+                      data-min-val="1"
+                    >
+                      <span class="RRicon RRicon-less"></span>
+                    </div>
+                    <div
+                      class="rr__guests__item--adult value Booking__guests__item--adult"
+                    >
+                      1
+                    </div>
+                    <div
+                      class="rr__guests__item--up Booking__guests__item--up"
+                      data-max-val="6"
+                    >
+                      <span class="RRicon RRicon-add"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rr__guests__col Children">
+                  <div class="rr__label"><label>Children</label></div>
+                  <div class="rr__guests__item Booking__guests__item">
+                    <input
+                      type="hidden"
+                      name="child"
+                      value="0"
+                      id="RealRate-BB-childs-selector"
+                      class="rrDefEv"
+                      rr-actionname="CHILD_UPDATED"
+                    />
+                    <div
+                      class="rr__guests__item--down Booking__guests__item--down"
+                      data-min-val="0"
+                    >
+                      <span class="RRicon RRicon-less"></span>
+                    </div>
+                    <div class="rr__guests__item--children value">0</div>
+                    <div
+                      class="rr__guests__item--up Booking__guests__item--up"
+                      data-max-val="6"
+                    >
+                      <span class="RRicon RRicon-add"></span>
+                    </div>
+                  </div>
+                  <!-- CHILDREN AGE -->
+                  <!-- <div class="rr__guests__col Children"> -->
+                  <div class="rr__editGuest--info rr_setAge rr_hide">
+                    <div class="rr__editGuest-label">
+                      <span>Age of child <span>1</span></span>
+                    </div>
+                    <div class="rr__editGuest-container">
+                      <span class="RRicon RRicon-less"></span>
+                      <div class="rr__editGuest_value">
+                        <span class="rr__editGuest_val">3</span>
+                        <span>year(s)</span>
+                      </div>
+                      <span class="RRicon RRicon-add"></span>
+                    </div>
+                  </div>
+                  <div class="rr__editGuest onlyChild">
+                    <div class="rr__editGuest--header">
+                      <span>0</span> Child (s)
+                      <div class="rr__close_multiRoom mr_v2">
+                        <span class="RRicon RRicon-add"></span>
+                      </div>
+                    </div>
+                    <div class="rr__editGuest--body">
+                      <div class="rr__editGuest-item rr__roomLine">
+                        <div class="rr__editGuest-bottom">
+                          <div class="rr__editGuest--info">
+                            <div class="rr__editGuest-container children">
+                              <span class="RRicon RRicon-less"></span>
+                              <div class="rr__editGuest_value">
+                                <span class="rr__editGuest_val">0</span>
+                                <!-- <span>Children</span> -->
+                                <span data-multi-c="Children">Child</span>
+                              </div>
+                              <span class="RRicon RRicon-add"></span>
+                            </div>
+                          </div>
+                          <!-- ages  -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rr__editGuest--footer">
+                      <button class="rr__edit_apply">Apply</button>
+                    </div>
+                  </div>
+                  <!-- CHILDREN AGE -->
+                </div>
+                <!-- PROMO FIELDS -->
+                <div class="rr__promotions">
+                  <div class="rr__label"><label>Promo Code ?</label></div>
+                  <div class="rr__promotions_fields">
+                    <div class="rr__promo">
+                      <input
+                        type="text"
+                        rr-actionname="PROMOCODE_UPDATED"
+                        name="promo"
+                        class="rr__promo_input rrDefEv"
+                        data-field-id="1"
+                        data-field-default="1"
+                        placeholder="Promo Code"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- PROMO FIELDS -->
+              </div>
+            </div>
+            <div class="rr__container_body--all">
+              <div class="rr__container_body--middle">
+                <div id="arrive" class="rr__calender">
+                  <div
+                    class="date-picker-wrapper no-shortcuts inline-wrapper no-gap single-month"
+                    style="user-select: none"
+                    unselectable="on"
+                  >
+                    <div class="drp_top-bar normal">
+                      <div class="normal-top">
+                        <span style="color: #333">Selected: </span>
+                        <b class="start-day">2024.12.20</b>
+                        <span class="separator-day"> to </span>
+                        <b class="end-day">2024.12.21</b>
+                        <i class="selected-days" style="display: inline"
+                          >(<span class="selected-days-num">2</span> Days)</i
+                        >
+                      </div>
+                      <div class="error-top">error</div>
+                      <div class="default-top">
+                        Please select a date range longer than 2 days
+                      </div>
+                      <input
+                        type="button"
+                        class="apply-btn"
+                        value="Close"
+                        style="display: none"
+                      />
+                    </div>
+                    <div class="month-wrapper" style="width: 202px">
+                      <table class="month1" cellspacing="0" cellpadding="0">
+                        <thead>
+                          <tr class="caption">
+                            <th style="width: 27px">
+                              <span class="prev">&lt; </span>
+                            </th>
+                            <th colspan="5" class="month-name">
+                              <div class="month-element">december</div>
+                              <div class="month-element">2024</div>
+                            </th>
+                            <th style="width: 27px">
+                              <span class="next">&gt;</span>
+                            </th>
+                          </tr>
+                          <tr class="week-name">
+                            <th>mo</th>
+                            <th>tu</th>
+                            <th>we</th>
+                            <th>th</th>
+                            <th>fr</th>
+                            <th>sa</th>
+                            <th>su</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div
+                                time="1732489200000"
+                                data-tooltip=""
+                                class="day lastMonth invalid"
+                              >
+                                25
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1732575600000"
+                                data-tooltip=""
+                                class="day lastMonth invalid"
+                              >
+                                26
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1732662000000"
+                                data-tooltip=""
+                                class="day lastMonth invalid"
+                              >
+                                27
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1732748400000"
+                                data-tooltip=""
+                                class="day lastMonth invalid"
+                              >
+                                28
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1732834800000"
+                                data-tooltip=""
+                                class="day lastMonth invalid"
+                              >
+                                29
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1732921200000"
+                                data-tooltip=""
+                                class="day lastMonth invalid"
+                              >
+                                30
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1733007600000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                1
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                time="1733094000000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                2
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1733180400000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                3
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1733266800000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                4
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1733353200000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                5
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1733439600000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                6
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1733526000000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                7
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1733612400000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                8
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                time="1733698800000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                9
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1733785200000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                10
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1733871600000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                11
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1733958000000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                12
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1734044400000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                13
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1734130800000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                14
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1734217200000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                15
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                time="1734303600000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                16
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1734390000000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                17
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1734476400000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                18
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1734562800000"
+                                data-tooltip=""
+                                class="day toMonth invalid"
+                              >
+                                19
+                              </div>
+                            </td>
+                            <td
+                              class="realrate-custom-checked realrate-custom-first-date-selected has-price"
+                              data-realrate-price-before=" 159 "
+                              data-realrate-currency-before="CHF"
+                              status-date="Open"
+                              data-realrate-selected-date="--"
+                            >
+                              <div
+                                time="1734649200000"
+                                data-tooltip=""
+                                class="day toMonth valid real-today checked first-date-selected"
+                              >
+                                20
+                              </div>
+                            </td>
+                            <td
+                              class="realrate-custom-checked realrate-custom-last-date-selected has-price"
+                              data-realrate-price-before=" 159 "
+                              data-realrate-currency-before="CHF"
+                              status-date="Open"
+                              data-realrate-selected-date="--"
+                            >
+                              <div
+                                time="1734735600000"
+                                data-tooltip=""
+                                class="day toMonth valid checked last-date-selected"
+                              >
+                                21
+                              </div>
+                            </td>
+                            <td
+                              data-realrate-price-before=" 157 "
+                              data-realrate-currency-before="CHF"
+                              status-date="Open"
+                              class="has-price"
+                            >
+                              <div
+                                time="1734822000000"
+                                data-tooltip=""
+                                class="day toMonth valid"
+                              >
+                                22
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              data-realrate-price-before=" 157 "
+                              data-realrate-currency-before="CHF"
+                              status-date="Open"
+                              class="has-price"
+                            >
+                              <div
+                                time="1734908400000"
+                                data-tooltip=""
+                                class="day toMonth valid"
+                              >
+                                23
+                              </div>
+                            </td>
+                            <td
+                              data-realrate-price-before=" 180 "
+                              data-realrate-currency-before="CHF"
+                              status-date="Open"
+                              class="has-price"
+                            >
+                              <div
+                                time="1734994800000"
+                                data-tooltip=""
+                                class="day toMonth valid"
+                              >
+                                24
+                              </div>
+                            </td>
+                            <td
+                              data-realrate-price-before=" 180 "
+                              data-realrate-currency-before="CHF"
+                              status-date="Open"
+                              class="has-price"
+                            >
+                              <div
+                                time="1735081200000"
+                                data-tooltip=""
+                                class="day toMonth valid"
+                              >
+                                25
+                              </div>
+                            </td>
+                            <td
+                              data-realrate-price-before=" 180 "
+                              data-realrate-currency-before="CHF"
+                              status-date="Open"
+                              class="has-price"
+                            >
+                              <div
+                                time="1735167600000"
+                                data-tooltip=""
+                                class="day toMonth valid"
+                              >
+                                26
+                              </div>
+                            </td>
+                            <td
+                              data-realrate-price-before=" 164 "
+                              data-realrate-currency-before="CHF"
+                              status-date="Open"
+                              class="has-price"
+                            >
+                              <div
+                                time="1735254000000"
+                                data-tooltip=""
+                                class="day toMonth valid"
+                              >
+                                27
+                              </div>
+                            </td>
+                            <td
+                              data-realrate-price-before=" 164 "
+                              data-realrate-currency-before="CHF"
+                              status-date="Open"
+                              class="has-price"
+                            >
+                              <div
+                                time="1735340400000"
+                                data-tooltip=""
+                                class="day toMonth valid"
+                              >
+                                28
+                              </div>
+                            </td>
+                            <td
+                              data-realrate-price-before=" 164 "
+                              data-realrate-currency-before="CHF"
+                              status-date="Open"
+                              class="has-price"
+                            >
+                              <div
+                                time="1735426800000"
+                                data-tooltip=""
+                                class="day toMonth valid"
+                              >
+                                29
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              data-realrate-price-before=" 172 "
+                              data-realrate-currency-before="CHF"
+                              status-date="Open"
+                              class="has-price"
+                            >
+                              <div
+                                time="1735513200000"
+                                data-tooltip=""
+                                class="day toMonth valid"
+                              >
+                                30
+                              </div>
+                            </td>
+                            <td
+                              data-realrate-price-before=" 188 "
+                              data-realrate-currency-before="CHF"
+                              status-date="Open"
+                              class="has-price"
+                            >
+                              <div
+                                time="1735599600000"
+                                data-tooltip=""
+                                class="day toMonth valid"
+                              >
+                                31
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1735686000000"
+                                data-tooltip=""
+                                class="day nextMonth valid"
+                              >
+                                1
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1735772400000"
+                                data-tooltip=""
+                                class="day nextMonth valid"
+                              >
+                                2
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1735858800000"
+                                data-tooltip=""
+                                class="day nextMonth valid"
+                              >
+                                3
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1735945200000"
+                                data-tooltip=""
+                                class="day nextMonth valid"
+                              >
+                                4
+                              </div>
+                            </td>
+                            <td>
+                              <div
+                                time="1736031600000"
+                                data-tooltip=""
+                                class="day nextMonth valid"
+                              >
+                                5
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div style="clear: both; height: 0; font-size: 0"></div>
+                      <div class="time">
+                        <div class="time1"></div>
+                        <div class="time2"></div>
+                      </div>
+                      <div style="clear: both; height: 0; font-size: 0"></div>
+                    </div>
+                    <div class="footer"></div>
+                    <div class="date-range-length-tip"></div>
+                  </div>
+                </div>
+                <div class="rr__grpLegend">
+                  <div class="LegendItem">
+                    <span class="ui-state-active Lgnd"></span>Selected dates
+                  </div>
+                  <div class="LegendItem">
+                    <span class="BECalOpen Lgnd"></span>Rooms are available
+                  </div>
+                  <div class="LegendItem">
+                    <span class="BENoAvail Lgnd"></span>No availability
+                  </div>
+                  <div class="LegendItem">
+                    <span class="BEMinLen Lgnd"></span>Min stay
+                  </div>
+                  <div class="LegendItem" style="display: none">
+                    <span class="BENoDepart Lgnd"></span>No Departure
+                  </div>
+                  <div class="LegendItem">
+                    <span class="BENoArrive Lgnd"></span>No arrival
+                  </div>
+                </div>
+                <div class="rr__offers">
+                  <div class="rr__offers_div">
+                    <a
+                      data-lang="EN"
+                      data-promo-position="pr_right"
+                      data-realrate-promo-id="1"
+                      style="
+                        background-image: url(https://uploads.globres.io/rr/o/61f7cb3d312f0_60669_v2.png);
+                      "
+                      target="_blank"
+                      href="https://engimatt.ch/en/leafs/specials-vouchers/packages/"
+                      class="rr__promo_have_image item_offer"
+                      data-offer-title="Check out our special packages"
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="rr__container_body--right">
+                <div class="rr__container_body--right-container">
+                  <!-- START BOOKING SUMMARY / MAP -->
+                  <!-- START MAP --><!-- <h2 class="rr__title rr_title_map">Location</h2> -->
+                  <div class="rt__popup_header rr__map_bs_title">
+                    <p class="">Location</p>
+                    <div
+                      class="rr__maps_icon rrClkEv"
+                      rr-actionname="RR - Show Map"
+                    >
+                      <svg
+                        version="1.1"
+                        id="Calque_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 40 40"
+                        style="enable-background: new 0 0 40 40"
+                        xml:space="preserve"
+                      >
+                        <g>
+                          <path
+                            class="st0 rr_st0"
+                            d="M31.11,38.41H8.89c-4.03,0-7.3-3.27-7.3-7.3l0-22.21c0-4.03,3.27-7.3,7.3-7.3l22.21,0c4.03,0,7.3,3.27,7.3,7.3                v22.21C38.41,35.14,35.14,38.41,31.11,38.41z"
+                          ></path>
+                          <g>
+                            <path
+                              class="st1 rr_st1"
+                              d="M15.98,16.12l-0.11,0.11c-0.18,0.18-0.46,0.18-0.64,0L8.97,9.97c-0.18-0.18-0.18-0.46,0-0.64l0.11-0.11                    c0.18-0.18,0.46-0.18,0.64,0l6.26,6.26C16.16,15.65,16.16,15.94,15.98,16.12z"
+                            ></path>
+                            <path
+                              class="st1 rr_st1"
+                              d="M14.29,10.15h-4.9c-0.25,0-0.45-0.2-0.45-0.45V9.54c0-0.25,0.2-0.45,0.45-0.45h4.9c0.25,0,0.45,0.2,0.45,0.45                    V9.7C14.75,9.95,14.54,10.15,14.29,10.15z"
+                            ></path>
+                            <path
+                              class="st1 rr_st1"
+                              d="M8.83,14.55v-4.9c0-0.25,0.2-0.45,0.45-0.45h0.16c0.25,0,0.45,0.2,0.45,0.45v4.9c0,0.25-0.2,0.45-0.45,0.45                    H9.28C9.03,15.01,8.83,14.8,8.83,14.55z"
+                            ></path>
+                          </g>
+                          <g>
+                            <path
+                              class="st1 rr_st1"
+                              d="M22.95,23.32l0.11-0.11c0.18-0.18,0.46-0.18,0.64,0l6.26,6.26c0.18,0.18,0.18,0.46,0,0.64l-0.11,0.11                    c-0.18,0.18-0.46,0.18-0.64,0l-6.26-6.26C22.78,23.79,22.78,23.5,22.95,23.32z"
+                            ></path>
+                            <path
+                              class="st1 rr_st1"
+                              d="M24.64,29.29h4.9c0.25,0,0.45,0.2,0.45,0.45v0.16c0,0.25-0.2,0.45-0.45,0.45h-4.9c-0.25,0-0.45-0.2-0.45-0.45                    v-0.16C24.19,29.49,24.39,29.29,24.64,29.29z"
+                            ></path>
+                            <path
+                              class="st1 rr_st1"
+                              d="M30.1,24.89v4.9c0,0.25-0.2,0.45-0.45,0.45h-0.16c-0.25,0-0.45-0.2-0.45-0.45v-4.9c0-0.25,0.2-0.45,0.45-0.45                    h0.16C29.9,24.43,30.1,24.64,30.1,24.89z"
+                            ></path>
+                          </g>
+                          <g>
+                            <path
+                              class="st1 rr_st1"
+                              d="M15.86,23.21l0.11,0.11c0.18,0.18,0.18,0.46,0,0.64l-6.26,6.26c-0.18,0.18-0.46,0.18-0.64,0L8.96,30.1                    c-0.18-0.18-0.18-0.46,0-0.64l6.26-6.26C15.4,23.03,15.69,23.03,15.86,23.21z"
+                            ></path>
+                            <path
+                              class="st1 rr_st1"
+                              d="M9.9,24.89v4.9c0,0.25-0.2,0.45-0.45,0.45H9.29c-0.25,0-0.45-0.2-0.45-0.45v-4.9c0-0.25,0.2-0.45,0.45-0.45                    h0.16C9.69,24.44,9.9,24.64,9.9,24.89z"
+                            ></path>
+                            <path
+                              class="st1 rr_st1"
+                              d="M14.3,30.36H9.4c-0.25,0-0.45-0.2-0.45-0.45v-0.16c0-0.25,0.2-0.45,0.45-0.45h4.9c0.25,0,0.45,0.2,0.45,0.45                    v0.16C14.75,30.15,14.55,30.36,14.3,30.36z"
+                            ></path>
+                          </g>
+                          <g>
+                            <path
+                              class="st1 rr_st1"
+                              d="M23.07,16.23l-0.11-0.11c-0.18-0.18-0.18-0.46,0-0.64l6.26-6.26c0.18-0.18,0.46-0.18,0.64,0l0.11,0.11                    c0.18,0.18,0.18,0.46,0,0.64l-6.26,6.26C23.53,16.41,23.25,16.41,23.07,16.23z"
+                            ></path>
+                            <path
+                              class="st1 rr_st1"
+                              d="M29.03,14.55v-4.9c0-0.25,0.2-0.45,0.45-0.45h0.16c0.25,0,0.45,0.2,0.45,0.45v4.9c0,0.25-0.2,0.45-0.45,0.45                    h-0.16C29.24,15,29.03,14.8,29.03,14.55z"
+                            ></path>
+                            <path
+                              class="st1 rr_st1"
+                              d="M24.63,9.08h4.9c0.25,0,0.45,0.2,0.45,0.45v0.16c0,0.25-0.2,0.45-0.45,0.45h-4.9c-0.25,0-0.45-0.2-0.45-0.45                    V9.54C24.18,9.29,24.38,9.08,24.63,9.08z"
+                            ></path>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    class="rr__infos_maps rr__lf_maps rrClkEv"
+                    id="infos_maps"
+                    rr-actionname="RR - Show Map"
+                    style="
+                      background-image: url('https://uploads.globres.io/rr/mv2/sc/sc_60669.jpeg?rr');
+                    "
+                  >
+                    <!-- <img src="https://api.globres.io/RealRate/assets/img/BB/carte.png" alt=""> -->
+                  </div>
+                  <!-- START MAP -->
+                  <!-- START BOOKING SUMMARY / MAP -->
+                  <!-- START RATING -->
+                  <div class="rt__popup rt_rating_container">
+                    <div class="rt__popup_header rr__rating_title">
+                      <p>Public rating</p>
+                    </div>
+                    <div class="rt__popup_body">
+                      <div class="rt__popup_body--total">
+                        <div class="rat">4.23<sub>/5</sub></div>
+                        <div class="">
+                          <div
+                            class="rt__popup_body--sub"
+                            data-number-of-rounded-rating="0"
+                          >
+                            <div class="rr-rating" data-rating="4.23">
+                              <div
+                                class="jq-star"
+                                style="width: 18px; height: 18px"
+                              >
+                                <svg
+                                  version="1.0"
+                                  class="jq-star-svg"
+                                  shape-rendering="geometricPrecision"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  x="0px"
+                                  y="0px"
+                                  width="305px"
+                                  height="305px"
+                                  viewBox="60 -62 309 309"
+                                  style="
+                                    enable-background: new 64 -59 305 305;
+                                    stroke-width: 0px;
+                                  "
+                                  xml:space="preserve"
+                                >
+                                  <style type="text/css">
+                                    .svg-empty-132 {
+                                      fill: url(#132_SVGID_1_);
+                                    }
+                                    .svg-hovered-132 {
+                                      fill: url(#132_SVGID_2_);
+                                    }
+                                    .svg-active-132 {
+                                      fill: url(#132_SVGID_3_);
+                                    }
+                                    .svg-rated-132 {
+                                      fill: crimson;
+                                    }
+                                  </style>
+                                  <linearGradient
+                                    id="132_SVGID_1_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: lightgray"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: lightgray"
+                                    ></stop>
+                                  </linearGradient>
+                                  <linearGradient
+                                    id="132_SVGID_2_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: orange"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: orange"
+                                    ></stop>
+                                  </linearGradient>
+                                  <linearGradient
+                                    id="132_SVGID_3_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: gold"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: gold"
+                                    ></stop>
+                                  </linearGradient>
+                                  <polygon
+                                    data-side="center"
+                                    class="svg-empty-132"
+                                    points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 212.9,181.1 213.9,181 306.5,241 "
+                                    style="fill: transparent; stroke: black"
+                                  ></polygon>
+                                  <polygon
+                                    data-side="left"
+                                    class="svg-active-132"
+                                    points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 213.9,181.1 213.9,181 306.5,241 "
+                                    style="stroke-opacity: 0"
+                                  ></polygon>
+                                  <polygon
+                                    data-side="right"
+                                    class="svg-active-132"
+                                    points="364,55.7 255.5,46.8 214,-59 213.9,181 306.5,241 281.1,129.8 "
+                                    style="stroke-opacity: 0"
+                                  ></polygon>
+                                </svg>
+                              </div>
+                              <div
+                                class="jq-star"
+                                style="width: 18px; height: 18px"
+                              >
+                                <svg
+                                  version="1.0"
+                                  class="jq-star-svg"
+                                  shape-rendering="geometricPrecision"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  x="0px"
+                                  y="0px"
+                                  width="305px"
+                                  height="305px"
+                                  viewBox="60 -62 309 309"
+                                  style="
+                                    enable-background: new 64 -59 305 305;
+                                    stroke-width: 0px;
+                                  "
+                                  xml:space="preserve"
+                                >
+                                  <style type="text/css">
+                                    .svg-empty-132 {
+                                      fill: url(#132_SVGID_1_);
+                                    }
+                                    .svg-hovered-132 {
+                                      fill: url(#132_SVGID_2_);
+                                    }
+                                    .svg-active-132 {
+                                      fill: url(#132_SVGID_3_);
+                                    }
+                                    .svg-rated-132 {
+                                      fill: crimson;
+                                    }
+                                  </style>
+                                  <linearGradient
+                                    id="132_SVGID_1_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: lightgray"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: lightgray"
+                                    ></stop>
+                                  </linearGradient>
+                                  <linearGradient
+                                    id="132_SVGID_2_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: orange"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: orange"
+                                    ></stop>
+                                  </linearGradient>
+                                  <linearGradient
+                                    id="132_SVGID_3_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: gold"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: gold"
+                                    ></stop>
+                                  </linearGradient>
+                                  <polygon
+                                    data-side="center"
+                                    class="svg-empty-132"
+                                    points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 212.9,181.1 213.9,181 306.5,241 "
+                                    style="fill: transparent; stroke: black"
+                                  ></polygon>
+                                  <polygon
+                                    data-side="left"
+                                    class="svg-active-132"
+                                    points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 213.9,181.1 213.9,181 306.5,241 "
+                                    style="stroke-opacity: 0"
+                                  ></polygon>
+                                  <polygon
+                                    data-side="right"
+                                    class="svg-active-132"
+                                    points="364,55.7 255.5,46.8 214,-59 213.9,181 306.5,241 281.1,129.8 "
+                                    style="stroke-opacity: 0"
+                                  ></polygon>
+                                </svg>
+                              </div>
+                              <div
+                                class="jq-star"
+                                style="width: 18px; height: 18px"
+                              >
+                                <svg
+                                  version="1.0"
+                                  class="jq-star-svg"
+                                  shape-rendering="geometricPrecision"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  x="0px"
+                                  y="0px"
+                                  width="305px"
+                                  height="305px"
+                                  viewBox="60 -62 309 309"
+                                  style="
+                                    enable-background: new 64 -59 305 305;
+                                    stroke-width: 0px;
+                                  "
+                                  xml:space="preserve"
+                                >
+                                  <style type="text/css">
+                                    .svg-empty-132 {
+                                      fill: url(#132_SVGID_1_);
+                                    }
+                                    .svg-hovered-132 {
+                                      fill: url(#132_SVGID_2_);
+                                    }
+                                    .svg-active-132 {
+                                      fill: url(#132_SVGID_3_);
+                                    }
+                                    .svg-rated-132 {
+                                      fill: crimson;
+                                    }
+                                  </style>
+                                  <linearGradient
+                                    id="132_SVGID_1_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: lightgray"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: lightgray"
+                                    ></stop>
+                                  </linearGradient>
+                                  <linearGradient
+                                    id="132_SVGID_2_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: orange"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: orange"
+                                    ></stop>
+                                  </linearGradient>
+                                  <linearGradient
+                                    id="132_SVGID_3_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: gold"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: gold"
+                                    ></stop>
+                                  </linearGradient>
+                                  <polygon
+                                    data-side="center"
+                                    class="svg-empty-132"
+                                    points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 212.9,181.1 213.9,181 306.5,241 "
+                                    style="fill: transparent; stroke: black"
+                                  ></polygon>
+                                  <polygon
+                                    data-side="left"
+                                    class="svg-active-132"
+                                    points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 213.9,181.1 213.9,181 306.5,241 "
+                                    style="stroke-opacity: 0"
+                                  ></polygon>
+                                  <polygon
+                                    data-side="right"
+                                    class="svg-active-132"
+                                    points="364,55.7 255.5,46.8 214,-59 213.9,181 306.5,241 281.1,129.8 "
+                                    style="stroke-opacity: 0"
+                                  ></polygon>
+                                </svg>
+                              </div>
+                              <div
+                                class="jq-star"
+                                style="width: 18px; height: 18px"
+                              >
+                                <svg
+                                  version="1.0"
+                                  class="jq-star-svg"
+                                  shape-rendering="geometricPrecision"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  x="0px"
+                                  y="0px"
+                                  width="305px"
+                                  height="305px"
+                                  viewBox="60 -62 309 309"
+                                  style="
+                                    enable-background: new 64 -59 305 305;
+                                    stroke-width: 0px;
+                                  "
+                                  xml:space="preserve"
+                                >
+                                  <style type="text/css">
+                                    .svg-empty-132 {
+                                      fill: url(#132_SVGID_1_);
+                                    }
+                                    .svg-hovered-132 {
+                                      fill: url(#132_SVGID_2_);
+                                    }
+                                    .svg-active-132 {
+                                      fill: url(#132_SVGID_3_);
+                                    }
+                                    .svg-rated-132 {
+                                      fill: crimson;
+                                    }
+                                  </style>
+                                  <linearGradient
+                                    id="132_SVGID_1_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: lightgray"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: lightgray"
+                                    ></stop>
+                                  </linearGradient>
+                                  <linearGradient
+                                    id="132_SVGID_2_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: orange"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: orange"
+                                    ></stop>
+                                  </linearGradient>
+                                  <linearGradient
+                                    id="132_SVGID_3_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: gold"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: gold"
+                                    ></stop>
+                                  </linearGradient>
+                                  <polygon
+                                    data-side="center"
+                                    class="svg-empty-132"
+                                    points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 212.9,181.1 213.9,181 306.5,241 "
+                                    style="fill: transparent; stroke: black"
+                                  ></polygon>
+                                  <polygon
+                                    data-side="left"
+                                    class="svg-active-132"
+                                    points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 213.9,181.1 213.9,181 306.5,241 "
+                                    style="stroke-opacity: 0"
+                                  ></polygon>
+                                  <polygon
+                                    data-side="right"
+                                    class="svg-active-132"
+                                    points="364,55.7 255.5,46.8 214,-59 213.9,181 306.5,241 281.1,129.8 "
+                                    style="stroke-opacity: 0"
+                                  ></polygon>
+                                </svg>
+                              </div>
+                              <div
+                                class="jq-star"
+                                style="width: 18px; height: 18px"
+                              >
+                                <svg
+                                  version="1.0"
+                                  class="jq-star-svg"
+                                  shape-rendering="geometricPrecision"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  x="0px"
+                                  y="0px"
+                                  width="305px"
+                                  height="305px"
+                                  viewBox="60 -62 309 309"
+                                  style="
+                                    enable-background: new 64 -59 305 305;
+                                    stroke-width: 0px;
+                                  "
+                                  xml:space="preserve"
+                                >
+                                  <style type="text/css">
+                                    .svg-empty-132 {
+                                      fill: url(#132_SVGID_1_);
+                                    }
+                                    .svg-hovered-132 {
+                                      fill: url(#132_SVGID_2_);
+                                    }
+                                    .svg-active-132 {
+                                      fill: url(#132_SVGID_3_);
+                                    }
+                                    .svg-rated-132 {
+                                      fill: crimson;
+                                    }
+                                  </style>
+                                  <linearGradient
+                                    id="132_SVGID_1_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: lightgray"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: lightgray"
+                                    ></stop>
+                                  </linearGradient>
+                                  <linearGradient
+                                    id="132_SVGID_2_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: orange"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: orange"
+                                    ></stop>
+                                  </linearGradient>
+                                  <linearGradient
+                                    id="132_SVGID_3_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="0"
+                                    y1="-50"
+                                    x2="0"
+                                    y2="250"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      style="stop-color: gold"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      style="stop-color: gold"
+                                    ></stop>
+                                  </linearGradient>
+                                  <polygon
+                                    data-side="center"
+                                    class="svg-empty-132"
+                                    points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 212.9,181.1 213.9,181 306.5,241 "
+                                    style="fill: transparent; stroke: black"
+                                  ></polygon>
+                                  <polygon
+                                    data-side="left"
+                                    class="svg-empty-132"
+                                    points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 213.9,181.1 213.9,181 306.5,241 "
+                                    style="stroke-opacity: 0"
+                                  ></polygon>
+                                  <polygon
+                                    data-side="right"
+                                    class="svg-empty-132"
+                                    points="364,55.7 255.5,46.8 214,-59 213.9,181 306.5,241 281.1,129.8 "
+                                    style="stroke-opacity: 0"
+                                  ></polygon>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- number of rating -->
+                          <p class="nbr__rat">2100 Review (s)</p>
+                          <!-- end number of rating -->
+                        </div>
+                      </div>
+                      <div class="g__rating--global">
+                        <div
+                          class="g__container rr-booking"
+                          style="display: flex"
+                        >
+                          <div class="rr__logo logo-bk">
+                            <span class="rt_book">Book</span
+                            ><span class="rt_ing">ing</span>
+                          </div>
+                          <div class="g__rating-num">
+                            <span class="">8.4</span>
+                          </div>
+                        </div>
+                        <div class="g__container rr-exp" style="display: flex">
+                          <div class="rr__logo logo-ex">
+                            <span class="rt_expedia">Expedia</span>
+                          </div>
+                          <div class="g__rating-num">
+                            <div class="g__rating-num">
+                              <span class="">9</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="g__container rr-ta last_item"
+                          style="display: flex"
+                        >
+                          <div class="rr__logo logo-tp">
+                            <span class="rt_trip">trip</span
+                            ><span class="rt_advisor">advisor</span>
+                          </div>
+                          <div class="g__rating-icon">
+                            <span
+                              class="ui_bubble_rating bubble_4"
+                              data-clicksource="BubbleRatingTrackingOnly"
+                            ></span>
+                          </div>
+                        </div>
+                        <div class="g__rating--footer" style="display: none">
+                          <p>Thank you for booking with us</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END RATING -->
+                  <div class="rr__xtease_title"><p>Price comparison</p></div>
+                  <div class="rr_ripple">
+                    <div style="display: none"></div>
+                    <div style="display: none"></div>
+                  </div>
+                  <div class="rr__response" style="display: none">
+                    We have the best price for you
+                  </div>
+                  <div class="rr__xtease xtease">
+                    <div class="rr__xtease_body">
+                      <div
+                        class="rr__xtease_body--portail RealRate-xtease-item-agoda xt__portals"
+                      >
+                        <p class="rr__xtease_body-name">agoda</p>
+                        <div class="rr__xtease_body--p xt__price">
+                          <span class="rr__xtease_body--price">166</span>
+                          <span class="rr__xtease_body--currency">CHF</span>
+                        </div>
+                      </div>
+                      <div
+                        class="rr__xtease_body--portail RealRate-xtease-item-booking xt__portals"
+                      >
+                        <p class="rr__xtease_body-name">booking</p>
+                        <div class="rr__xtease_body--p xt__price">
+                          <span class="rr__xtease_body--price">189</span>
+                          <span class="rr__xtease_body--currency">CHF</span>
+                        </div>
+                      </div>
+                      <div
+                        class="rr__xtease_body--portail RealRate-xtease-item-expedia xt__portals"
+                      >
+                        <p class="rr__xtease_body-name">expedia</p>
+                        <div class="rr__xtease_body--p xt__price">
+                          <span class="rr__xtease_body--price">189</span>
+                          <span class="rr__xtease_body--currency">CHF</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rr__submit">
+                    <a
+                      target="_blank"
+                      class="rr__book_now_as_link rrClkEv"
+                      rr-actionname="RR - Form Submits"
+                      href="https://be.synxis.com/?hotel=60669&amp;arrive=2024-12-20&amp;depart=2024-12-21&amp;segment=DIRECPCT&amp;adult=1&amp;child=0&amp;room=1&amp;ChildAges=&amp;currency=CHF&amp;locale=EN-US&amp;configcode=Engimatt&amp;level=hotel&amp;themecode=&amp;promo="
+                      style="display: none"
+                      >Book Direct
+                    </a>
+                    <input
+                      type="submit"
+                      class="rr__submit_button"
+                      value="Book Direct"
+                    />
+                    <div class="rr__submit_p">
+                      <span class="rr__submit--price">159</span>
+                      <span class="rr__submit--currency currency">CHF</span>
+                    </div>
+                  </div>
+                  <div class="rr__modifiy RealRate-BB-Modify-cancel-res">
+                    <a
+                      href="https://be.synxis.com/signin?hotel=60669&amp;currency=CHF&amp;locale=EN-US&amp;configcode=Engimatt&amp;level=hotel&amp;themecode="
+                      target="_blank"
+                    >
+                      <span class="RRicon-settings"></span>
+                      Modify or cancel a reservation
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

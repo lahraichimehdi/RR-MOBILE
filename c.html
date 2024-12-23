@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>c</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/jquery-ui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/daterangepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://api.globres.io/RealRate/assets/lib/css/star-rating-svg.css"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ta.css" />
+    <link
+      rel="stylesheet"
+      href="https://api.globres.io/RealRate/assets/structures/BB/v2/style.css"
+    />
+    <link rel="stylesheet" href="new-style.css" />
+  </head>
+  <body>
+    <!-- <div class="rr__button" style="display: none">
+      <button class="rr__button_cta">
+        <span class="rr__button_cta--top">%%RR_BBCheckAvailibility_RR%%</span>
+        <span class="rr__button_cta--bottom">%%RR_BESTPRICEGUARANTEE_RR%%</span>
+      </button>
+    </div> -->
+
+    <div class="rr__container" translate="no">
+      <!-- FULL MAP -->
+      <div class="rr_map_extend rr_content-item" id="find-us">
+        <div class="rr__t_close">
+          <svg
+            class="rr__action_map rr__extend rrClkEv"
+            rr-actionname="RR - Close Map"
+            version="1.1"
+            x="0px"
+            y="0px"
+            viewBox="0 0 40 40"
+            style="enable-background: new 0 0 40 40"
+            xml:space="preserve"
+          >
+            <style type="text/css">
+              .st0 {
+                fill: #808387;
+              }
+            </style>
+            <g>
+              <g>
+                <path
+                  class="st0"
+                  d="M8.03,8.31L8.03,8.31c0.23-0.23,0.59-0.23,0.82,0l6.68,6.68c0.23,0.23,0.23,0.59,0,0.82l0,0
+                            c-0.23,0.23-0.59,0.23-0.82,0L8.03,9.13C7.8,8.9,7.8,8.54,8.03,8.31z"
+                />
+                <path
+                  class="st0"
+                  d="M9.89,14.85h5.16c0.32,0,0.58,0.26,0.58,0.58v0c0,0.32-0.26,0.58-0.58,0.58H9.89c-0.32,0-0.58-0.26-0.58-0.58
+                            v0C9.31,15.11,9.57,14.85,9.89,14.85z"
+                />
+                <path
+                  class="st0"
+                  d="M15.74,10.16v5.16c0,0.32-0.26,0.58-0.58,0.58h0c-0.32,0-0.58-0.26-0.58-0.58v-5.16
+                            c0-0.32,0.26-0.58,0.58-0.58h0C15.48,9.58,15.74,9.84,15.74,10.16z"
+                />
+              </g>
+              <g>
+                <path
+                  class="st0"
+                  d="M30.81,31.08L30.81,31.08c-0.23,0.23-0.59,0.23-0.82,0l-6.68-6.68c-0.23-0.23-0.23-0.59,0-0.82l0,0
+                            c0.23-0.23,0.59-0.23,0.82,0l6.68,6.68C31.03,30.49,31.03,30.85,30.81,31.08z"
+                />
+                <path
+                  class="st0"
+                  d="M28.95,24.54H23.8c-0.32,0-0.58-0.26-0.58-0.58v0c0-0.32,0.26-0.58,0.58-0.58h5.16
+                            c0.32,0,0.58,0.26,0.58,0.58v0C29.53,24.28,29.27,24.54,28.95,24.54z"
+                />
+                <path
+                  class="st0"
+                  d="M23.1,29.24v-5.16c0-0.32,0.26-0.58,0.58-0.58h0c0.32,0,0.58,0.26,0.58,0.58v5.16c0,0.32-0.26,0.58-0.58,0.58
+                            h0C23.36,29.81,23.1,29.55,23.1,29.24z"
+                />
+              </g>
+              <g>
+                <path
+                  class="st0"
+                  d="M8.03,31.09L8.03,31.09c-0.23-0.23-0.23-0.59,0-0.82l6.68-6.68c0.23-0.23,0.59-0.23,0.82,0l0,0
+                            c0.23,0.23,0.23,0.59,0,0.82l-6.68,6.68C8.63,31.31,8.26,31.31,8.03,31.09z"
+                />
+                <path
+                  class="st0"
+                  d="M14.58,29.23v-5.16c0-0.32,0.26-0.58,0.58-0.58h0c0.32,0,0.58,0.26,0.58,0.58v5.16
+                            c0,0.32-0.26,0.58-0.58,0.58h0C14.84,29.81,14.58,29.55,14.58,29.23z"
+                />
+                <path
+                  class="st0"
+                  d="M9.88,23.38h5.16c0.32,0,0.58,0.26,0.58,0.58l0,0c0,0.32-0.26,0.58-0.58,0.58H9.88
+                            c-0.32,0-0.58-0.26-0.58-0.58l0,0C9.3,23.64,9.56,23.38,9.88,23.38z"
+                />
+              </g>
+              <g>
+                <path
+                  class="st0"
+                  d="M30.8,8.31L30.8,8.31c0.23,0.23,0.23,0.59,0,0.82l-6.68,6.68c-0.23,0.23-0.59,0.23-0.82,0l0,0
+                            c-0.23-0.23-0.23-0.59,0-0.82l6.68-6.68C30.21,8.08,30.58,8.08,30.8,8.31z"
+                />
+                <path
+                  class="st0"
+                  d="M24.26,10.16v5.16c0,0.32-0.26,0.58-0.58,0.58h0c-0.32,0-0.58-0.26-0.58-0.58v-5.16
+                            c0-0.32,0.26-0.58,0.58-0.58h0C24,9.59,24.26,9.84,24.26,10.16z"
+                />
+                <path
+                  class="st0"
+                  d="M28.96,16.02H23.8c-0.32,0-0.58-0.26-0.58-0.58v0c0-0.32,0.26-0.58,0.58-0.58h5.16
+                            c0.32,0,0.58,0.26,0.58,0.58v0C29.54,15.76,29.28,16.02,28.96,16.02z"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="rr_map_sidebar_open rr_hide">
+          <span>Places Near the Hotel</span>
+          <span class="rr__t_close_desktop">
+            <svg
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="rr_map_sidebar rr_hide">
+          <div class="rr_map_title">
+            <span class="rr__t_close_desktop">
+              <svg
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              >
+                <path
+                  d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                />
+              </svg>
+            </span>
+            <span>Find US</span>
+            <span class="rr__t_close_desktop_left rr_hide">
+              <img
+                src="https://api.globres.io/RealRate/assets/img/BB/ic_menu_burger_w.png"
+                alt=""
+              />
+            </span>
+            <span class="rr__t_close_mobile">
+              <svg
+                x="0px"
+                y="0px"
+                viewBox="0 0 42 42"
+                style="enable-background: new 0 0 42 42"
+                xml:space="preserve"
+              >
+                <polygon
+                  class="st0"
+                  points="42,19 23,19 23,0 19,0 19,19 0,19 0,23 19,23 19,42 23,42 23,23 42,23 "
+                ></polygon>
+              </svg>
+            </span>
+          </div>
+          <div class="rr_map_category">
+            <div class="rr_map_category_title">Categories :</div>
+            <div class="rr_category map_category">
+              <div class="select-box">
+                <div class="select-box__current" tabindex="1">
+                  <div class="select-box__value">
+                    <input
+                      class="select-box__input"
+                      type="radio"
+                      id="1"
+                      value="1"
+                      name="categories"
+                      checked="checked"
+                    />
+                    <p class="select-box__input-text">All categories</p>
+                  </div>
+
+                  <img
+                    class="select-box__icon"
+                    src="https://api.globres.io/RealRate/assets/img/BB/arrow.svg"
+                    alt="Arrow Icon"
+                    aria-hidden="true"
+                  />
+                </div>
+                <ul class="select-box__list">
+                  <li>
+                    <label
+                      class="select-box__option"
+                      for="1"
+                      aria-hidden="aria-hidden"
+                    >
+                      <img
+                        src="https://api.globres.io/RealRate/assets/img/BB/all_cat_icon.png"
+                        alt="all"
+                      />
+                      All categories
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- places  -->
+            <div class="rr_places">
+              <div class="rr_places_res"><span>--</span> Place (s)</div>
+
+              <div class="rr_places_container"></div>
+            </div>
+
+            <div class="rr_loader rr_hide">
+              <img
+                src="https://api.globres.io/RealRate/assets/img/BB/arrows.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div id="maps_big" class="show_maps">
+          <div class="rr_menu_burger rr_hide">
+            <img
+              src="https://api.globres.io/RealRate/assets/img/BB/ic_menu_burger_w.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- FULL MAP -->
+
+      <div class="rr__close_layer"></div>
+
+      <form
+        action="https://gc.synxis.com/rez.aspx"
+        method="get"
+        id="booking__form"
+        target="_blank"
+      >
+        <input type="hidden" name="Hotel" value="" />
+        <input type="hidden" name="Locale" value="" />
+        <input type="hidden" name="Currency" value="" />
+        <input type="hidden" name="Shell" value="" />
+        <input type="hidden" name="Chain" value="" />
+        <input type="hidden" name="Dest" value="" />
+        <input type="hidden" name="template" value="" />
+        <input
+          type="hidden"
+          name="start"
+          class="second_step"
+          value="availresults"
+        />
+        <input type="hidden" name="Arrive" value="" />
+        <input
+          type="hidden"
+          name="Depart"
+          value=""
+          class="rrDefEv"
+          rr-actionname="CALENDAR-DATE_UPDATED"
+        />
+
+        <div class="rr__container_body RealRate-BB-container">
+          <!-- close button -->
+          <span
+            rr-actionname="RR - Close RR"
+            class="rr__container_close rr__close booking__close rrClkEv"
+          >
+            <span class="bar animate"></span>
+          </span>
+          <!-- end close button -->
+
+          <div class="rr__container_body--body">
+            <div class="rr__container_body--left">
+              <div class="guestResult">
+                <div>
+                  <h4>Guests</h4>
+                  <p>
+                    <span class="nbRoom">Room 1 - </span>
+                    <span> 2 adults, 1 children</span>
+                  </p>
+                </div>
+                <div>
+                  <button class="rr__update_guest">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                      <path
+                        id="Vector"
+                        d="M7.719,1.2.878,8.441A2.541,2.541,0,0,0,.319,9.633l-.308,2.7a1.273,1.273,0,0,0,1.558,1.475l2.683-.458a2.393,2.393,0,0,0,1.158-.625l6.842-7.242c1.183-1.25,1.717-2.675-.125-4.417C10.294-.659,8.9-.051,7.719,1.2Z"
+                        transform="translate(3.331 1.801)"
+                        fill="none"
+                        stroke="#656565"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.2"
+                      />
+                      <path
+                        id="Vector-2"
+                        data-name="Vector"
+                        d="M0,0A5.105,5.105,0,0,0,4.542,4.292"
+                        transform="translate(9.908 4.208)"
+                        fill="none"
+                        stroke="#656565"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.2"
+                      />
+                      <path
+                        id="Vector-3"
+                        data-name="Vector"
+                        d="M0,0H20V20H0Z"
+                        fill="none"
+                        opacity="0"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="rr__infos__stay">
+                <div class="rr__date__col Arrival">
+                  <div class="rr__label">
+                    <label>Arrival date </label>
+                  </div>
+                  <div class="rr__date__item">
+                    <span class="RRicon RRicon-booking"></span>
+                    <span class="rr__date__item--day Booking__date__item--Day"
+                      >--</span
+                    >
+                    <div class="rr__date__item--time">
+                      <span
+                        class="rr__date__item--month Booking__date__item--Month"
+                        >--</span
+                      >
+                      <span
+                        class="rr__date__item--year Booking__date__item--year"
+                        >--</span
+                      >
+                      <span class="rr__date__item--week">--</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rr__date__col Departure">
+                  <div class="rr__label">
+                    <label>%%RR_DEPARTUREDATE_RR%% </label>
+                  </div>
+                  <div class="rr__date__item">
+                    <span class="RRicon RRicon-booking"></span>
+                    <span class="rr__date__item--day Booking__date__item--Day"
+                      >--</span
+                    >
+                    <div class="rr__date__item--time">
+                      <span
+                        class="rr__date__item--month Booking__date__item--Month"
+                        >--</span
+                      >
+                      <span
+                        class="rr__date__item--year Booking__date__item--year"
+                        >--</span
+                      >
+                      <span class="rr__date__item--week">--</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rr__guests__col Rooms">
+                  <div class="rr__editGuest multiRooms">
+                    <div
+                      class="rr__editGuest--info rr_setAge setAge_cloned rr_hide"
+                    >
+                      <div class="rr__editGuest-label">
+                        <span>
+                          %%RR_AGEOFCHILD_RR%%
+                          <span class="order_child_val">1</span>
+                        </span>
+                      </div>
+
+                      <div class="rr__editGuest-container child_age">
+                        <span class="RRicon RRicon-less"></span>
+                        <div class="rr__editGuest_value">
+                          <span class="rr__editGuest_less_1year rr_hide">
+                            <
+                          </span>
+                          <span class="rr__editGuest_val">1</span>
+                          <span>%%RR_ROOM_CHILD_YEAR_RR%%</span>
+                        </div>
+                        <span class="RRicon RRicon-add"></span>
+                      </div>
+                    </div>
+
+                    <div class="rr__editGuest--header">
+                      <!-- <span class="hd_rooms_total">0</span> room(s) - <span class="hd_guests_total">0</span> adult(s) - <span class="hd_childs_total">0</span> child(s) -->
+                      <span>%%RR_ROOMOCCUPANCY_RR%%</span>
+                      <div class="rr__close_multiRoom mr_v2">
+                        <span class="RRicon RRicon-add"></span>
+                      </div>
+                    </div>
+                    <div class="rr__editGuest--body rr__details_room">
+                      <div class="rr__editGuest-item rr__roomLine">
+                        <div class="rr__editGuest-top">
+                          <div
+                            class="rr__lineRoom-numOfRoom rr__roomLine-numOfRoom"
+                          >
+                            <span>%%RR_ROOM_RR%%</span>
+                            <span class="order_room_val">1</span>
+                          </div>
+                          <div class="rr__delete_room">
+                            %%RR_REMOVE_ROOM_RR%%
+                          </div>
+                        </div>
+                        <div class="rr__editGuest-bottom">
+                          <div class="rr__editGuest--info rr__lineRoom">
+                            <div class="rr__editGuest-container adults">
+                              <span class="RRicon RRicon-less"></span>
+                              <div class="rr__editGuest_value">
+                                <span class="rr__editGuest_val">1</span>
+                                <span>%%RR_ROOM_ADULTS_RR%%</span>
+                              </div>
+                              <span class="RRicon RRicon-add"></span>
+                            </div>
+
+                            <div
+                              class="rr__editGuest-container children rr_hide"
+                            >
+                              <span class="RRicon RRicon-less"></span>
+                              <div class="rr__editGuest_value">
+                                <span class="rr__editGuest_val">0</span>
+                                <span
+                                  class="rr__editGuest_label"
+                                  data-one-c="%%RR_ROOM_CHILD_RR%%"
+                                  data-multi-c="%%RR_ROOM_CHILDREN_RR%%"
+                                  >%%RR_ROOM_CHILD_RR%%</span
+                                >
+                              </div>
+                              <span class="RRicon RRicon-add"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rr__editGuest--footer">
+                      <button
+                        type="button"
+                        class="rr__add_room rr__roomLine-add"
+                      >
+                        + %%RR_ADD_ROOM_RR%%
+                      </button>
+                      <button type="button" class="rr__edit_apply">
+                        %%RR_APPLY_MULTI_ROOMS_LABEL_RR%%
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="rr__label"><label>Room</label></div>
+                  <div class="rr__guests__item Booking__guests__item">
+                    <input
+                      type="hidden"
+                      name="rooms"
+                      value="1"
+                      id="RealRate-BB-rooms-selector"
+                    />
+                    <div
+                      class="rr__room__qty--down Booking__guests__item--down rrDefEv"
+                      rr-actionname="ROOM_UPDATED"
+                      data-min-val="1"
+                    >
+                      <span class="RRicon RRicon-less"></span>
+                    </div>
+                    <div class="rr__guests__item--room value">1</div>
+                    <div
+                      class="rr__room__qty--up Booking__guests__item--up rrDefEv"
+                      rr-actionname="ROOM_UPDATED"
+                      data-max-val="10"
+                    >
+                      <span class="RRicon RRicon-add"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rr__guests__col Adults">
+                  <div class="rr__label">
+                    <label>Adult</label>
+                  </div>
+                  <div class="rr__guests__item Booking__guests__item">
+                    <input
+                      type="hidden"
+                      name="adult"
+                      value="2"
+                      class="guest_check rrDefEv"
+                      id="RealRate-BB-adult-selector"
+                      rr-actionname="ADULT_UPDATED"
+                    />
+                    <div
+                      class="rr__guests__item--down Booking__guests__item--down"
+                      data-min-val="1"
+                    >
+                      <span class="RRicon RRicon-less"></span>
+                    </div>
+                    <div
+                      class="rr__guests__item--adult value Booking__guests__item--adult"
+                    >
+                      2
+                    </div>
+                    <div
+                      class="rr__guests__item--up Booking__guests__item--up"
+                      data-max-val="6"
+                    >
+                      <span class="RRicon RRicon-add"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rr__guests__col Children">
+                  <div class="rr__label">
+                    <label>%%RR_CHILDS_RR%%</label>
+                  </div>
+                  <div class="rr__guests__item Booking__guests__item">
+                    <input
+                      type="hidden"
+                      name="child"
+                      value="0"
+                      id="RealRate-BB-childs-selector"
+                      class="rrDefEv"
+                      rr-actionname="CHILD_UPDATED"
+                    />
+                    <div
+                      class="rr__guests__item--down Booking__guests__item--down"
+                      data-min-val="0"
+                    >
+                      <span class="RRicon RRicon-less"></span>
+                    </div>
+                    <div class="rr__guests__item--children value">0</div>
+                    <div
+                      class="rr__guests__item--up Booking__guests__item--up"
+                      data-max-val="6"
+                    >
+                      <span class="RRicon RRicon-add"></span>
+                    </div>
+                  </div>
+                  <!-- CHILDREN AGE -->
+                  <!-- %%RR_CHILDREN_AGE_RR%% -->
+                  <!-- CHILDREN AGE -->
+                </div>
+
+                <!-- PROMO FIELDS -->
+                <div class="rr__promotions">
+                  <div class="rr__label">
+                    <label>Promo Code ?</label>
+                  </div>
+
+                  <div class="rr__promotions_fields">
+                    <div class="rr__promo">
+                      <input
+                        type="text"
+                        rr-actionname="PROMOCODE_UPDATED"
+                        name="promo"
+                        class="rr__promo_input rrDefEv"
+                        data-field-id="1"
+                        data-field-default="1"
+                        placeholder="%%RR_PROMOCODE_RR%%"
+                      />
+                    </div>
+
+                    <div class="rr__promo">
+                      <input
+                        type="text"
+                        rr-actionname="PROMOCODE_UPDATED"
+                        name="group_code"
+                        class="rr__group_code_input rrDefEv"
+                        data-field-id="2"
+                        placeholder="%%RR_GROUPCODE_RR%%"
+                      />
+                    </div>
+
+                    <div class="rr__promo">
+                      <input
+                        type="text"
+                        rr-actionname="PROMOCODE_UPDATED"
+                        name="coupon_code"
+                        class="rr__coupon_code_input rrDefEv"
+                        data-field-id="3"
+                        placeholder="%%RR_COUPONCODE_RR%%"
+                      />
+                    </div>
+
+                    <div class="rr__promo">
+                      <input
+                        type="text"
+                        rr-actionname="PROMOCODE_UPDATED"
+                        name="iata_code"
+                        class="rr__iata_code_input rrDefEv"
+                        data-field-id="4"
+                        placeholder="%%RR_IATACODE_RR%%"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- PROMO FIELDS -->
+              </div>
+            </div>
+            <div class="rr__container_body--all">
+              <div class="rr__container_body--middle">
+                <div id="rr__calender" class="rr__calender"></div>
+
+                <div class="rr__grpLegend">
+                  <div class="LegendItem">
+                    <span class="ui-state-active Lgnd"></span
+                    >%%RR_SELECTEDDATES_RR%%
+                  </div>
+                  <div class="LegendItem">
+                    <span class="BECalOpen Lgnd"></span
+                    >%%RR_ROOMSAREAVAILABLE_RR%%
+                  </div>
+                  <div class="LegendItem">
+                    <span class="BENoAvail Lgnd"></span>%%RR_NOAVAILIBILITY_RR%%
+                  </div>
+                  <div class="LegendItem">
+                    <span class="BEMinLen Lgnd"></span>Min Stay
+                  </div>
+                  <div class="LegendItem" style="display: none">
+                    <span class="BENoDepart Lgnd"></span>No Departure
+                  </div>
+                  <div class="LegendItem">
+                    <span class="BENoArrive Lgnd"></span>
+                    No Arrival
+                  </div>
+                </div>
+                <div class="rr__offers">
+                  <div class="rr__offers_div"></div>
+                </div>
+              </div>
+              <div class="rr__container_body--right">
+                <div class="rr__container_body--right-container">
+                  <!-- START BOOKING SUMMARY / MAP -->
+                  <!-- %%RR_CONTENT_TOP_SIDEBAR_RR%% -->
+                  <!-- START BOOKING SUMMARY / MAP -->
+
+                  <!-- START RATING -->
+                  <div
+                    id="rating"
+                    class="rt__popup rt_rating_container hide rr_content-item"
+                  >
+                    <div class="rt__popup_header rr__rating_title">
+                      <p>Public Rating</p>
+                    </div>
+                    <div class="rt__popup_body">
+                      <div class="rt__popup_body--total">
+                        <div class="rat">--<sub>/--</sub></div>
+                        <div class="">
+                          <div class="rt__popup_body--sub">
+                            <div class="rr-rating" data-rating=""></div>
+                          </div>
+                          <!-- number of rating -->
+                          <p class="nbr__rat">-- 200 Reviews</p>
+                          <!-- end number of rating -->
+                        </div>
+                      </div>
+
+                      <div class="g__rating--global">
+                        <div class="g__container rr-booking">
+                          <div class="rr__logo logo-bk">
+                            <span class="rt_book">Book</span
+                            ><span class="rt_ing">ing</span>
+                          </div>
+                          <div class="g__rating-num">
+                            <span class="">--</span>
+                          </div>
+                        </div>
+
+                        <div class="g__container rr-exp">
+                          <div class="rr__logo logo-ex">
+                            <span class="rt_expedia">Expedia</span>
+                          </div>
+                          <div class="g__rating-num">
+                            <div class="g__rating-num">
+                              <span class="">--</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="g__container rr-ta last_item">
+                          <div class="rr__logo logo-tp">
+                            <span class="rt_trip">trip</span
+                            ><span class="rt_advisor">advisor</span>
+                          </div>
+                          <div class="g__rating-icon">
+                            <span
+                              class="ui_bubble_rating"
+                              data-clicksource="BubbleRatingTrackingOnly"
+                            ></span>
+                          </div>
+                        </div>
+                        <div class="g__rating--footer" style="display: none">
+                          <p>Thank you for booking with us</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END RATING -->
+
+                  <div class="rr__xtease_title">
+                    <p>Price Comparaison</p>
+                  </div>
+
+                  <div class="rr_ripple">
+                    <div style="display: none"></div>
+                    <div style="display: none"></div>
+                  </div>
+                  <!-- <div class="rr__response">%%RR_WEHAVEBESTPRICE_RR%%</div> -->
+                  <div class="rr__xtease xtease">
+                    <div class="rr__xtease_body">
+                      <div
+                        class="rr__xtease_body--portail bk RealRate-xtease-item-booking xt__portals"
+                      >
+                        <p class="rr__xtease_body-name">Booking</p>
+                        <div class="rr__xtease_body--p xt__price">
+                          <span class="rr__xtease_body--price">--</span>
+                          <span class="rr__xtease_body--currency">--</span>
+                        </div>
+                      </div>
+                      <div
+                        class="rr__xtease_body--portail ex RealRate-xtease-item-expedia xt__portals"
+                      >
+                        <p class="rr__xtease_body-name">Expedia</p>
+                        <div class="rr__xtease_body--p xt__price">
+                          <span class="rr__xtease_body--price">--</span>
+                          <span class="rr__xtease_body--currency">--</span>
+                        </div>
+                      </div>
+                      <div
+                        class="rr__xtease_body--portail hrs RealRate-xtease-item-hrs xt__portals"
+                      >
+                        <p class="rr__xtease_body-name">Hrs</p>
+                        <div class="rr__xtease_body--p xt__price">
+                          <span class="rr__xtease_body--price">--</span>
+                          <span class="rr__xtease_body--currency">--</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rr__submit">
+                    <a
+                      target="_blank"
+                      class="rr__book_now_as_link rrClkEv"
+                      rr-actionname="RR - Form Submits"
+                      href="#"
+                      style="display: none"
+                      >Book Direct</a
+                    >
+                    <input
+                      type="submit"
+                      class="rr__submit_button"
+                      value="Book Direct"
+                    />
+                    <div class="rr__submit_p">
+                      <span class="rr__submit--price">--</span>
+                      <span class="rr__submit--currency currency">--</span>
+                    </div>
+                  </div>
+                  <div class="rr__modifiy RealRate-BB-Modify-cancel-res">
+                    <a href="#">
+                      <span class="RRicon-settings"> </span>
+                      %%RR_MODIFY_OR_CANCEL_RES_RR%%
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <button class="rr__container_menu_button rr__menu_button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <g data-name="vuesax/linear/menu" transform="translate(-684 -380)">
+            <g id="menu">
+              <path
+                id="Vector"
+                d="M0,0H18"
+                transform="translate(687 387)"
+                fill="none"
+                stroke="#292d32"
+                stroke-linecap="round"
+                stroke-width="1.5"
+              />
+              <path
+                id="Vector-2"
+                data-name="Vector"
+                d="M0,0H18"
+                transform="translate(687 392)"
+                fill="none"
+                stroke="#292d32"
+                stroke-linecap="round"
+                stroke-width="1.5"
+              />
+              <path
+                id="Vector-3"
+                data-name="Vector"
+                d="M0,0H18"
+                transform="translate(687 397)"
+                fill="none"
+                stroke="#292d32"
+                stroke-linecap="round"
+                stroke-width="1.5"
+              />
+              <path
+                id="Vector-4"
+                data-name="Vector"
+                d="M0,0H24V24H0Z"
+                transform="translate(684 380)"
+                fill="none"
+                opacity="0"
+              />
+            </g>
+          </g>
+        </svg>
+      </button>
+      <div class="rr__container_menu rr__menu">
+        <button class="rr__close_menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="33.941"
+            height="33.941"
+            viewBox="0 0 33.941 33.941"
+          >
+            <g
+              data-name="vuesax/linear/add"
+              transform="translate(-152.735 -526.087) rotate(45)"
+            >
+              <g id="add">
+                <path
+                  id="Vector"
+                  d="M0,0H12"
+                  transform="translate(498 264)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  id="Vector-2"
+                  data-name="Vector"
+                  d="M0,12V0"
+                  transform="translate(504 258)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  id="Vector-3"
+                  data-name="Vector"
+                  d="M0,0H24V24H0Z"
+                  transform="translate(492 252)"
+                  fill="none"
+                  opacity="0"
+                />
+              </g>
+            </g>
+          </svg>
+        </button>
+        <ul class="rr_menu_mobile">
+          <li class="menu-item" data-content="availability">
+            Check Availability
+          </li>
+          <li class="menu-item" data-content="booking">Find Booking</li>
+          <li class="menu-item" data-content="reservation">
+            Cancel Reservation
+          </li>
+        </ul>
+        <hr />
+        <ul class="rr_menu_mobile">
+          <li class="menu-item" data-content="find-us">Find us</li>
+          <li class="menu-item" data-content="rating">Public rating</li>
+          <li class="menu-item" data-content="offers">Offers</li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/jquery.daterangepicker.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script async defer src="js/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".rr_content-item").hide();
+
+        // Add click event to menu items
+        $(".menu-item").click(function () {
+          const contentId = $(this).data("content");
+          $(".rr_content-item").hide();
+          $(`#${contentId}`).show();
+          $(".rr__menu").toggleClass("open");
+        });
+
+        $(".rr__menu_button").click(function () {
+          $(".rr__menu").toggleClass("open");
+        });
+        $(".rr__close_menu").click(function () {
+          $(".rr__menu").toggleClass("open");
+        });
+        $(".rr__update_guest").click(function () {
+          $(".rr__infos__stay").toggleClass("open");
+          $(".guestResult").hide();
+        });
+        $(".rr__close_guest").click(function () {
+          $(".rr__infos__stay").toggleClass("open");
+          $(".guestResult").show();
+        });
+      });
+    </script>
+  </body>
+</html>
