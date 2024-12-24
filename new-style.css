@@ -16,7 +16,8 @@
     .rr__date__col,
     .rr__promo,
     .rr__container .rr__modifiy,
-    .rr__infos_maps {
+    .rr__infos_maps,
+    .rr__map_bs_title {
         display: none !important;
     }
 
