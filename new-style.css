@@ -655,4 +655,8 @@
 
     /* End code need to be removed */
 
+    .rr__lineRoom-numOfRoom.rr__roomLine-numOfRoom {
+        display: flex;
+    }
+
 }
