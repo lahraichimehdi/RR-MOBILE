@@ -242,8 +242,9 @@
     }
 
     .rr__container .rr__label label {
-        font-weight: 500;
+        font-weight: BOLD;
         font-size: 14px !important;
+        text-transform: capitalize;
     }
 
     .rr__container .rr__guests__item--down,
