@@ -57,6 +57,16 @@
         text-align: center;
     }
 
+    .rr__container {
+        left: 0;
+        bottom: -290%;
+        right: 0;
+        top: 0;
+        width: 100%;
+        max-height: none;
+        height: 100%
+    }
+
     .rr__container.open {
         left: 0;
         bottom: 0;
@@ -105,7 +115,7 @@
         width: 60px;
     }
 
-    .rr__container {
+    .rr__container.open {
         top: 0%;
         width: 100%;
         height: 100%;
@@ -207,10 +217,11 @@
         padding: 10px;
     }
 
-    .rr__container .rr__guests__item--down,
-    .rr__container .rr__guests__item--up {
-        color: #000000;
-    }
+    /* .rr__container .rr__guests__item--down,
+    .rr__container .rr__guests__item--up,
+     {
+        
+    } */
 
     .rr__container .rr__date__col,
     .rr__container .rr__guests__col {
@@ -226,13 +237,16 @@
     }
 
     .rr__container .rr__guests__item--down,
-    .rr__container .rr__guests__item--up {
+    .rr__container .rr__guests__item--up,
+    .rr__room__qty--down.Booking__guests__item--down,
+    .rr__room__qty--up.Booking__guests__item--up {
         border: 1px solid #000;
         border-radius: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0;
+        color: #000000;
     }
 
     .rr__container .rr__guests__item .value {

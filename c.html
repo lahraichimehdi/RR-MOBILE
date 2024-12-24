@@ -28,12 +28,12 @@
     <link rel="stylesheet" href="new-style.css" />
   </head>
   <body>
-    <!-- <div class="rr__button" style="display: none">
+    <div class="rr__button">
       <button class="rr__button_cta">
         <span class="rr__button_cta--top">%%RR_BBCheckAvailibility_RR%%</span>
-        <span class="rr__button_cta--bottom">%%RR_BESTPRICEGUARANTEE_RR%%</span>
+        <!-- <span class="rr__button_cta--bottom">%%RR_BESTPRICEGUARANTEE_RR%%</span> -->
       </button>
-    </div> -->
+    </div>
 
     <div class="rr__container" translate="no">
       <!-- FULL MAP -->
@@ -2132,6 +2132,9 @@
     <script async defer src="js/main.js"></script>
     <script>
       $(document).ready(function () {
+        $(".rr__close").click(function () {
+          $(".rr__container").removeAttr("open");
+        });
         $(".rr_content-item").hide();
 
         // Add click event to menu items
