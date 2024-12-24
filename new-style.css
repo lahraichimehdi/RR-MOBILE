@@ -93,6 +93,9 @@
     .rr__container .rr__close {
         background: transparent;
         z-index: 99999999999;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
     }
 
     .rr__container .rr__close .bar:after,
