@@ -628,7 +628,7 @@
     }
 
     .rr__guests__col.Rooms {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .rr__editGuest::before {
@@ -657,6 +657,17 @@
 
     .rr__lineRoom-numOfRoom.rr__roomLine-numOfRoom {
         display: flex;
+    }
+
+    .rr__editGuest--info.rr__lineRoom {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .rr__editGuest--info>div {
+        margin: 0;
+        margin-bottom: 10px;
     }
 
 }
