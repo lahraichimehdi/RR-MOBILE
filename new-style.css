@@ -539,12 +539,14 @@
 
     .rr__form {
         margin-top: 40px;
+        padding: 15px;
     }
 
     .rr_form {
         display: flex;
         flex-direction: column;
         margin-bottom: 10px;
+        /* padding: 10px; */
     }
 
     .rr_form input {
