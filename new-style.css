@@ -349,7 +349,8 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         pointer-events: initial;
-        font-size: 18px;
+        font-size: 16px;
+        box-shadow: 0 -4px 23px rgb(0 0 0 / 70%);
     }
 
     .rr__container .rt__popup_header p {
@@ -589,7 +590,7 @@
     }
 
     .rr__container .rr__xtease_body--portail {
-        padding: 10px;
+        padding: 10px 0;
     }
 
     .date-picker-wrapper.no-shortcuts.inline-wrapper.no-gap.single-month {
