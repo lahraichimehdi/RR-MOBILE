@@ -36,6 +36,9 @@
     </div>
 
     <div class="rr__container" translate="no">
+      <div class="rt__popup_header rr__rating_title">
+        <p>Check availability</p>
+      </div>
       <!-- FULL MAP -->
       <div class="rr_map_extend rr_content-item" id="find-us">
         <div class="rr__t_close">
@@ -1479,53 +1482,6 @@
 
           <div class="rr__container_body--body">
             <div class="rr__container_body--left">
-              <!-- <div class="rr__row_close_guest">
-                <h4>Room 1</h4>
-                <span class="rr__close_guest">
-                  <svg
-                    width="33.941"
-                    height="33.941"
-                    viewBox="0 0 33.941 33.941"
-                  >
-                    <g
-                      data-name="vuesax/linear/add"
-                      transform="translate(-152.735 -526.087) rotate(45)"
-                    >
-                      <g id="add">
-                        <path
-                          id="Vector"
-                          d="M0,0H12"
-                          transform="translate(498 264)"
-                          fill="none"
-                          stroke="#292d32"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                        ></path>
-                        <path
-                          id="Vector-2"
-                          data-name="Vector"
-                          d="M0,12V0"
-                          transform="translate(504 258)"
-                          fill="none"
-                          stroke="#292d32"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                        ></path>
-                        <path
-                          id="Vector-3"
-                          data-name="Vector"
-                          d="M0,0H24V24H0Z"
-                          transform="translate(492 252)"
-                          fill="none"
-                          opacity="0"
-                        ></path>
-                      </g>
-                    </g>
-                  </svg>
-                </span>
-              </div> -->
               <div class="guestResult">
                 <div>
                   <h4>Guests</h4>
@@ -1570,6 +1526,53 @@
                 </div>
               </div>
               <div class="rr__infos__stay">
+                <div class="rr__row_close_guest">
+                  <h4>Room Occupancy</h4>
+                  <span class="rr__close_guest">
+                    <svg
+                      width="33.941"
+                      height="33.941"
+                      viewBox="0 0 33.941 33.941"
+                    >
+                      <g
+                        data-name="vuesax/linear/add"
+                        transform="translate(-152.735 -526.087) rotate(45)"
+                      >
+                        <g id="add">
+                          <path
+                            id="Vector"
+                            d="M0,0H12"
+                            transform="translate(498 264)"
+                            fill="none"
+                            stroke="#292d32"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                          ></path>
+                          <path
+                            id="Vector-2"
+                            data-name="Vector"
+                            d="M0,12V0"
+                            transform="translate(504 258)"
+                            fill="none"
+                            stroke="#292d32"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                          ></path>
+                          <path
+                            id="Vector-3"
+                            data-name="Vector"
+                            d="M0,0H24V24H0Z"
+                            transform="translate(492 252)"
+                            fill="none"
+                            opacity="0"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </div>
                 <div class="rr__date__col Arrival">
                   <div class="rr__label">
                     <label>Arrival date </label>
@@ -1656,9 +1659,7 @@
                             <span>%%RR_ROOM_RR%%</span>
                             <span class="order_room_val">1</span>
                           </div>
-                          <div class="rr__delete_room">
-                            %%RR_REMOVE_ROOM_RR%%
-                          </div>
+                          <div class="rr__delete_room"> Remove </div>
                         </div>
                         <div class="rr__editGuest-bottom">
                           <div class="rr__editGuest--info rr__lineRoom">
@@ -1681,8 +1682,9 @@
                                   class="rr__editGuest_label"
                                   data-one-c="%%RR_ROOM_CHILD_RR%%"
                                   data-multi-c="%%RR_ROOM_CHILDREN_RR%%"
-                                  >%%RR_ROOM_CHILD_RR%%</span
                                 >
+                                  %%RR_ROOM_CHILD_RR%%
+                                </span>
                               </div>
                               <span class="RRicon RRicon-add"></span>
                             </div>
@@ -1695,10 +1697,10 @@
                         type="button"
                         class="rr__add_room rr__roomLine-add"
                       >
-                        + %%RR_ADD_ROOM_RR%%
+                        + Add room
                       </button>
                       <button type="button" class="rr__edit_apply">
-                        %%RR_APPLY_MULTI_ROOMS_LABEL_RR%%
+                        Apply
                       </button>
                     </div>
                   </div>

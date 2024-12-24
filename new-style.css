@@ -80,7 +80,8 @@
         top: 0;
         width: 100%;
         max-height: none;
-        height: 100%
+        height: 100%;
+        overflow: auto;
     }
 
     .rr__container .date-picker-wrapper .month-wrapper table .week-name th {
@@ -222,7 +223,7 @@
     .rr__container .rr__container_body--left {
         background-color: #F5F5F5;
         color: #000000;
-        margin: 50px 10px 0;
+        margin: 20px 10px 0;
         border-radius: 6px;
         padding: 10px;
     }
@@ -261,8 +262,8 @@
     }
 
     .rr__container .rr__guests__item .value {
-        font-size: 16px;
-        margin: 0 10px;
+        font-size: 18px;
+        margin: 0 15px;
         font-variant-numeric: tabular-nums;
         font-weight: 600;
     }
@@ -276,6 +277,12 @@
         box-shadow: 0 -6px 30px #e4e4e4;
         background-color: transparent;
         height: 80px;
+        transition: all 1s ease-in-out;
+    }
+
+    .rr__container.open .rr__submit {
+        position: fixed;
+        z-index: 9;
     }
 
     .rr__container .rr__container_body--right {
@@ -608,4 +615,44 @@
         margin: 0 5px;
         border-radius: 4px;
     }
+
+    .rr__editGuest.multiRooms,
+    .rr__editGuest.onlyChild {
+        display: block;
+        top: initial !important;
+        position: initial !important;
+        min-width: auto !important;
+        width: 100%;
+        height: auto;
+        border: 0;
+    }
+
+    .rr__guests__col.Rooms {
+        flex-direction: column;
+    }
+
+    .rr__editGuest::before {
+        display: none;
+    }
+
+    .rr__editGuest--footer {
+        flex-direction: column;
+    }
+
+    .multiRooms .rr__edit_apply {
+        padding: 10px;
+        background-color: black;
+    }
+
+    .rr__editGuest--header {
+        display: none;
+    }
+
+    /* code need to be removed */
+    .rr__editGuest-item.rr__roomLine:first-child .rr__delete_room {
+        display: block;
+    }
+
+    /* End code need to be removed */
+
 }
