@@ -1889,7 +1889,7 @@
                   <!-- START RATING -->
                   <div
                     id="rating"
-                    class="rt__popup rt_rating_container rr_content-item"
+                    class="rt__popup rt_rating_container hide rr_content-item"
                   >
                     <div class="rt__popup_header rr__rating_title">
                       <p>Public Rating</p>
@@ -2178,12 +2178,15 @@
     <script async defer src="js/main.js"></script>
     <script>
       $(document).ready(function () {
-        $(".rr__close").click(function () {
-          $(".rr__container").removeAttr("open");
-          $(".rr_content-item").hide();
-        });
+        const default_mobile_width = 600;
+        if (jQuery(window).width() < default_mobile_width) {
+          $(".rr__close").click(function () {
+            $(".rr__container").removeAttr("open");
+            $(".rr_content-item").hide();
+          });
 
-        $(".rr_content-item").hide();
+          $(".rr_content-item").hide();
+        }
 
         // Add click event to menu items
         $(".menu-item").click(function () {

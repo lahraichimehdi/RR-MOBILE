@@ -5,9 +5,6 @@
     display: none;
 }
 
-.rr_content-item {
-    display: block !important;
-}
 
 .guestResult,
 .rr_cancel_reserv {
@@ -15,6 +12,11 @@
 }
 
 @media screen and (max-width: 600px) {
+
+    .rr__new,
+    .rr__row_close_guest {
+        display: block;
+    }
 
     .rr__button *,
     .rr__container * {
