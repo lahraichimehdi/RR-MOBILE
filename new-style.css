@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Urbanist:300,400,600,700');
 
+.rr__new,
+.rr__row_close_guest {
+    display: none;
+}
+
+.rr_content-item {
+    display: block !important;
+}
+
 .guestResult,
 .rr_cancel_reserv {
     display: none;

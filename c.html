@@ -36,7 +36,7 @@
     </div>
 
     <div class="rr__container" translate="no">
-      <div class="rt__popup_header rr__rating_title">
+      <div class="rt__popup_header rr__rating_title rr__new">
         <p>Check availability</p>
       </div>
       <!-- FULL MAP -->
@@ -1889,7 +1889,7 @@
                   <!-- START RATING -->
                   <div
                     id="rating"
-                    class="rt__popup rt_rating_container hide rr_content-item"
+                    class="rt__popup rt_rating_container rr_content-item"
                   >
                     <div class="rt__popup_header rr__rating_title">
                       <p>Public Rating</p>
@@ -2206,6 +2206,19 @@
         $(".rr__close_guest").click(function () {
           $(".rr__infos__stay").toggleClass("open");
           $(".guestResult").show();
+        });
+
+        jQuery("body").on("click", ".rr__close_multiRoom", function () {
+          jQuery(".rr__editGuest").fadeOut(100).removeClass("mr_active");
+          jQuery(
+            ".Booking__guests__item--down,.Booking__guests__item--up"
+          ).removeClass("rr_disabled");
+        });
+
+        jQuery("body").on("click", ".rr__promotions .rr__label", function () {
+          jQuery(".rr__promotions_fields").toggleClass(
+            "rr__promotions_fields--show"
+          );
         });
       });
     </script>
