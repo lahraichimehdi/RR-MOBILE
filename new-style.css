@@ -236,9 +236,13 @@
     .rr__container .rr__container_body--left {
         background-color: #F5F5F5;
         color: #000000;
-        margin: 20px 10px 0;
+        margin: 10px 10px 0;
         border-radius: 6px;
-        padding: 10px;
+        padding: 10px !important;
+    }
+
+    .rr__promotions {
+        padding: 5px !important;
     }
 
     /* .rr__container .rr__guests__item--down,
