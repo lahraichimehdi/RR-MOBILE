@@ -373,6 +373,7 @@
     }
 
     .rr__container .rt__popup_header {
+        width: 100%;
         background-color: #ffffff;
         color: #000000;
         text-transform: uppercase !important;

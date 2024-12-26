@@ -20,7 +20,7 @@
     <script>
       $(document).ready(function () {
         setTimeout(() => {
-          $(".rr__container").append(`
+          $(".rr__container_body").append(`
             <span class="rr__container_menu_button rr__menu_button">
             <svg width="24" height="24" viewBox="0 0 24 24">
                 <g transform="translate(-684 -380)">
@@ -118,6 +118,12 @@
             </ul>
             </div>
             `);
+
+          $(".rr__container_body").prepend(`
+          <div class="rt__popup_header rr__rating_title rr__new">
+                <p>Check availability</p>
+            </div>
+        `);
         }, 3000);
 
         jQuery("body").on("click", ".rr__menu_button", function () {
