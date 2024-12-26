@@ -156,7 +156,7 @@
         background-color: #ffffff;
         top: 0;
         left: -100%;
-        box-shadow: 0 0 26px #c2c2c2;
+        box-shadow: 0 0 71px #00000059;
         z-index: 9999999;
         transition: left 0.3s ease-in-out;
     }
@@ -618,6 +618,10 @@
 
     .rr__container .date-picker-wrapper .month-wrapper table .week-name {
         height: 40px !important;
+    }
+
+    .rr__container .date-picker-wrapper .month-wrapper table .day {
+        min-height: 50px !important;
     }
 
     .rr__container .rr__xtease_body--portail {
