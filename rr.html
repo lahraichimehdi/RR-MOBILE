@@ -9,10 +9,117 @@
       src="https://api.globres.io/RealRate/66078/BB/RR_60ae2833adc5d/EN"
       type="text/javascript"
     ></script>
+    <script src="js/jquery.js"></script>
+
     <link rel="stylesheet" href="new-style.css" />
     <!-- End RealRate script -->
   </head>
   <body>
     <button class="rr_opener">Book</button>
+
+    <script>
+      $(document).ready(function () {
+        setTimeout(() => {
+          $(".rr__container").append(`
+            <span class="rr__container_menu_button rr__menu_button">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(-684 -380)">
+                <g>
+                    <path
+                    id="Vector"
+                    d="M0,0H18"
+                    transform="translate(687 387)"
+                    fill="none"
+                    stroke="#292d32"
+                    stroke-linecap="round"
+                    stroke-width="1.5"
+                    />
+                    <path
+                    id="Vector-2"
+                    data-name="Vector"
+                    d="M0,0H18"
+                    transform="translate(687 392)"
+                    fill="none"
+                    stroke="#292d32"
+                    stroke-linecap="round"
+                    stroke-width="1.5"
+                    />
+                    <path
+                    id="Vector-3"
+                    data-name="Vector"
+                    d="M0,0H18"
+                    transform="translate(687 397)"
+                    fill="none"
+                    stroke="#292d32"
+                    stroke-linecap="round"
+                    stroke-width="1.5"
+                    />
+                    <path
+                    id="Vector-4"
+                    data-name="Vector"
+                    d="M0,0H24V24H0Z"
+                    transform="translate(684 380)"
+                    fill="none"
+                    opacity="0"
+                    />
+                </g>
+                </g>
+            </svg>
+            </span>
+            <div class="rr__container_menu rr__menu">
+            <button class="rr__close_menu">
+                <svg width="33.941" height="33.941" viewBox="0 0 33.941 33.941">
+                <g transform="translate(-152.735 -526.087) rotate(45)">
+                    <g id="add">
+                    <path
+                        d="M0,0H12"
+                        transform="translate(498 264)"
+                        fill="none"
+                        stroke="#292d32"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                    />
+                    <path
+                        data-name="Vector"
+                        d="M0,12V0"
+                        transform="translate(504 258)"
+                        fill="none"
+                        stroke="#292d32"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                    />
+                    <path
+                        data-name="Vector"
+                        d="M0,0H24V24H0Z"
+                        transform="translate(492 252)"
+                        fill="none"
+                        opacity="0"
+                    />
+                    </g>
+                </g>
+                </svg>
+            </button>
+            <ul class="rr_menu_mobile">
+                <li class="menu-item" data-content="availability">
+                Check Availability
+                </li>
+                <li class="menu-item" data-content="booking">Find Booking</li>
+                <li class="menu-item" data-content="reservation">
+                Cancel Reservation
+                </li>
+            </ul>
+            <hr />
+            <ul class="rr_menu_mobile">
+                <li class="menu-item" data-content="find-us">Find us</li>
+                <li class="menu-item" data-content="rating">Public rating</li>
+                <li class="menu-item" data-content="offers">Offers</li>
+            </ul>
+            </div>
+            `);
+        }, 5000);
+      });
+    </script>
   </body>
 </html>
