@@ -51,6 +51,7 @@
     .rr__container .rr__grpLegend {
         flex-direction: row !important;
         flex-wrap: nowrap !important;
+        padding: 0 10px !important;
     }
 
     .rr__container .rr__container_body--middle {
@@ -225,6 +226,7 @@
     .rr__container .rr__container_body--right-container {
         /* height: auto; */
         position: relative;
+        padding: 0 10px;
     }
 
     .rr__grpLegend .LegendItem:nth-child(1),
@@ -238,7 +240,7 @@
         color: #000000;
         margin: 10px 10px 0;
         border-radius: 6px;
-        padding: 10px !important;
+        padding: 0px !important;
     }
 
     .rr__promotions {
@@ -304,7 +306,7 @@
     }
 
     .rr__container .rr__container_body--right {
-        padding: 0;
+        padding: 0 !important;
     }
 
     .rr__container .rr__submit_button {
@@ -623,7 +625,7 @@
     }
 
     .date-picker-wrapper.no-shortcuts.inline-wrapper.no-gap.single-month {
-        padding: 10px;
+        padding: 5px 10px;
         background: white;
     }
 
