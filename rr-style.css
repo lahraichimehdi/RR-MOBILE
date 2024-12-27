@@ -180,6 +180,10 @@
         font-family: inherit;
     }
 
+    span.rr__code_type {
+        font-weight: 300;
+    }
+
     .rr__submit_p {
         display: flex;
         position: absolute;
