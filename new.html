@@ -92,7 +92,7 @@
         </span>
       </div>
       <div class="rr__menu">
-        <button class="rr__menu--close">
+        <span class="rr__menu--close">
           <svg width="33.941" height="33.941" viewBox="0 0 33.941 33.941">
             <g transform="translate(-152.735 -526.087) rotate(45)">
               <g id="add">
@@ -125,7 +125,7 @@
               </g>
             </g>
           </svg>
-        </button>
+        </span>
         <ul class="rr__menu--nav">
           <li class="rr__menu--item" data-content="availability">
             Check Availability
@@ -417,6 +417,12 @@
         hoveringTooltip: false,
         format: "DD.MM.YYYY",
         startDate: new Date(),
+      });
+      jQuery(".rr__menu--trigger").click(function () {
+        jQuery(".rr__menu").toggleClass("open");
+      });
+      jQuery(".rr__menu--close").click(function () {
+        jQuery(".rr__menu").toggleClass("open");
       });
     </script>
   </body>
