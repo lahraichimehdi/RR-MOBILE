@@ -373,11 +373,11 @@
     .rr__container .rr__grpLegend {
         flex-direction: row;
         flex-wrap: nowrap;
-        padding: 0 10px;
+        padding: 0;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding: 10px 0;
+        margin-top: 10px;
     }
 
     .rr__container .LegendItem {
@@ -388,7 +388,6 @@
         font-size: 13px;
         font-style: italic;
         text-align: left;
-        /* padding: 5px 0; */
     }
 
     .rr__container .rr__grpLegend .Lgnd {
