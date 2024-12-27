@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Urbanist:300,400,600,500,700');
+@import url("https://api.globres.io/RealRate/assets/lib/css/RRicon.css");
 @media screen and (max-width: 600px) {
 
     .rr__button *,
@@ -296,6 +297,27 @@
         font-weight: 600;
     }
 
+    .rr__container .date-picker-wrapper table .caption .next::before,
+    .rr__container .date-picker-wrapper table .caption .prev::before {
+        content: "\e900";
+        position: absolute;
+        font-family: "RRicon" !important;
+        visibility: visible;
+        font-size: 20px;
+        color: black;
+        top: 5px;
+    }
+
+    .rr__container .date-picker-wrapper table .caption .next::before {
+        transform: rotate(-90deg) translateX(-50%);
+        right: 5px;
+    }
+
+    .rr__container .date-picker-wrapper table .caption .prev::before {
+        transform: rotate(90deg) translateX(50%);
+        left: 5px;
+    }
+
     @keyframes loadPrice {
         0% {
             content: "...";
@@ -304,5 +326,66 @@
         100% {
             content: "99$";
         }
+    }
+
+    @media all and (-ms-high-contrast: none) {
+
+        .rr__container .date-picker-wrapper table .caption .next,
+        .rr__container .date-picker-wrapper table .caption .prev {
+            visibility: visible;
+            font-size: 45px;
+        }
+
+        .rr__container .date-picker-wrapper table .caption .next::before,
+        .rr__container .date-picker-wrapper table .caption .prev::before {
+            display: none;
+        }
+
+        /* IE10 */
+        *::-ms-backdrop,
+        .rr__container .date-picker-wrapper table .caption .next,
+        .rr__container .date-picker-wrapper table .caption .prev {
+            visibility: visible;
+        }
+
+        .rr__container .date-picker-wrapper table .caption .next::before,
+        .rr__container .date-picker-wrapper table .caption .prev::before {
+            display: none;
+        }
+    }
+
+    .rr__container .date-picker-wrapper.no-shortcuts {
+        border: 0;
+        padding: 0;
+        width: 100%;
+        font-weight: 300;
+    }
+
+    .date-picker-wrapper table .caption .next,
+    .date-picker-wrapper table .caption .prev {
+        visibility: hidden;
+    }
+
+    .calendarEdit {
+        flex-direction: column;
+    }
+
+    .rr__container .rr__grpLegend {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .rr__container .LegendItem {
+        text-transform: capitalize;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        font-style: italic;
+        text-align: left;
+        padding: 5px 0;
     }
 }
