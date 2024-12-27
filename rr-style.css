@@ -376,6 +376,8 @@
         padding: 0 10px;
         display: flex;
         justify-content: space-between;
+        width: 100%;
+        padding: 10px 0;
     }
 
     .rr__container .LegendItem {
@@ -386,6 +388,23 @@
         font-size: 13px;
         font-style: italic;
         text-align: left;
-        padding: 5px 0;
+        /* padding: 5px 0; */
+    }
+
+    .rr__container .rr__grpLegend .Lgnd {
+        vertical-align: middle;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin: 0 5px 0 0;
+    }
+
+    .RealRate-BB-container td[status-date="MinStay"] .day,
+    .rr__grpLegend .BEMinLen {
+        background-color: #bdf0f7 !important;
+    }
+
+    .rr__container .rr__grpLegend .BENoArrive {
+        background-image: linear-gradient(135deg, #d4dbc5 50%, #FFF 50%);
     }
 }
