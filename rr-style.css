@@ -47,6 +47,10 @@
         top: 0;
     }
 
+    .rr__roomLine {
+        width: 100%;
+    }
+
     .rr__container--header h5 {
         text-transform: uppercase !important;
         letter-spacing: 1px;
