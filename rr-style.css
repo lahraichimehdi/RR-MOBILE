@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Urbanist:300,400,600,500,700');
+@media screen and (max-width: 600px) {
+
+    .rr__button *,
+    .rr__container * {
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 300;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .rr__container {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rr_view {
+        /* display: none; */
+        flex: 1;
+        overflow-y: auto;
+        padding-bottom: 100px;
+    }
+
+    .rr__container--header {
+        padding: 10px;
+        background-color: #ffffff;
+        color: #000000;
+        display: flex;
+        box-shadow: 0 -4px 23px rgb(0 0 0 / 50%);
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .rr__container--header h5 {
+        text-transform: uppercase !important;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .rr__menu {
+        position: absolute;
+        width: 70%;
+        height: 100%;
+        background-color: #ffffff;
+        top: 0;
+        left: -100%;
+        box-shadow: 0 0 71px #00000059;
+        z-index: 9999999;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .rr__menu--nav {
+        padding: 10px;
+        margin: 0;
+        list-style: none;
+    }
+
+    .rr__menu--nav li {
+        padding: 15px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .rr__menu hr {
+        opacity: 0.2;
+    }
+
+    .rr__component {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        justify-content: space-between;
+        font-size: 14px;
+        padding: 10px !important;
+        margin: 0 10px;
+        background-color: #f5f5f5;
+        margin-top: 15px;
+        border-radius: 5px;
+    }
+
+    .rr__component h4 {
+        margin-bottom: 4px;
+        font-weight: lighter;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+
+    .rr__component span {
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .rr__xtease_title {
+        font-size: 16px;
+        background: #ffffff;
+        color: #000000;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .rr__xtease {
+        margin-top: 20px;
+    }
+
+    .rr__xtease h5 {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 16px;
+        background: #ffffff;
+        color: #000000;
+        font-weight: 700;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .xtease {
+        background: #f5f5f5;
+        padding: 10px;
+        margin: 0 10px;
+        border-radius: 5px;
+    }
+
+    .rr__xtease_body {
+        padding: 5px;
+        padding-top: 0;
+        position: relative;
+    }
+
+    .rr__xtease_body--p {
+        flex: 3;
+        text-align: right;
+        font-size: 14px;
+    }
+
+    .rr__xtease_body--portail {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px dashed #c1c1c1;
+    }
+
+    .rr__submit {
+        box-shadow: 0 -6px 30px #e4e4e4;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        height: 80px;
+        transition: all 1s ease-in-out;
+        color: white;
+    }
+
+    .rr__submit_button {
+        background-color: black;
+
+        color: #ffffff;
+        height: 100%;
+        border: 0;
+        width: 100%;
+        outline: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        padding: 10px 20px;
+        font-family: inherit;
+    }
+
+    .rr__submit_p {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .rr__submit--price {
+        font-weight: 700;
+        font-size: 30px;
+        position: relative;
+    }
+
+    .rr__submit--currency {
+        margin-left: 5px;
+        font-size: 16px;
+    }
+
+    .rr__container .date-picker-wrapper .month-wrapper table .day.toMonth.valid {
+        color: #333;
+        font-weight: 500;
+        position: relative;
+        font-size: 14px;
+        border: 1px solid #e4e4e4;
+    }
+
+    .rr__container .date-picker-wrapper .month-wrapper table,
+    .rr__container .date-picker-wrapper .month-wrapper table.month2 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .rr__container .date-picker-wrapper .month-wrapper table .week-name {
+        height: 40px !important;
+    }
+
+    .rr__container .date-picker-wrapper .month-wrapper table .week-name th {
+        background: #ffffff;
+        color: #000000;
+        width: 14%;
+        padding: 13px 0;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .rr__container .date-picker-wrapper .month-wrapper table .day {
+        min-height: 50px !important;
+        margin: 1px;
+        font-size: 16px;
+    }
+
+    .rr__container .date-picker-wrapper.no-shortcuts.inline-wrapper.no-gap.single-month {
+        padding: 0;
+        background: white;
+        border: 0;
+    }
+
+    .rr__container .date-picker-wrapper .month-wrapper {
+        border: 0;
+    }
+
+    .rr__container .date-picker-wrapper .gap,
+    .rr__container .date-picker-wrapper .footer,
+    .rr__container .date-picker-wrapper .drp_top-bar {
+        display: none;
+    }
+
+    .rr__container .date-picker-wrapper .month-wrapper table .day::after {
+        content: "...";
+        position: absolute;
+        bottom: 7px;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: 1;
+        font-size: 11px;
+        font-weight: 500;
+        animation: loadPrice 2s forwards;
+        border: 0;
+        width: auto;
+        height: auto;
+        top: inherit;
+    }
+
+    @keyframes loadPrice {
+        0% {
+            content: "...";
+        }
+
+        100% {
+            content: "99$";
+        }
+    }
+}

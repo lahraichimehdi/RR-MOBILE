@@ -4,9 +4,347 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RR Widget</title>
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker.min.css" />
+    <link rel="stylesheet" href="rr-style.css" />
   </head>
   <body>
+    <div class="rr__container">
+      <div class="rr__container--header">
+        <span class="rr__menu--trigger">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <g transform="translate(-684 -380)">
+              <g>
+                <path
+                  id="Vector"
+                  d="M0,0H18"
+                  transform="translate(687 387)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  id="Vector-2"
+                  data-name="Vector"
+                  d="M0,0H18"
+                  transform="translate(687 392)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  id="Vector-3"
+                  data-name="Vector"
+                  d="M0,0H18"
+                  transform="translate(687 397)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  id="Vector-4"
+                  data-name="Vector"
+                  d="M0,0H24V24H0Z"
+                  transform="translate(684 380)"
+                  fill="none"
+                  opacity="0"
+                />
+              </g>
+            </g>
+          </svg>
+        </span>
+        <h5>check availability</h5>
+        <span class="rr__container--close">
+          <svg width="33.941" height="33.941" viewBox="0 0 33.941 33.941">
+            <g transform="translate(-152.735 -526.087) rotate(45)">
+              <g id="add">
+                <path
+                  d="M0,0H12"
+                  transform="translate(498 264)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  data-name="Vector"
+                  d="M0,12V0"
+                  transform="translate(504 258)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  data-name="Vector"
+                  d="M0,0H24V24H0Z"
+                  transform="translate(492 252)"
+                  fill="none"
+                  opacity="0"
+                />
+              </g>
+            </g>
+          </svg>
+        </span>
+      </div>
+      <div class="rr__menu">
+        <button class="rr__menu--close">
+          <svg width="33.941" height="33.941" viewBox="0 0 33.941 33.941">
+            <g transform="translate(-152.735 -526.087) rotate(45)">
+              <g id="add">
+                <path
+                  d="M0,0H12"
+                  transform="translate(498 264)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  data-name="Vector"
+                  d="M0,12V0"
+                  transform="translate(504 258)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  data-name="Vector"
+                  d="M0,0H24V24H0Z"
+                  transform="translate(492 252)"
+                  fill="none"
+                  opacity="0"
+                />
+              </g>
+            </g>
+          </svg>
+        </button>
+        <ul class="rr__menu--nav">
+          <li class="rr__menu--item" data-content="availability">
+            Check Availability
+          </li>
+          <li class="rr__menu--item" data-content="booking">Find Booking</li>
+          <li class="rr__menu--item" data-content="reservation">
+            Cancel Reservation
+          </li>
+        </ul>
+        <hr />
+        <ul class="rr__menu--nav">
+          <li class="rr__menu--item" data-content="find-us">Find us</li>
+          <li class="rr__menu--item" data-content="rating">Public rating</li>
+          <li class="rr__menu--item" data-content="offers">Offers</li>
+        </ul>
+      </div>
+      <!-- HOME VIEW -->
+      <div class="rr__home rr_view">
+        <div class="rr__component guestResult">
+          <div>
+            <h4>Guests</h4>
+            <p>
+              <span class="nbRoom">Room 1 - </span>
+              <span> 2 adults, 1 children</span>
+            </p>
+          </div>
+          <div>
+            <span class="rr__update--guest">
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <path
+                  id="Vector"
+                  d="M7.719,1.2.878,8.441A2.541,2.541,0,0,0,.319,9.633l-.308,2.7a1.273,1.273,0,0,0,1.558,1.475l2.683-.458a2.393,2.393,0,0,0,1.158-.625l6.842-7.242c1.183-1.25,1.717-2.675-.125-4.417C10.294-.659,8.9-.051,7.719,1.2Z"
+                  transform="translate(3.331 1.801)"
+                  fill="none"
+                  stroke="#656565"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  id="Vector-2"
+                  data-name="Vector"
+                  d="M0,0A5.105,5.105,0,0,0,4.542,4.292"
+                  transform="translate(9.908 4.208)"
+                  fill="none"
+                  stroke="#656565"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  id="Vector-3"
+                  data-name="Vector"
+                  d="M0,0H20V20H0Z"
+                  fill="none"
+                  opacity="0"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="rr__component calendarResult">
+          <div>
+            <h4>Arrival - Departure</h4>
+            <p>
+              <span>10 DEC - 15 Dec</span>
+            </p>
+          </div>
+          <div>
+            <span class="rr__update--calendar">
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <path
+                  id="Vector"
+                  d="M7.719,1.2.878,8.441A2.541,2.541,0,0,0,.319,9.633l-.308,2.7a1.273,1.273,0,0,0,1.558,1.475l2.683-.458a2.393,2.393,0,0,0,1.158-.625l6.842-7.242c1.183-1.25,1.717-2.675-.125-4.417C10.294-.659,8.9-.051,7.719,1.2Z"
+                  transform="translate(3.331 1.801)"
+                  fill="none"
+                  stroke="#656565"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  id="Vector-2"
+                  data-name="Vector"
+                  d="M0,0A5.105,5.105,0,0,0,4.542,4.292"
+                  transform="translate(9.908 4.208)"
+                  fill="none"
+                  stroke="#656565"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  id="Vector-3"
+                  data-name="Vector"
+                  d="M0,0H20V20H0Z"
+                  fill="none"
+                  opacity="0"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="rr__component calendarEdit">
+          <div class="rr__calendar">
+            <div id="rr__calender"></div>
+          </div>
+        </div>
+
+        <div class="rr__component promoResult">
+          <div>
+            <h4>PromoCode ?</h4>
+            <p>
+              <span class="nbRoom">Discout - </span>
+              <span> NEWYEAR25</span>
+            </p>
+          </div>
+          <div>
+            <span class="rr__update--promo">
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <path
+                  id="Vector"
+                  d="M7.719,1.2.878,8.441A2.541,2.541,0,0,0,.319,9.633l-.308,2.7a1.273,1.273,0,0,0,1.558,1.475l2.683-.458a2.393,2.393,0,0,0,1.158-.625l6.842-7.242c1.183-1.25,1.717-2.675-.125-4.417C10.294-.659,8.9-.051,7.719,1.2Z"
+                  transform="translate(3.331 1.801)"
+                  fill="none"
+                  stroke="#656565"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  id="Vector-2"
+                  data-name="Vector"
+                  d="M0,0A5.105,5.105,0,0,0,4.542,4.292"
+                  transform="translate(9.908 4.208)"
+                  fill="none"
+                  stroke="#656565"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  id="Vector-3"
+                  data-name="Vector"
+                  d="M0,0H20V20H0Z"
+                  fill="none"
+                  opacity="0"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="rr__xtease">
+          <h5>Price comparaison</h5>
+          <div class="xtease">
+            <div class="rr__xtease_body">
+              <div
+                class="rr__xtease_body--portail bk RealRate-xtease-item-booking xt__portals"
+              >
+                <p class="rr__xtease_body-name">Booking</p>
+                <div class="rr__xtease_body--p xt__price">
+                  <span class="rr__xtease_body--price">--</span>
+                  <span class="rr__xtease_body--currency">--</span>
+                </div>
+              </div>
+              <div
+                class="rr__xtease_body--portail ex RealRate-xtease-item-expedia xt__portals"
+              >
+                <p class="rr__xtease_body-name">Expedia</p>
+                <div class="rr__xtease_body--p xt__price">
+                  <span class="rr__xtease_body--price">--</span>
+                  <span class="rr__xtease_body--currency">--</span>
+                </div>
+              </div>
+              <div
+                class="rr__xtease_body--portail hrs RealRate-xtease-item-hrs xt__portals"
+              >
+                <p class="rr__xtease_body-name">Hrs</p>
+                <div class="rr__xtease_body--p xt__price">
+                  <span class="rr__xtease_body--price">--</span>
+                  <span class="rr__xtease_body--currency">--</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rr__submit">
+          <input type="submit" class="rr__submit_button" value="Book Direct" />
+          <div class="rr__submit_p">
+            <span class="rr__submit--price">--</span>
+            <span class="rr__submit--currency currency">--</span>
+          </div>
+        </div>
+      </div>
+      <!-- HOME VIEW -->
+      <!-- RATING VIEW -->
+      <div class="rr__ratings rr_view" style="display: none"> ratings</div>
+      <!-- RATING VIEW -->
+      <div class="rr__maps rr_view" style="display: none">Maps</div>
+      <div class="rr__offers rr_view" style="display: none">Offers</div>
+      <!-- <div id="rr__calender"></div> -->
+    </div>
+    <script src="js/jquery.js"></script>
     <script src="js/moment.js"></script>
     <script src="js/jquery.daterangepicker.min.js"></script>
+    <script>
+      jQuery("#rr__calender").dateRangePicker({
+        language: "en",
+        inline: true,
+        container: "#rr__calender",
+        alwaysOpen: true,
+        stickyMonths: true,
+        hoveringTooltip: false,
+        format: "DD.MM.YYYY",
+        startDate: new Date(),
+      });
+    </script>
   </body>
 </html>
