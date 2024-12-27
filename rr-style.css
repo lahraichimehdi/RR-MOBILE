@@ -265,6 +265,31 @@
         top: inherit;
     }
 
+    #rr__calender {
+        width: 100%;
+    }
+
+    .rr__container .date-picker-wrapper .month-wrapper table .day.real-today {
+        background-color: inherit;
+    }
+
+    .rr__container .date-picker-wrapper .first-date-selected {
+        position: relative;
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    .rr__container .rr__grpLegend .ui-state-active,
+    .rr__container .date-picker-wrapper .month-wrapper table .day.checked,
+    .rr__container .date-picker-wrapper .month-wrapper table .day.toMonth.hovering {
+        background-color: #000 !important;
+        border: 0 !important;
+        color: white !important;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+    }
+
     @keyframes loadPrice {
         0% {
             content: "...";
