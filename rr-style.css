@@ -370,7 +370,9 @@
         visibility: hidden;
     }
 
-    .calendarEdit {
+    .calendarEdit,
+    .promoEdit {
+        align-items: start;
         flex-direction: column;
     }
 
@@ -409,5 +411,36 @@
 
     .rr__container .rr__grpLegend .BENoArrive {
         background-image: linear-gradient(135deg, #d4dbc5 50%, #FFF 50%);
+    }
+
+    /* .rr__promocode, */
+    .rr__promocode--select {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .rr__promocode {
+        width: 100%;
+        /* gap: 10px; */
+    }
+
+    .rr__promo--input {
+        padding: 10px;
+        border: 0;
+        width: 100%;
+
+    }
+
+    .rr__promo--apply {
+        background-color: black;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 10px;
+        width: 100%;
+        margin-top: 10px;
     }
 }
