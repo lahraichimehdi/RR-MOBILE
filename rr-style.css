@@ -431,6 +431,8 @@
         padding: 10px;
         border: 0;
         width: 100%;
+        appearance: none;
+        border-radius: 0;
 
     }
 
