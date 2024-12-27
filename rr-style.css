@@ -482,6 +482,7 @@
         margin: 0;
         color: #000000;
         padding: 8px;
+        font-size: 10px;
     }
 
     .rr__container .rr__guests__item .value {
