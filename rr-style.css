@@ -520,4 +520,8 @@
         font-size: 10px;
         letter-spacing: 0 !important;
     }
+
+    .guestEdit {
+        display: none;
+    }
 }

@@ -269,6 +269,7 @@
               </div>
             </div>
           </div>
+          <button class="rr__promo--apply apply--room">Apply</button>
         </div>
 
         <div class="rr__component calendarResult">
@@ -326,6 +327,7 @@
               No Arrival
             </div>
           </div>
+          <button class="rr__promo--apply">Apply</button>
         </div>
 
         <div class="rr__component promoResult">
@@ -469,6 +471,15 @@
       });
       jQuery(".rr__menu--close").click(function () {
         jQuery(".rr__menu").toggleClass("open");
+      });
+      jQuery(".rr__update--guest").click(function () {
+        jQuery(".guestResult").hide();
+        jQuery(".guestEdit").show();
+      });
+
+      jQuery(".apply--room").click(function () {
+        jQuery(".guestResult").show();
+        jQuery(".guestEdit").hide();
       });
     </script>
   </body>
