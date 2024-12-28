@@ -522,7 +522,8 @@
     }
 
     .guestEdit,
-    .calendarEdit {
+    .calendarEdit,
+    .promoEdit {
         display: none;
     }
 }
