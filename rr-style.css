@@ -177,6 +177,7 @@
         transition: all 1s ease-in-out;
         color: white;
         background-color: white;
+        z-index: 9;
     }
 
     .rr__submit_button {
@@ -505,5 +506,18 @@
         margin: 0 10px;
         font-variant-numeric: tabular-nums;
         font-weight: 600;
+    }
+
+    .rr__roomLine--title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+
+    .rr__roomLine--remove {
+        color: red;
+        font-size: 10px;
+        letter-spacing: 0 !important;
     }
 }
