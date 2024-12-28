@@ -327,7 +327,7 @@
               No Arrival
             </div>
           </div>
-          <button class="rr__promo--apply">Apply</button>
+          <button class="rr__promo--apply apply--calendar">Apply</button>
         </div>
 
         <div class="rr__component promoResult">
@@ -398,7 +398,7 @@
               placeholder="Agent Id"
             />
           </div>
-          <button class="rr__promo--apply">Apply</button>
+          <button class="rr__promo--apply apply--promo">Apply</button>
         </div>
 
         <div class="rr__xtease">
@@ -480,6 +480,24 @@
       jQuery(".apply--room").click(function () {
         jQuery(".guestResult").show();
         jQuery(".guestEdit").hide();
+      });
+      jQuery(".rr__update--calendar").click(function () {
+        jQuery(".calendarResult").hide();
+        jQuery(".calendarEdit").show();
+      });
+
+      jQuery(".apply--calendar").click(function () {
+        jQuery(".calendarResult").show();
+        jQuery(".calendarEdit").hide();
+      });
+
+      jQuery(".rr__update--promo").click(function () {
+        jQuery(".promoResult").hide();
+        jQuery(".promoEdit").show();
+      });
+      jQuery(".apply--promo").click(function () {
+        jQuery(".promoResult").show();
+        jQuery(".promoEdit").hide();
       });
     </script>
   </body>
