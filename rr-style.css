@@ -521,7 +521,8 @@
         letter-spacing: 0 !important;
     }
 
-    .guestEdit {
+    .guestEdit,
+    .calendarEdit {
         display: none;
     }
 }
