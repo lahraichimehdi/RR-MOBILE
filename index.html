@@ -1,2398 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>RR-new</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- style -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="css/jquery-ui.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="css/daterangepicker.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="css/style.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="css/slick.css"
-    />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/ta.css" />
-    <link
-      rel="stylesheet"
-      href="https://api.globres.io/RealRate/assets/lib/css/star-rating-svg.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="css/fa.css" />
-    <!-- custom style-->
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" /> -->
-    <link
-      rel="stylesheet"
-      href="https://api.globres.io/RealRate/assets/structures/BB/v2/style.css"
-    />
-    <link rel="stylesheet" href="new-style.css" />
-    <!-- <link rel="stylesheet" href="https://api.globres.io/RealRate/assets/structures/BB/v2/style-sofia.css"> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RR Widget</title>
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker.min.css" />
+    <link rel="stylesheet" href="rr-style.css" />
+    <link rel="stylesheet" href="BB-mobile.css" />
   </head>
-
   <body>
-    <div class="rr__button">
-      <a class="rr__button_cta" href="#">
-        <span class="rr__button_cta--top">Check Availability</span>
-        <span class="rr__button_cta--bottom">Best Price Guarantee</span>
-      </a>
-    </div>
 
     <div class="rr__container">
-      <div class="rr_map_extend open">
-        <div class="rr__t_close">
-          <svg
-            class="rr__action_map rr__extend rrClkEv"
-            rr-actionname="RR - Close Map"
-            version="1.1"
-            id="Calque_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 40 40"
-            style="enable-background: new 0 0 40 40"
-            xml:space="preserve"
-          >
-            <style type="text/css">
-              .st0 {
-                fill: #808387;
-              }
-            </style>
-            <g>
+      <div class="rr__container--header">
+        <span class="rr__menu--trigger">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <g transform="translate(-684 -380)">
               <g>
                 <path
-                  class="st0"
-                  d="M8.03,8.31L8.03,8.31c0.23-0.23,0.59-0.23,0.82,0l6.68,6.68c0.23,0.23,0.23,0.59,0,0.82l0,0                            c-0.23,0.23-0.59,0.23-0.82,0L8.03,9.13C7.8,8.9,7.8,8.54,8.03,8.31z"
-                ></path>
+                  id="Vector"
+                  d="M0,0H18"
+                  transform="translate(687 387)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                />
                 <path
-                  class="st0"
-                  d="M9.89,14.85h5.16c0.32,0,0.58,0.26,0.58,0.58v0c0,0.32-0.26,0.58-0.58,0.58H9.89c-0.32,0-0.58-0.26-0.58-0.58                            v0C9.31,15.11,9.57,14.85,9.89,14.85z"
-                ></path>
+                  id="Vector-2"
+                  data-name="Vector"
+                  d="M0,0H18"
+                  transform="translate(687 392)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                />
                 <path
-                  class="st0"
-                  d="M15.74,10.16v5.16c0,0.32-0.26,0.58-0.58,0.58h0c-0.32,0-0.58-0.26-0.58-0.58v-5.16                            c0-0.32,0.26-0.58,0.58-0.58h0C15.48,9.58,15.74,9.84,15.74,10.16z"
-                ></path>
-              </g>
-              <g>
+                  id="Vector-3"
+                  data-name="Vector"
+                  d="M0,0H18"
+                  transform="translate(687 397)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                />
                 <path
-                  class="st0"
-                  d="M30.81,31.08L30.81,31.08c-0.23,0.23-0.59,0.23-0.82,0l-6.68-6.68c-0.23-0.23-0.23-0.59,0-0.82l0,0                            c0.23-0.23,0.59-0.23,0.82,0l6.68,6.68C31.03,30.49,31.03,30.85,30.81,31.08z"
-                ></path>
-                <path
-                  class="st0"
-                  d="M28.95,24.54H23.8c-0.32,0-0.58-0.26-0.58-0.58v0c0-0.32,0.26-0.58,0.58-0.58h5.16                            c0.32,0,0.58,0.26,0.58,0.58v0C29.53,24.28,29.27,24.54,28.95,24.54z"
-                ></path>
-                <path
-                  class="st0"
-                  d="M23.1,29.24v-5.16c0-0.32,0.26-0.58,0.58-0.58h0c0.32,0,0.58,0.26,0.58,0.58v5.16c0,0.32-0.26,0.58-0.58,0.58                            h0C23.36,29.81,23.1,29.55,23.1,29.24z"
-                ></path>
-              </g>
-              <g>
-                <path
-                  class="st0"
-                  d="M8.03,31.09L8.03,31.09c-0.23-0.23-0.23-0.59,0-0.82l6.68-6.68c0.23-0.23,0.59-0.23,0.82,0l0,0                            c0.23,0.23,0.23,0.59,0,0.82l-6.68,6.68C8.63,31.31,8.26,31.31,8.03,31.09z"
-                ></path>
-                <path
-                  class="st0"
-                  d="M14.58,29.23v-5.16c0-0.32,0.26-0.58,0.58-0.58h0c0.32,0,0.58,0.26,0.58,0.58v5.16                            c0,0.32-0.26,0.58-0.58,0.58h0C14.84,29.81,14.58,29.55,14.58,29.23z"
-                ></path>
-                <path
-                  class="st0"
-                  d="M9.88,23.38h5.16c0.32,0,0.58,0.26,0.58,0.58l0,0c0,0.32-0.26,0.58-0.58,0.58H9.88                            c-0.32,0-0.58-0.26-0.58-0.58l0,0C9.3,23.64,9.56,23.38,9.88,23.38z"
-                ></path>
-              </g>
-              <g>
-                <path
-                  class="st0"
-                  d="M30.8,8.31L30.8,8.31c0.23,0.23,0.23,0.59,0,0.82l-6.68,6.68c-0.23,0.23-0.59,0.23-0.82,0l0,0                            c-0.23-0.23-0.23-0.59,0-0.82l6.68-6.68C30.21,8.08,30.58,8.08,30.8,8.31z"
-                ></path>
-                <path
-                  class="st0"
-                  d="M24.26,10.16v5.16c0,0.32-0.26,0.58-0.58,0.58h0c-0.32,0-0.58-0.26-0.58-0.58v-5.16                            c0-0.32,0.26-0.58,0.58-0.58h0C24,9.59,24.26,9.84,24.26,10.16z"
-                ></path>
-                <path
-                  class="st0"
-                  d="M28.96,16.02H23.8c-0.32,0-0.58-0.26-0.58-0.58v0c0-0.32,0.26-0.58,0.58-0.58h5.16                            c0.32,0,0.58,0.26,0.58,0.58v0C29.54,15.76,29.28,16.02,28.96,16.02z"
-                ></path>
+                  id="Vector-4"
+                  data-name="Vector"
+                  d="M0,0H24V24H0Z"
+                  transform="translate(684 380)"
+                  fill="none"
+                  opacity="0"
+                />
               </g>
             </g>
           </svg>
-        </div>
-        <div class="rr_map_sidebar_open">
-          <span>Places Near the Hotel</span>
-          <span class="rr__t_close_desktop">
-            <svg
-              width="24"
-              height="24"
-              xmlns="http://www.w3.org/2000/svg"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-            >
-              <path
-                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
-              ></path>
-            </svg>
-          </span>
-        </div>
-        <div class="rr_map_sidebar">
-          <div class="rr_map_title">
-            <span class="rr__t_close_desktop">
-              <svg
-                width="24"
-                height="24"
-                xmlns="http://www.w3.org/2000/svg"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-              >
-                <path
-                  d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
-                ></path>
-              </svg>
-            </span>
-            <span>Places Near the Hotel</span>
-            <span class="rr__t_close_desktop_left rr_hide">
-              <img
-                src="https://api.globres.io/RealRate/assets/img/BB/ic_menu_burger_w.png"
-                alt=""
-              />
-            </span>
-            <span class="rr__t_close_mobile">
-              <svg
-                x="0px"
-                y="0px"
-                viewBox="0 0 42 42"
-                style="enable-background: new 0 0 42 42"
-                xml:space="preserve"
-              >
-                <polygon
-                  class="st0"
-                  points="42,19 23,19 23,0 19,0 19,19 0,19 0,23 19,23 19,42 23,42 23,23 42,23 "
-                ></polygon>
-              </svg>
-            </span>
-          </div>
-          <div class="rr_map_category">
-            <div class="rr_map_category_title">Categories :</div>
-            <div class="rr_category map_category">
-              <div class="select-box">
-                <div class="select-box__current" tabindex="1">
-                  <div class="select-box__value">
-                    <input
-                      class="select-box__input"
-                      type="radio"
-                      id="1"
-                      value="1"
-                      name="categories"
-                      checked="checked"
-                    />
-                    <p class="select-box__input-text">All categories</p>
-                  </div>
-                  <div class="select-box__value">
-                    <input
-                      class="select-box__input"
-                      type="radio"
-                      id="2"
-                      value="restaurants"
-                      name="categories"
-                    />
-                    <p class="select-box__input-text">restaurants</p>
-                  </div>
-                  <div class="select-box__value">
-                    <input
-                      class="select-box__input"
-                      type="radio"
-                      id="4"
-                      value="cafés"
-                      name="categories"
-                    />
-                    <p class="select-box__input-text">cafés</p>
-                  </div>
-                  <div class="select-box__value">
-                    <input
-                      class="select-box__input"
-                      type="radio"
-                      id="8"
-                      value="pharmacy"
-                      name="categories"
-                    />
-                    <p class="select-box__input-text">pharmacy</p>
-                  </div>
-                  <div class="select-box__value">
-                    <input
-                      class="select-box__input"
-                      type="radio"
-                      id="10"
-                      value="transportation"
-                      name="categories"
-                    />
-                    <p class="select-box__input-text">transportation</p>
-                  </div>
-                  <div class="select-box__value">
-                    <input
-                      class="select-box__input"
-                      type="radio"
-                      id="12"
-                      value="museum"
-                      name="categories"
-                    />
-                    <p class="select-box__input-text">museum</p>
-                  </div>
-                  <div class="select-box__value">
-                    <input
-                      class="select-box__input"
-                      type="radio"
-                      id="14"
-                      value="EMA House Apartments"
-                      name="categories"
-                    />
-                    <p class="select-box__input-text">EMA House Apartments</p>
-                  </div>
-                  <div class="select-box__value">
-                    <input
-                      class="select-box__input"
-                      type="radio"
-                      id="16"
-                      value="Shopping"
-                      name="categories"
-                    />
-                    <p class="select-box__input-text">Shopping</p>
-                  </div>
-                  <img
-                    class="select-box__icon"
-                    src="https://api.globres.io/RealRate/assets/img/BB/arrow.svg"
-                    alt="Arrow Icon"
-                    aria-hidden="true"
-                  />
-                </div>
-                <ul class="select-box__list">
-                  <li>
-                    <label
-                      class="select-box__option"
-                      for="1"
-                      aria-hidden="aria-hidden"
-                    >
-                      <img
-                        src="https://api.globres.io/RealRate/assets/img/BB/all_cat_icon.png"
-                        alt="all"
-                      />
-                      All categories
-                    </label>
-                  </li>
-                  <li
-                    data-c-id="6176897c0a11b318f231eb82"
-                    data-c-name="restaurants"
-                  >
-                    <label
-                      class="select-box__option"
-                      for="2"
-                      aria-hidden="aria-hidden"
-                    >
-                      <img
-                        loading="eager"
-                        src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                      />
-                      restaurants
-                    </label>
-                  </li>
-                  <li data-c-id="617694790b263967943d0632" data-c-name="cafés">
-                    <label
-                      class="select-box__option"
-                      for="4"
-                      aria-hidden="aria-hidden"
-                    >
-                      <img
-                        loading="eager"
-                        src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                      />
-                      cafés
-                    </label>
-                  </li>
-                  <li
-                    data-c-id="6176948faa33fa4be7546992"
-                    data-c-name="pharmacy"
-                  >
-                    <label
-                      class="select-box__option"
-                      for="8"
-                      aria-hidden="aria-hidden"
-                    >
-                      <img
-                        loading="eager"
-                        src="https://uploads.globres.io/rr/mv2/categories/013-pharmacy.png"
-                      />
-                      pharmacy
-                    </label>
-                  </li>
-                  <li
-                    data-c-id="617694a546eb5e04c46ee712"
-                    data-c-name="transportation"
-                  >
-                    <label
-                      class="select-box__option"
-                      for="10"
-                      aria-hidden="aria-hidden"
-                    >
-                      <img
-                        loading="eager"
-                        src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                      />
-                      transportation
-                    </label>
-                  </li>
-                  <li data-c-id="617694bbf8e4e25af370e202" data-c-name="museum">
-                    <label
-                      class="select-box__option"
-                      for="12"
-                      aria-hidden="aria-hidden"
-                    >
-                      <img
-                        loading="eager"
-                        src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                      />
-                      museum
-                    </label>
-                  </li>
-                  <li
-                    data-c-id="61b21b7eb5f03b0891798ae2"
-                    data-c-name="EMA House Apartments"
-                  >
-                    <label
-                      class="select-box__option"
-                      for="14"
-                      aria-hidden="aria-hidden"
-                    >
-                      <img
-                        loading="eager"
-                        src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                      />
-                      EMA House Apartments
-                    </label>
-                  </li>
-                  <li
-                    data-c-id="61b1c1de9a5e2f21b91a76c2"
-                    data-c-name="Shopping"
-                  >
-                    <label
-                      class="select-box__option"
-                      for="16"
-                      aria-hidden="aria-hidden"
-                    >
-                      <img
-                        loading="eager"
-                        src="https://uploads.globres.io/rr/mv2/categories/fashion.png"
-                      />
-                      Shopping
-                    </label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- places  -->
-            <div class="rr_places">
-              <div class="rr_places_res"><span>44</span> Place (s)</div>
-              <div class="rr_places_container">
-                <div
-                  class="rr_places_item"
-                  data-cat-name="transportation"
-                  data-place-name="Becknhof"
-                  data-lf-id="163"
-                  data-geoloc='{"lat":"47.38389569523998","long":"8.54047102794171"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                        alt="transportation - Becknhof"
-                        src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Becknhof</span>
-                        <div class="rr_places_distance">0.0 km</div>
-                      </div>
-                      <div class="rr_places_desc">Tram lines 11 and 14</div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="EMA"
-                  house=""
-                  apartments=""
-                  data-place-name="Downtown"
-                  data-lf-id="165"
-                  data-geoloc='{"lat":"47.38340296622699","long":"8.540546148632663"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                        alt="EMA House Apartments - Downtown"
-                        src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Downtown</span>
-                        <div class="rr_places_distance">0.0 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="restaurants"
-                  data-place-name="Restaurant"
-                  drei=""
-                  stuben=""
-                  data-lf-id="167"
-                  data-geoloc='{"lat":"47.38327648906217","long":"8.541620787987432"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                        alt="restaurants - Restaurant Drei Stuben"
-                        src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Restaurant Drei Stuben</span>
-                        <div class="rr_places_distance">0.1 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="EMA"
-                  house=""
-                  apartments=""
-                  data-place-name="Unterstrass"
-                  data-lf-id="169"
-                  data-geoloc='{"lat":"47.384185697196486","long":"8.542163520649504"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                        alt="EMA House Apartments - Unterstrass"
-                        src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Unterstrass</span>
-                        <div class="rr_places_distance">0.2 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="cafés"
-                  data-place-name="Primitivo"
-                  data-lf-id="171"
-                  data-geoloc='{"lat":"47.38501882866828","long":"8.536537215702632"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                        alt="cafés - Primitivo"
-                        src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Primitivo</span>
-                        <div class="rr_places_distance">0.3 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="museum"
-                  data-place-name="Swiss"
-                  national=""
-                  museum=""
-                  data-lf-id="173"
-                  data-geoloc='{"lat":"47.37891611338774","long":"8.540634661497913"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                        alt="museum - Swiss National Museum"
-                        src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Swiss National Museum</span>
-                        <div class="rr_places_distance">0.5 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="restaurants"
-                  data-place-name="Moudi's"
-                  lecker=""
-                  cafe=""
-                  data-lf-id="175"
-                  data-geoloc='{"lat":"47.38780801974507","long":"8.539251627041741"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                        alt="restaurants - Moudi's Lecker Cafe"
-                        src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Moudi's Lecker Cafe</span>
-                        <div class="rr_places_distance">0.5 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="restaurants"
-                  data-place-name="Restaurant"
-                  spitz=""
-                  data-lf-id="177"
-                  data-geoloc='{"lat":"47.37893433172426","long":"8.540949538033514"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                        alt="restaurants - Restaurant Spitz"
-                        src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Restaurant Spitz</span>
-                        <div class="rr_places_distance">0.5 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="restaurants"
-                  data-place-name="Café"
-                  des=""
-                  amis=""
-                  data-lf-id="179"
-                  data-geoloc='{"lat":"47.38862535854804","long":"8.536150977604155"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                        alt="restaurants - Café des Amis"
-                        src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Café des Amis</span>
-                        <div class="rr_places_distance">0.6 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="restaurants"
-                  data-place-name="Didi's"
-                  frieden=""
-                  data-lf-id="181"
-                  data-geoloc='{"lat":"47.379223421935805","long":"8.543618955877625"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                        alt="restaurants - Didi's Frieden"
-                        src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Didi's Frieden</span>
-                        <div class="rr_places_distance">0.6 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="transportation"
-                  data-place-name="Main"
-                  station=""
-                  data-lf-id="183"
-                  data-geoloc='{"lat":"47.37766651909099","long":"8.540929704433946"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                        alt="transportation - Main Station"
-                        src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Main Station</span>
-                        <div class="rr_places_distance">0.7 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        Train connections to all major Swiss destinations and
-                        Zürich airport
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="Shopping"
-                  data-place-name="Europaallee"
-                  data-lf-id="185"
-                  data-geoloc='{"lat":"47.378520640541076","long":"8.53432707546326"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/fashion.png"
-                        alt="Shopping - Europaallee"
-                        src="https://uploads.globres.io/rr/mv2/categories/fashion.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Europaallee</span>
-                        <div class="rr_places_distance">0.7 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="pharmacy"
-                  data-place-name="TopPharm"
-                  leonhards=""
-                  apotheke=""
-                  data-lf-id="187"
-                  data-geoloc='{"lat":"47.37770433552357","long":"8.543640212114573"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/013-pharmacy.png"
-                        alt="pharmacy - TopPharm Leonhards Apotheke"
-                        src="https://uploads.globres.io/rr/mv2/categories/013-pharmacy.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>TopPharm Leonhards Apotheke</span>
-                        <div class="rr_places_distance">0.7 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="Shopping"
-                  data-place-name="Bahnhofstrasse"
-                  data-lf-id="189"
-                  data-geoloc='{"lat":"47.37530528627161","long":"8.539046793736317"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/fashion.png"
-                        alt="Shopping - Bahnhofstrasse"
-                        src="https://uploads.globres.io/rr/mv2/categories/fashion.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Bahnhofstrasse</span>
-                        <div class="rr_places_distance">0.9 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="cafés"
-                  data-place-name="Nude"
-                  data-lf-id="191"
-                  data-geoloc='{"lat":"47.38875087917279","long":"8.530248527657408"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                        alt="cafés - Nude"
-                        src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Nude</span>
-                        <div class="rr_places_distance">0.9 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="museum"
-                  data-place-name="Lindenhof"
-                  data-lf-id="193"
-                  data-geoloc='{"lat":"47.37360240852276","long":"8.541332035879325"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                        alt="museum - Lindenhof"
-                        src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Lindenhof</span>
-                        <div class="rr_places_distance">1.1 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="Shopping"
-                  data-place-name="Viadukt"
-                  data-lf-id="195"
-                  data-geoloc='{"lat":"47.38696659312752","long":"8.523798416654413"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/fashion.png"
-                        alt="Shopping - Viadukt"
-                        src="https://uploads.globres.io/rr/mv2/categories/fashion.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Viadukt</span>
-                        <div class="rr_places_distance">1.3 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="Shopping"
-                  data-place-name="Old"
-                  town=""
-                  data-lf-id="197"
-                  data-geoloc='{"lat":"47.37214153962845","long":"8.53934817077144"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/fashion.png"
-                        alt="Shopping - Old Town"
-                        src="https://uploads.globres.io/rr/mv2/categories/fashion.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Old Town</span>
-                        <div class="rr_places_distance">1.3 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="museum"
-                  data-place-name="Grossmünster"
-                  data-lf-id="199"
-                  data-geoloc='{"lat":"47.370171964600964","long":"8.543998151593549"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                        alt="museum - Grossmünster"
-                        src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Grossmünster</span>
-                        <div class="rr_places_distance">1.5 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="museum"
-                  data-place-name="Kunsthaus"
-                  data-lf-id="201"
-                  data-geoloc='{"lat":"47.37040652614981","long":"8.548278957179429"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                        alt="museum - Kunsthaus"
-                        src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Kunsthaus</span>
-                        <div class="rr_places_distance">1.6 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="cafés"
-                  data-place-name="Frau"
-                  gerolds=""
-                  garten=""
-                  data-lf-id="203"
-                  data-geoloc='{"lat":"47.38544115468948","long":"8.519056271078595"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                        alt="cafés - Frau Gerolds Garten"
-                        src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Frau Gerolds Garten</span>
-                        <div class="rr_places_distance">1.6 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="restaurants"
-                  data-place-name="Café"
-                  bebek=""
-                  data-lf-id="205"
-                  data-geoloc='{"lat":"47.37452964158467","long":"8.520675669984726"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                        alt="restaurants - Café Bebek"
-                        src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Café Bebek</span>
-                        <div class="rr_places_distance">1.8 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="EMA"
-                  house=""
-                  apartments=""
-                  data-place-name="Aussersihl"
-                  data-lf-id="207"
-                  data-geoloc='{"lat":"47.37897821331872","long":"8.515997615344759"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                        alt="EMA House Apartments - Aussersihl"
-                        src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Aussersihl</span>
-                        <div class="rr_places_distance">1.9 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="museum"
-                  data-place-name="Seepromenade"
-                  data-lf-id="209"
-                  data-geoloc='{"lat":"47.36649695504891","long":"8.544413894047299"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                        alt="museum - Seepromenade"
-                        src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Seepromenade</span>
-                        <div class="rr_places_distance">1.9 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="pharmacy"
-                  data-place-name="Bellevue"
-                  apotheke=""
-                  data-lf-id="211"
-                  data-geoloc='{"lat":"47.36691575329035","long":"8.546094014915724"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/013-pharmacy.png"
-                        alt="pharmacy - Bellevue Apotheke"
-                        src="https://uploads.globres.io/rr/mv2/categories/013-pharmacy.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Bellevue Apotheke</span>
-                        <div class="rr_places_distance">1.9 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="restaurants"
-                  data-place-name="Baranco"
-                  data-lf-id="213"
-                  data-geoloc='{"lat":"47.379281130710886","long":"8.515826236028705"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                        alt="restaurants - Baranco"
-                        src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Baranco</span>
-                        <div class="rr_places_distance">1.9 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="pharmacy"
-                  data-place-name="Lochergut"
-                  apotheke=""
-                  drogerie=""
-                  data-lf-id="215"
-                  data-geoloc='{"lat":"47.375606204667356","long":"8.517613794444468"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/013-pharmacy.png"
-                        alt="pharmacy - Lochergut Apotheke Drogerie"
-                        src="https://uploads.globres.io/rr/mv2/categories/013-pharmacy.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Lochergut Apotheke Drogerie</span>
-                        <div class="rr_places_distance">1.9 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="transportation"
-                  data-place-name="Hardplatz"
-                  data-lf-id="217"
-                  data-geoloc='{"lat":"47.38233721724169","long":"8.5152534504834"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                        alt="transportation - Hardplatz"
-                        src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Hardplatz</span>
-                        <div class="rr_places_distance">1.9 km</div>
-                      </div>
-                      <div class="rr_places_desc">Tram line 8</div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="restaurants"
-                  data-place-name="Rosi"
-                  data-lf-id="219"
-                  data-geoloc='{"lat":"47.37645166967265","long":"8.516320733730595"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                        alt="restaurants - Rosi"
-                        src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Rosi</span>
-                        <div class="rr_places_distance">2.0 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="cafés"
-                  data-place-name="169"
-                  west=""
-                  data-lf-id="221"
-                  data-geoloc='{"lat":"47.373889713482924","long":"8.518037583476154"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                        alt="cafés - 169 West"
-                        src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>169 West</span>
-                        <div class="rr_places_distance">2.0 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="transportation"
-                  data-place-name="Lochergut"
-                  data-lf-id="223"
-                  data-geoloc='{"lat":"47.37559530648692","long":"8.516953971018825"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                        alt="transportation - Lochergut"
-                        src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Lochergut</span>
-                        <div class="rr_places_distance">2.0 km</div>
-                      </div>
-                      <div class="rr_places_desc">Tram lines 2 and 3</div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="museum"
-                  data-place-name="Opernhaus"
-                  zürich=""
-                  data-lf-id="225"
-                  data-geoloc='{"lat":"47.36517348926949","long":"8.546685725075875"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                        alt="museum - Opernhaus Zürich"
-                        src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Opernhaus Zürich</span>
-                        <div class="rr_places_distance">2.1 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="restaurants"
-                  data-place-name="Restaurant"
-                  du=""
-                  théâtre=""
-                  data-lf-id="227"
-                  data-geoloc='{"lat":"47.36401844737668","long":"8.547416356493155"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                        alt="restaurants - Restaurant Du Théâtre"
-                        src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Restaurant Du Théâtre</span>
-                        <div class="rr_places_distance">2.2 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="cafés"
-                  data-place-name="Gärtnerei"
-                  data-lf-id="229"
-                  data-geoloc='{"lat":"47.36370127917126","long":"8.5494302411484"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                        alt="cafés -  Gärtnerei"
-                        src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span> Gärtnerei</span>
-                        <div class="rr_places_distance">2.3 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="transportation"
-                  data-place-name="Kreuzstrasse"
-                  data-lf-id="231"
-                  data-geoloc='{"lat":"47.36286353174445","long":"8.550044908790143"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                        alt="transportation - Kreuzstrasse"
-                        src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Kreuzstrasse</span>
-                        <div class="rr_places_distance">2.4 km</div>
-                      </div>
-                      <div class="rr_places_desc">Tram lines 2 and 4</div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="EMA"
-                  house=""
-                  apartments=""
-                  data-place-name="Seefeld"
-                  data-lf-id="233"
-                  data-geoloc='{"lat":"47.36108020093152","long":"8.550333916611656"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                        alt="EMA House Apartments - Seefeld"
-                        src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Seefeld</span>
-                        <div class="rr_places_distance">2.6 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="EMA"
-                  house=""
-                  apartments=""
-                  data-place-name="Seefeld"
-                  superior=""
-                  data-lf-id="235"
-                  data-geoloc='{"lat":"47.361270971256054","long":"8.550881087257574"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                        alt="EMA House Apartments - Seefeld Superior"
-                        src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Seefeld Superior</span>
-                        <div class="rr_places_distance">2.6 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="restaurants"
-                  data-place-name="Ristorante"
-                  frascati=""
-                  data-lf-id="237"
-                  data-geoloc='{"lat":"47.360878988647094","long":"8.548006442468383"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                        alt="restaurants - Ristorante Frascati"
-                        src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Ristorante Frascati</span>
-                        <div class="rr_places_distance">2.6 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="restaurants"
-                  data-place-name="Restaurant"
-                  razzia=""
-                  data-lf-id="239"
-                  data-geoloc='{"lat":"47.360779618561125","long":"8.551699831770335"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                        alt="restaurants - Restaurant Razzia"
-                        src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Restaurant Razzia</span>
-                        <div class="rr_places_distance">2.7 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="transportation"
-                  data-place-name="Feldeggstrasse"
-                  data-lf-id="241"
-                  data-geoloc='{"lat":"47.360071032982155","long":"8.552483036799567"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                        alt="transportation - Feldeggstrasse"
-                        src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Feldeggstrasse</span>
-                        <div class="rr_places_distance">2.8 km</div>
-                      </div>
-                      <div class="rr_places_desc">Tram lines 2 and 4</div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="cafés"
-                  data-place-name="Monocle"
-                  data-lf-id="243"
-                  data-geoloc='{"lat":"47.35971626598162","long":"8.550754691309438"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                        alt="cafés - Monocle"
-                        src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Monocle</span>
-                        <div class="rr_places_distance">2.8 km</div>
-                      </div>
-                      <div class="rr_places_desc">© Foto Monocle</div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="museum"
-                  data-place-name="Pavillon"
-                  le=""
-                  corbusier=""
-                  data-lf-id="245"
-                  data-geoloc='{"lat":"47.35610412422353","long":"8.550776148972739"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                        alt="museum - Pavillon Le Corbusier"
-                        src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Pavillon Le Corbusier</span>
-                        <div class="rr_places_distance">3.2 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="restaurants"
-                  data-place-name="Restaurant"
-                  fischstube=""
-                  data-lf-id="247"
-                  data-geoloc='{"lat":"47.353025739140946","long":"8.550600961695777"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                        alt="restaurants - Restaurant Fischstube"
-                        src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Restaurant Fischstube</span>
-                        <div class="rr_places_distance">3.5 km</div>
-                      </div>
-                      <div class="rr_places_desc">
-                        © Foto Zürich Tourism -
-                        https://zt.zuerich.com/en/media/media -
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rr_places_item"
-                  data-cat-name="transportation"
-                  data-place-name="Zürich"
-                  airport=""
-                  data-lf-id="249"
-                  data-geoloc='{"lat":"47.45240312264591","long":"8.561951921666003"}'
-                >
-                  <div class="rr_places_item--left">
-                    <div class="rr_places_item--icon">
-                      <img
-                        loading="eager"
-                        data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                        alt="transportation - Zürich Airport"
-                        src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                      />
-                    </div>
-                    <div class="rr_places_item--info">
-                      <div class="rr_places_header">
-                        <span>Zürich Airport</span>
-                        <div class="rr_places_distance">7.8 km</div>
-                      </div>
-                      <div class="rr_places_desc"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="rr_loader rr_hide">
-              <img
-                src="https://api.globres.io/RealRate/assets/img/BB/arrows.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          id="maps_big"
-          class="show_maps leaflet-container leaflet-touch leaflet-retina leaflet-safari leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
-          tabindex="0"
-          style=""
-        >
-          <div class="rr_menu_burger">
-            <img
-              src="https://api.globres.io/RealRate/assets/img/BB/ic_menu_burger_w.png"
-              alt=""
-            />
-          </div>
-          <div
-            class="leaflet-pane leaflet-map-pane"
-            style="transform: translate3d(0px, 80px, 0px)"
-          >
-            <div class="leaflet-pane leaflet-tile-pane">
-              <div class="leaflet-layer" style="z-index: 1; opacity: 1">
-                <div
-                  class="leaflet-tile-container leaflet-zoom-animated"
-                  style="
-                    z-index: 17;
-                    transform: translate3d(-204px, -349px, 0px) scale(2);
-                  "
-                ></div>
-                <div
-                  class="leaflet-tile-container leaflet-zoom-animated"
-                  style="
-                    z-index: 18;
-                    transform: translate3d(-204px, -349px, 0px) scale(1);
-                  "
-                >
-                  <img
-                    alt=""
-                    role="presentation"
-                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/17/45895/68645"
-                    class="leaflet-tile leaflet-tile-loaded"
-                    style="
-                      width: 256px;
-                      height: 256px;
-                      transform: translate3d(230px, 446px, 0px);
-                      opacity: 1;
-                    "
-                  /><img
-                    alt=""
-                    role="presentation"
-                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/17/45894/68645"
-                    class="leaflet-tile leaflet-tile-loaded"
-                    style="
-                      width: 256px;
-                      height: 256px;
-                      transform: translate3d(230px, 190px, 0px);
-                      opacity: 1;
-                    "
-                  /><img
-                    alt=""
-                    role="presentation"
-                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/17/45895/68644"
-                    class="leaflet-tile leaflet-tile-loaded"
-                    style="
-                      width: 256px;
-                      height: 256px;
-                      transform: translate3d(-26px, 446px, 0px);
-                      opacity: 1;
-                    "
-                  /><img
-                    alt=""
-                    role="presentation"
-                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/17/45895/68646"
-                    class="leaflet-tile leaflet-tile-loaded"
-                    style="
-                      width: 256px;
-                      height: 256px;
-                      transform: translate3d(486px, 446px, 0px);
-                      opacity: 1;
-                    "
-                  /><img
-                    alt=""
-                    role="presentation"
-                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/17/45896/68645"
-                    class="leaflet-tile leaflet-tile-loaded"
-                    style="
-                      width: 256px;
-                      height: 256px;
-                      transform: translate3d(230px, 702px, 0px);
-                      opacity: 1;
-                    "
-                  /><img
-                    alt=""
-                    role="presentation"
-                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/17/45894/68644"
-                    class="leaflet-tile leaflet-tile-loaded"
-                    style="
-                      width: 256px;
-                      height: 256px;
-                      transform: translate3d(-26px, 190px, 0px);
-                      opacity: 1;
-                    "
-                  /><img
-                    alt=""
-                    role="presentation"
-                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/17/45894/68646"
-                    class="leaflet-tile leaflet-tile-loaded"
-                    style="
-                      width: 256px;
-                      height: 256px;
-                      transform: translate3d(486px, 190px, 0px);
-                      opacity: 1;
-                    "
-                  /><img
-                    alt=""
-                    role="presentation"
-                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/17/45896/68644"
-                    class="leaflet-tile leaflet-tile-loaded"
-                    style="
-                      width: 256px;
-                      height: 256px;
-                      transform: translate3d(-26px, 702px, 0px);
-                      opacity: 1;
-                    "
-                  /><img
-                    alt=""
-                    role="presentation"
-                    src="https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/17/45896/68646"
-                    class="leaflet-tile leaflet-tile-loaded"
-                    style="
-                      width: 256px;
-                      height: 256px;
-                      transform: translate3d(486px, 702px, 0px);
-                      opacity: 1;
-                    "
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="leaflet-pane leaflet-overlay-pane"></div>
-            <div class="leaflet-pane leaflet-shadow-pane"></div>
-            <div class="leaflet-pane leaflet-marker-pane">
-              <img
-                src="https://uploads.globres.io/flags/map-icons/default-marker.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 45px;
-                  transform: translate3d(136px, 331px, 0px);
-                  z-index: 331;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(152px, 295px, 0px);
-                  z-index: 295;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(159px, 363px, 0px);
-                  z-index: 363;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(259px, 380px, 0px);
-                  z-index: 380;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(309px, 255px, 0px);
-                  z-index: 255;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-215px, 140px, 0px);
-                  z-index: 140;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(167px, 980px, 0px);
-                  z-index: 980;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(38px, -244px, 0px);
-                  z-index: -244;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(196px, 978px, 0px);
-                  z-index: 978;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-251px, -356px, 0px);
-                  z-index: -356;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(445px, 938px, 0px);
-                  z-index: 938;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(194px, 1152px, 0px);
-                  z-index: 1152;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/fashion.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-421px, 1035px, 0px);
-                  z-index: 1035;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/013-pharmacy.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(447px, 1147px, 0px);
-                  z-index: 1147;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/fashion.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(19px, 1477px, 0px);
-                  z-index: 1477;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-801px, -373px, 0px);
-                  z-index: -373;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(232px, 1712px, 0px);
-                  z-index: 1712;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/fashion.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-1402px, -128px, 0px);
-                  z-index: -128;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/fashion.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(47px, 1913px, 0px);
-                  z-index: 1913;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(480px, 2184px, 0px);
-                  z-index: 2184;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(879px, 2152px, 0px);
-                  z-index: 2152;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-1844px, 82px, 0px);
-                  z-index: 82;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-1693px, 1584px, 0px);
-                  z-index: 1584;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-2129px, 972px, 0px);
-                  z-index: 972;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(519px, 2690px, 0px);
-                  z-index: 2690;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/013-pharmacy.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(676px, 2632px, 0px);
-                  z-index: 2632;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-2145px, 930px, 0px);
-                  z-index: 930;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/013-pharmacy.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-1979px, 1436px, 0px);
-                  z-index: 1436;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-2199px, 509px, 0px);
-                  z-index: 509;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-2099px, 1320px, 0px);
-                  z-index: 1320;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-1939px, 1672px, 0px);
-                  z-index: 1672;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(-2040px, 1437px, 0px);
-                  z-index: 1437;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(731px, 2872px, 0px);
-                  z-index: 2872;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(799px, 3031px, 0px);
-                  z-index: 3031;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(987px, 3074px, 0px);
-                  z-index: 3074;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(1044px, 3190px, 0px);
-                  z-index: 3190;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(1071px, 3435px, 0px);
-                  z-index: 3435;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(1122px, 3409px, 0px);
-                  z-index: 3409;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(854px, 3463px, 0px);
-                  z-index: 3463;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(1198px, 3476px, 0px);
-                  z-index: 3476;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(1271px, 3574px, 0px);
-                  z-index: 3574;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(1110px, 3623px, 0px);
-                  z-index: 3623;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(1112px, 4120px, 0px);
-                  z-index: 4120;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(1096px, 4543px, 0px);
-                  z-index: 4543;
-                "
-              /><img
-                src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
-                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                alt=""
-                tabindex="0"
-                style="
-                  margin-left: -16px;
-                  margin-top: -37px;
-                  width: 30px;
-                  height: 30px;
-                  transform: translate3d(2154px, -9142px, 0px);
-                  z-index: -9142;
-                "
-              />
-            </div>
-            <div class="leaflet-pane leaflet-tooltip-pane"></div>
-            <div class="leaflet-pane leaflet-popup-pane"></div>
-            <div
-              class="leaflet-proxy leaflet-zoom-animated"
-              style="
-                transform: translate3d(1.75733e7px, 1.17493e7px, 0px)
-                  scale(65536);
-              "
-            ></div>
-          </div>
-          <div class="leaflet-control-container">
-            <div class="leaflet-top leaflet-left"></div>
-            <div class="leaflet-top leaflet-right"></div>
-            <div class="leaflet-bottom leaflet-left"></div>
-            <div class="leaflet-bottom leaflet-right">
-              <div class="leaflet-control-zoom leaflet-bar leaflet-control">
-                <a
-                  class="leaflet-control-zoom-in"
-                  href="#"
-                  title="Zoom in"
-                  role="button"
-                  aria-label="Zoom in"
-                  aria-disabled="false"
-                  ><span aria-hidden="true">+</span></a
-                ><a
-                  class="leaflet-control-zoom-out"
-                  href="#"
-                  title="Zoom out"
-                  role="button"
-                  aria-label="Zoom out"
-                  aria-disabled="false"
-                  ><span aria-hidden="true">−</span></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="rr__container_menu rr__menu">
-        <button class="rr__close_menu">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="33.941"
-            height="33.941"
-            viewBox="0 0 33.941 33.941"
-          >
-            <g
-              data-name="vuesax/linear/add"
-              transform="translate(-152.735 -526.087) rotate(45)"
-            >
+        </span>
+        <h5>check availability</h5>
+        <span class="rr__container--close">
+          <svg width="33.941" height="33.941" viewBox="0 0 33.941 33.941">
+            <g transform="translate(-152.735 -526.087) rotate(45)">
               <g id="add">
                 <path
-                  id="Vector"
                   d="M0,0H12"
                   transform="translate(498 264)"
                   fill="none"
@@ -2402,7 +72,6 @@
                   stroke-width="1.5"
                 />
                 <path
-                  id="Vector-2"
                   data-name="Vector"
                   d="M0,12V0"
                   transform="translate(504 258)"
@@ -2413,7 +82,6 @@
                   stroke-width="1.5"
                 />
                 <path
-                  id="Vector-3"
                   data-name="Vector"
                   d="M0,0H24V24H0Z"
                   transform="translate(492 252)"
@@ -2423,1148 +91,341 @@
               </g>
             </g>
           </svg>
-        </button>
-        <ul class="rr_menu_mobile">
-          <li class="menu-item" data-content="availability">
+        </span>
+      </div>
+      <div class="rr__menu">
+        <span class="rr__menu--close">
+          <svg width="33.941" height="33.941" viewBox="0 0 33.941 33.941">
+            <g transform="translate(-152.735 -526.087) rotate(45)">
+              <g id="add">
+                <path
+                  d="M0,0H12"
+                  transform="translate(498 264)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  data-name="Vector"
+                  d="M0,12V0"
+                  transform="translate(504 258)"
+                  fill="none"
+                  stroke="#292d32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  data-name="Vector"
+                  d="M0,0H24V24H0Z"
+                  transform="translate(492 252)"
+                  fill="none"
+                  opacity="0"
+                />
+              </g>
+            </g>
+          </svg>
+        </span>
+        <ul class="rr__menu--nav">
+          <li class="rr__menu--item" data-content="availability">
             Check Availability
           </li>
-          <li class="menu-item" data-content="booking">Find Booking</li>
-          <li class="menu-item" data-content="reservation">
+          <li class="rr__menu--item" data-content="booking">Find Booking</li>
+          <li class="rr__menu--item" data-content="reservation">
             Cancel Reservation
           </li>
         </ul>
         <hr />
-        <ul class="rr_menu_mobile">
-          <li class="menu-item" data-content="find-us">Find us</li>
-          <li class="menu-item" data-content="rating">Public rating</li>
-          <li class="menu-item" data-content="offers">Offers</li>
+        <ul class="rr__menu--nav">
+          <li class="rr__menu--item" data-content="find-us">Find us</li>
+          <li class="rr__menu--item" data-content="rating">Public rating</li>
+          <li class="rr__menu--item" data-content="offers">Offers</li>
         </ul>
       </div>
-      <!-- xxx close button -->
-      <a href="#" class="rr__container_close rr__close">
-        <span class="bar animate"></span>
-      </a>
-      <button class="rr__container_menu_button rr__menu_button">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <g data-name="vuesax/linear/menu" transform="translate(-684 -380)">
-            <g id="menu">
-              <path
-                id="Vector"
-                d="M0,0H18"
-                transform="translate(687 387)"
-                fill="none"
-                stroke="#292d32"
-                stroke-linecap="round"
-                stroke-width="1.5"
-              />
-              <path
-                id="Vector-2"
-                data-name="Vector"
-                d="M0,0H18"
-                transform="translate(687 392)"
-                fill="none"
-                stroke="#292d32"
-                stroke-linecap="round"
-                stroke-width="1.5"
-              />
-              <path
-                id="Vector-3"
-                data-name="Vector"
-                d="M0,0H18"
-                transform="translate(687 397)"
-                fill="none"
-                stroke="#292d32"
-                stroke-linecap="round"
-                stroke-width="1.5"
-              />
-              <path
-                id="Vector-4"
-                data-name="Vector"
-                d="M0,0H24V24H0Z"
-                transform="translate(684 380)"
-                fill="none"
-                opacity="0"
-              />
-            </g>
-          </g>
-        </svg>
-      </button>
-      <!-- end close button -->
+      <!-- HOME VIEW -->
+      <div class="rr__home rr_view">
+        <div class="rr__component guestResult rr__update--guest">
+          <div>
+            <h4>Guests</h4>
 
-      <div class="rr__container_body">
-        <div class="rr__container_body--body">
-          <div class="rr__container_body--left">
-            <!--  -->
-            <div class="guestResult">
-              <div>
-                <h4>Guests</h4>
-                <p>
-                  <span class="nbRoom">Room 1 - </span>
-                  <span> 2 adults, 1 children</span>
-                </p>
-              </div>
-              <div>
-                <button class="rr__update_guest">
-                  <svg width="20" height="20" viewBox="0 0 20 20">
-                    <path
-                      id="Vector"
-                      d="M7.719,1.2.878,8.441A2.541,2.541,0,0,0,.319,9.633l-.308,2.7a1.273,1.273,0,0,0,1.558,1.475l2.683-.458a2.393,2.393,0,0,0,1.158-.625l6.842-7.242c1.183-1.25,1.717-2.675-.125-4.417C10.294-.659,8.9-.051,7.719,1.2Z"
-                      transform="translate(3.331 1.801)"
-                      fill="none"
-                      stroke="#656565"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                    />
-                    <path
-                      id="Vector-2"
-                      data-name="Vector"
-                      d="M0,0A5.105,5.105,0,0,0,4.542,4.292"
-                      transform="translate(9.908 4.208)"
-                      fill="none"
-                      stroke="#656565"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                    />
-                    <path
-                      id="Vector-3"
-                      data-name="Vector"
-                      d="M0,0H20V20H0Z"
-                      fill="none"
-                      opacity="0"
-                    />
-                  </svg>
-                </button>
+            <div class="rr__guestes--container">
+              <p>
+                <span class="nbRoom">Room 1 </span><i> - </i>
+                <span> 1 adults, 0 children</span>
+              </p>
+            </div>
+
+          </div>
+          <div>
+            <span >
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <path
+                  id="Vector"
+                  d="M7.719,1.2.878,8.441A2.541,2.541,0,0,0,.319,9.633l-.308,2.7a1.273,1.273,0,0,0,1.558,1.475l2.683-.458a2.393,2.393,0,0,0,1.158-.625l6.842-7.242c1.183-1.25,1.717-2.675-.125-4.417C10.294-.659,8.9-.051,7.719,1.2Z"
+                  transform="translate(3.331 1.801)"
+                  fill="none"
+                  stroke="#656565"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  id="Vector-2"
+                  data-name="Vector"
+                  d="M0,0A5.105,5.105,0,0,0,4.542,4.292"
+                  transform="translate(9.908 4.208)"
+                  fill="none"
+                  stroke="#656565"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  id="Vector-3"
+                  data-name="Vector"
+                  d="M0,0H20V20H0Z"
+                  fill="none"
+                  opacity="0"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="rr__component guestEdit">
+          <div class="rr__roomLine">
+            <div class="rr__roomLine--title">
+              <h4>Room - 1</h4>
+              <span class="rr__roomLine--remove"> Remove </span>
+            </div>
+
+            <div class="rr__guests__col Adults">
+              <label class="rr__label">Adult</label>
+
+              <div class="rr__guests__item Booking__guests__item">
+                <div class="rr__guests__item--down Booking__guests__item--down">
+                  <span class="RRicon RRicon-less"></span>
+                </div>
+                <div
+                  class="rr__guests__item--adult value Booking__guests__item--adult"
+                >
+                  1
+                </div>
+                <div class="rr__guests__item--up Booking__guests__item--up">
+                  <span class="RRicon RRicon-add"></span>
+                </div>
               </div>
             </div>
-            <!--  -->
-            <div class="rr__infos__stay">
-              <!-- <h2 class="rr__title">Your Reservation</h2> -->
-              <div class="rr__row_close_guest">
-                <h4>Room 1</h4>
-                <button class="rr__close_guest">
-                  <svg
-                    width="33.941"
-                    height="33.941"
-                    viewBox="0 0 33.941 33.941"
-                  >
-                    <g
-                      data-name="vuesax/linear/add"
-                      transform="translate(-152.735 -526.087) rotate(45)"
-                    >
-                      <g id="add">
-                        <path
-                          id="Vector"
-                          d="M0,0H12"
-                          transform="translate(498 264)"
-                          fill="none"
-                          stroke="#292d32"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                        ></path>
-                        <path
-                          id="Vector-2"
-                          data-name="Vector"
-                          d="M0,12V0"
-                          transform="translate(504 258)"
-                          fill="none"
-                          stroke="#292d32"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                        ></path>
-                        <path
-                          id="Vector-3"
-                          data-name="Vector"
-                          d="M0,0H24V24H0Z"
-                          transform="translate(492 252)"
-                          fill="none"
-                          opacity="0"
-                        ></path>
-                      </g>
-                    </g>
-                  </svg>
-                </button>
-              </div>
-              <div class="rr__date__col arrival">
-                <div class="rr__label">
-                  <label>Arrival Date </label>
-                </div>
-                <div class="rr__date__item">
-                  <span class="icon icon-booking"></span>
-                  <span class="rr__date__item--day">18</span>
-                  <div class="rr__date__item--time">
-                    <span class="rr__date__item--month">Jul</span>
-                    <span class="rr__date__item--year">2018</span>
-                    <span class="rr__date__item--week">Thursday</span>
-                  </div>
-                </div>
-              </div>
+            <div class="rr__guests__col Adults">
+              <label class="rr__label">Child</label>
 
-              <div class="rr__date__col departure">
-                <div class="rr__label">
-                  <label>Departure Date </label>
+              <div class="rr__guests__item Booking__guests__item">
+                <div class="rr__guests__item--down Booking__guests__item--down">
+                  <span class="RRicon RRicon-less"></span>
                 </div>
-                <div class="rr__date__item">
-                  <span class="icon icon-booking"></span>
-                  <span class="rr__date__item--day">24</span>
-                  <div class="rr__date__item--time">
-                    <span class="rr__date__item--month">Aug</span>
-                    <span class="rr__date__item--year">2018</span>
-                    <span class="rr__date__item--week">Wednesday</span>
-                  </div>
+                <div
+                  class="rr__guests__item--adult value Booking__guests__item--adult"
+                >
+                  0
                 </div>
-              </div>
-
-              <div class="rr__guests__col Adults">
-                <div class="rr__label">
-                  <label>Adult</label>
+                <div class="rr__guests__item--up Booking__guests__item--up">
+                  <span class="RRicon RRicon-add"></span>
                 </div>
-                <div class="rr__guests__item">
-                  <input
-                    type="hidden"
-                    name="adult"
-                    value="1"
-                    class="guest_check"
-                  />
-                  <div class="rr__guests__item--down">
-                    <span class="icon icon-less"></span>
-                  </div>
-                  <div class="rr__guests__item--adult value">1</div>
-                  <div class="rr__guests__item--up">
-                    <span class="icon icon-add"></span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="rr__guests__col Children">
-                <div class="rr__label">
-                  <label>Children</label>
-                </div>
-                <div class="rr__guests__item">
-                  <input type="hidden" name="children" value="0" />
-                  <div class="rr__guests__item--down">
-                    <span class="icon icon-less"></span>
-                  </div>
-                  <div class="rr__guests__item--children value">0</div>
-                  <div class="rr__guests__item--up">
-                    <span class="icon icon-add"></span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="rr__promo">
-                <!-- <div class="rr__label">
-                                <label>Promo Code</label>
-                            </div> -->
-                <input
-                  type="text"
-                  name="rr__promo_input"
-                  placeholder="Promo Code"
-                />
               </div>
             </div>
           </div>
-          <div class="rr__container_body--all">
-            <!-- maps RR -->
-            <div class="rr__maps">
-              <h2 class="rr__maps_title">Places Nearby the Hotel</h2>
-              <div class="rr__nearby">
-                <div>
-                  <ul>
-                    <li data-rrtype="restaurant">
-                      <span class="rr__nearby-tlt">Restaurants</span>
-                      <span class="rr__nearby-icon"
-                        ><img src="img/restaurant.svg" alt="Restaurants"
-                      /></span>
-                    </li>
-                    <li data-rrtype="cafe">
-                      <span class="rr__nearby-tlt">Coffee</span>
-                      <span class="rr__nearby-icon"
-                        ><img src="img/coffee.svg" alt="Restaurants"
-                      /></span>
-                    </li>
-                    <li data-rrtype="bar">
-                      <span class="rr__nearby-tlt">Bars</span>
-                      <span class="rr__nearby-icon"
-                        ><img src="img/cocktail.svg" alt="Restaurants"
-                      /></span>
-                    </li>
-                    <li data-rrtype="shopping_mall">
-                      <span class="rr__nearby-tlt">Shopping</span>
-                      <span class="rr__nearby-icon"
-                        ><img src="img/shopping.svg" alt="Restaurants"
-                      /></span>
-                    </li>
-                    <li data-rrtype="bank">
-                      <span class="rr__nearby-tlt">Banks</span>
-                      <span class="rr__nearby-icon"
-                        ><img src="img/museum.svg" alt="Restaurants"
-                      /></span>
-                    </li>
-                    <li data-rrtype="airport">
-                      <span class="rr__nearby-tlt">Airport</span>
-                      <span class="rr__nearby-icon"
-                        ><img src="img/plane.svg" alt="Restaurants"
-                      /></span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="rr__maps_icon">
-                <img src="img/full-screen.svg" alt="full-screen" />
-              </div>
+          <button class="rr__promo--apply apply--room">Apply</button>
+        </div>
 
-              <div class="rr__maps_mobile">
-                <img src="img/placeholder.svg" alt="full-screen" />
-              </div>
-
-              <div id="maps_big">
-                <div class="rr_menu_burger">
-                  <img
-                    src="https://api.globres.io/RealRate/assets/img/BB/ic_menu_burger_w.png"
-                    alt=""
-                  />
-                </div>
-              </div>
+        <div class="rr__component calendarResult rr__update--calendar">
+          <div>
+            <h4>Arrival - Departure</h4>
+            <p>
+              <span>10 DEC - 15 Dec</span>
+            </p>
+          </div>
+          <div>
+            <span >
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <path
+                  id="Vector"
+                  d="M7.719,1.2.878,8.441A2.541,2.541,0,0,0,.319,9.633l-.308,2.7a1.273,1.273,0,0,0,1.558,1.475l2.683-.458a2.393,2.393,0,0,0,1.158-.625l6.842-7.242c1.183-1.25,1.717-2.675-.125-4.417C10.294-.659,8.9-.051,7.719,1.2Z"
+                  transform="translate(3.331 1.801)"
+                  fill="none"
+                  stroke="#656565"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  id="Vector-2"
+                  data-name="Vector"
+                  d="M0,0A5.105,5.105,0,0,0,4.542,4.292"
+                  transform="translate(9.908 4.208)"
+                  fill="none"
+                  stroke="#656565"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  id="Vector-3"
+                  data-name="Vector"
+                  d="M0,0H20V20H0Z"
+                  fill="none"
+                  opacity="0"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="rr__component calendarEdit">
+          <div class="rr__calendar">
+            <div id="rr__calender"></div>
+          </div>
+          <div class="rr__grpLegend">
+            <div class="LegendItem">
+              <span class="BEMinLen Lgnd"></span> Min Stay
             </div>
-            <div class="rr__container_body--middle">
-              <div id="rr__calender" class="rr__calender"></div>
-
-              <div class="rr__grpLegend">
-                <!-- <div class="LegendItem">
-                  <span class="ui-state-active Lgnd"></span>Selected Dates
-                </div>
-                <div class="LegendItem">
-                  <span class="BECalOpen Lgnd"></span>Rooms are available
-                </div> -->
-                <div class="LegendItem">
-                  <span class="BENoAvail Lgnd"></span>No Availability
-                </div>
-                <div class="LegendItem">
-                  <span class="BEMinLen Lgnd"></span>Min Stay
-                </div>
-              </div>
-              <div class="rr__offers">
-                <div class="rr__offers_div">
-                  <div class="item_offer">
-                    <div class="item_offer_img">
-                      <img src="img/offer-2.png" alt="offer" />
-                    </div>
-                    <div class="item_offer_txt">
-                      <p class="item_offer_txt--title">
-                        Stay 5 nights and save 15%
-                      </p>
-                      <div class="item_offer_txt--desc">
-                        <p>
-                          Booking directly via phone, email or through our
-                          official website is really worthwhile.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item_offer">
-                    <div class="item_offer_img">
-                      <img src="img/offer-1.png" alt="offer" />
-                    </div>
-                    <div class="item_offer_txt">
-                      <p class="item_offer_txt--title">
-                        Stay 5 nights and save 15%
-                      </p>
-                      <div class="item_offer_txt--desc">
-                        <p>
-                          Booking directly via phone, email or through our
-                          official website is really worthwhile.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="LegendItem">
+              <span class="BENoArrive Lgnd"></span>
+              No Arrival
             </div>
-            <div class="rr__container_body--right">
-              <div class="rr__container_body--right-container">
-                <h2 class="rr__title">Find us</h2>
-                <div class="rr__infos_maps" id="infos_maps"></div>
-                <!-- START RATING -->
-                <div class="rt__popup">
-                  <div class="rt__popup_header">
-                    <p>Our Rating</p>
-                  </div>
-                  <div class="rt__popup_body">
-                    <div class="rt__popup_body--total">
-                      <div class="rat">4.23<sub>/5</sub></div>
-                      <div class="">
-                        <div
-                          class="rt__popup_body--sub"
-                          data-number-of-rounded-rating="0"
-                        >
-                          <div class="rr-rating" data-rating="4.23">
-                            <div
-                              class="jq-star"
-                              style="width: 18px; height: 18px"
-                            >
-                              <svg
-                                version="1.0"
-                                class="jq-star-svg"
-                                shape-rendering="geometricPrecision"
-                                xmlns="http://www.w3.org/2000/svg"
-                                x="0px"
-                                y="0px"
-                                width="305px"
-                                height="305px"
-                                viewBox="60 -62 309 309"
-                                style="
-                                  enable-background: new 64 -59 305 305;
-                                  stroke-width: 0px;
-                                "
-                                xml:space="preserve"
-                              >
-                                <style type="text/css">
-                                  .svg-empty-236 {
-                                    fill: url(#236_SVGID_1_);
-                                  }
-                                  .svg-hovered-236 {
-                                    fill: url(#236_SVGID_2_);
-                                  }
-                                  .svg-active-236 {
-                                    fill: url(#236_SVGID_3_);
-                                  }
-                                  .svg-rated-236 {
-                                    fill: crimson;
-                                  }
-                                </style>
-                                <linearGradient
-                                  id="236_SVGID_1_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: lightgray"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: lightgray"
-                                  ></stop>
-                                </linearGradient>
-                                <linearGradient
-                                  id="236_SVGID_2_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: orange"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: orange"
-                                  ></stop>
-                                </linearGradient>
-                                <linearGradient
-                                  id="236_SVGID_3_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: gold"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: gold"
-                                  ></stop>
-                                </linearGradient>
-                                <polygon
-                                  data-side="center"
-                                  class="svg-empty-236"
-                                  points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 212.9,181.1 213.9,181 306.5,241 "
-                                  style="fill: transparent; stroke: black"
-                                ></polygon>
-                                <polygon
-                                  data-side="left"
-                                  class="svg-active-236"
-                                  points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 213.9,181.1 213.9,181 306.5,241 "
-                                  style="stroke-opacity: 0"
-                                ></polygon>
-                                <polygon
-                                  data-side="right"
-                                  class="svg-active-236"
-                                  points="364,55.7 255.5,46.8 214,-59 213.9,181 306.5,241 281.1,129.8 "
-                                  style="stroke-opacity: 0"
-                                ></polygon>
-                              </svg>
-                            </div>
-                            <div
-                              class="jq-star"
-                              style="width: 18px; height: 18px"
-                            >
-                              <svg
-                                version="1.0"
-                                class="jq-star-svg"
-                                shape-rendering="geometricPrecision"
-                                xmlns="http://www.w3.org/2000/svg"
-                                x="0px"
-                                y="0px"
-                                width="305px"
-                                height="305px"
-                                viewBox="60 -62 309 309"
-                                style="
-                                  enable-background: new 64 -59 305 305;
-                                  stroke-width: 0px;
-                                "
-                                xml:space="preserve"
-                              >
-                                <style type="text/css">
-                                  .svg-empty-236 {
-                                    fill: url(#236_SVGID_1_);
-                                  }
-                                  .svg-hovered-236 {
-                                    fill: url(#236_SVGID_2_);
-                                  }
-                                  .svg-active-236 {
-                                    fill: url(#236_SVGID_3_);
-                                  }
-                                  .svg-rated-236 {
-                                    fill: crimson;
-                                  }
-                                </style>
-                                <linearGradient
-                                  id="236_SVGID_1_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: lightgray"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: lightgray"
-                                  ></stop>
-                                </linearGradient>
-                                <linearGradient
-                                  id="236_SVGID_2_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: orange"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: orange"
-                                  ></stop>
-                                </linearGradient>
-                                <linearGradient
-                                  id="236_SVGID_3_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: gold"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: gold"
-                                  ></stop>
-                                </linearGradient>
-                                <polygon
-                                  data-side="center"
-                                  class="svg-empty-236"
-                                  points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 212.9,181.1 213.9,181 306.5,241 "
-                                  style="fill: transparent; stroke: black"
-                                ></polygon>
-                                <polygon
-                                  data-side="left"
-                                  class="svg-active-236"
-                                  points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 213.9,181.1 213.9,181 306.5,241 "
-                                  style="stroke-opacity: 0"
-                                ></polygon>
-                                <polygon
-                                  data-side="right"
-                                  class="svg-active-236"
-                                  points="364,55.7 255.5,46.8 214,-59 213.9,181 306.5,241 281.1,129.8 "
-                                  style="stroke-opacity: 0"
-                                ></polygon>
-                              </svg>
-                            </div>
-                            <div
-                              class="jq-star"
-                              style="width: 18px; height: 18px"
-                            >
-                              <svg
-                                version="1.0"
-                                class="jq-star-svg"
-                                shape-rendering="geometricPrecision"
-                                xmlns="http://www.w3.org/2000/svg"
-                                x="0px"
-                                y="0px"
-                                width="305px"
-                                height="305px"
-                                viewBox="60 -62 309 309"
-                                style="
-                                  enable-background: new 64 -59 305 305;
-                                  stroke-width: 0px;
-                                "
-                                xml:space="preserve"
-                              >
-                                <style type="text/css">
-                                  .svg-empty-236 {
-                                    fill: url(#236_SVGID_1_);
-                                  }
-                                  .svg-hovered-236 {
-                                    fill: url(#236_SVGID_2_);
-                                  }
-                                  .svg-active-236 {
-                                    fill: url(#236_SVGID_3_);
-                                  }
-                                  .svg-rated-236 {
-                                    fill: crimson;
-                                  }
-                                </style>
-                                <linearGradient
-                                  id="236_SVGID_1_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: lightgray"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: lightgray"
-                                  ></stop>
-                                </linearGradient>
-                                <linearGradient
-                                  id="236_SVGID_2_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: orange"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: orange"
-                                  ></stop>
-                                </linearGradient>
-                                <linearGradient
-                                  id="236_SVGID_3_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: gold"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: gold"
-                                  ></stop>
-                                </linearGradient>
-                                <polygon
-                                  data-side="center"
-                                  class="svg-empty-236"
-                                  points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 212.9,181.1 213.9,181 306.5,241 "
-                                  style="fill: transparent; stroke: black"
-                                ></polygon>
-                                <polygon
-                                  data-side="left"
-                                  class="svg-active-236"
-                                  points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 213.9,181.1 213.9,181 306.5,241 "
-                                  style="stroke-opacity: 0"
-                                ></polygon>
-                                <polygon
-                                  data-side="right"
-                                  class="svg-active-236"
-                                  points="364,55.7 255.5,46.8 214,-59 213.9,181 306.5,241 281.1,129.8 "
-                                  style="stroke-opacity: 0"
-                                ></polygon>
-                              </svg>
-                            </div>
-                            <div
-                              class="jq-star"
-                              style="width: 18px; height: 18px"
-                            >
-                              <svg
-                                version="1.0"
-                                class="jq-star-svg"
-                                shape-rendering="geometricPrecision"
-                                xmlns="http://www.w3.org/2000/svg"
-                                x="0px"
-                                y="0px"
-                                width="305px"
-                                height="305px"
-                                viewBox="60 -62 309 309"
-                                style="
-                                  enable-background: new 64 -59 305 305;
-                                  stroke-width: 0px;
-                                "
-                                xml:space="preserve"
-                              >
-                                <style type="text/css">
-                                  .svg-empty-236 {
-                                    fill: url(#236_SVGID_1_);
-                                  }
-                                  .svg-hovered-236 {
-                                    fill: url(#236_SVGID_2_);
-                                  }
-                                  .svg-active-236 {
-                                    fill: url(#236_SVGID_3_);
-                                  }
-                                  .svg-rated-236 {
-                                    fill: crimson;
-                                  }
-                                </style>
-                                <linearGradient
-                                  id="236_SVGID_1_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: lightgray"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: lightgray"
-                                  ></stop>
-                                </linearGradient>
-                                <linearGradient
-                                  id="236_SVGID_2_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: orange"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: orange"
-                                  ></stop>
-                                </linearGradient>
-                                <linearGradient
-                                  id="236_SVGID_3_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: gold"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: gold"
-                                  ></stop>
-                                </linearGradient>
-                                <polygon
-                                  data-side="center"
-                                  class="svg-empty-236"
-                                  points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 212.9,181.1 213.9,181 306.5,241 "
-                                  style="fill: transparent; stroke: black"
-                                ></polygon>
-                                <polygon
-                                  data-side="left"
-                                  class="svg-active-236"
-                                  points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 213.9,181.1 213.9,181 306.5,241 "
-                                  style="stroke-opacity: 0"
-                                ></polygon>
-                                <polygon
-                                  data-side="right"
-                                  class="svg-active-236"
-                                  points="364,55.7 255.5,46.8 214,-59 213.9,181 306.5,241 281.1,129.8 "
-                                  style="stroke-opacity: 0"
-                                ></polygon>
-                              </svg>
-                            </div>
-                            <div
-                              class="jq-star"
-                              style="width: 18px; height: 18px"
-                            >
-                              <svg
-                                version="1.0"
-                                class="jq-star-svg"
-                                shape-rendering="geometricPrecision"
-                                xmlns="http://www.w3.org/2000/svg"
-                                x="0px"
-                                y="0px"
-                                width="305px"
-                                height="305px"
-                                viewBox="60 -62 309 309"
-                                style="
-                                  enable-background: new 64 -59 305 305;
-                                  stroke-width: 0px;
-                                "
-                                xml:space="preserve"
-                              >
-                                <style type="text/css">
-                                  .svg-empty-236 {
-                                    fill: url(#236_SVGID_1_);
-                                  }
-                                  .svg-hovered-236 {
-                                    fill: url(#236_SVGID_2_);
-                                  }
-                                  .svg-active-236 {
-                                    fill: url(#236_SVGID_3_);
-                                  }
-                                  .svg-rated-236 {
-                                    fill: crimson;
-                                  }
-                                </style>
-                                <linearGradient
-                                  id="236_SVGID_1_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: lightgray"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: lightgray"
-                                  ></stop>
-                                </linearGradient>
-                                <linearGradient
-                                  id="236_SVGID_2_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: orange"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: orange"
-                                  ></stop>
-                                </linearGradient>
-                                <linearGradient
-                                  id="236_SVGID_3_"
-                                  gradientUnits="userSpaceOnUse"
-                                  x1="0"
-                                  y1="-50"
-                                  x2="0"
-                                  y2="250"
-                                >
-                                  <stop
-                                    offset="0"
-                                    style="stop-color: gold"
-                                  ></stop>
-                                  <stop
-                                    offset="1"
-                                    style="stop-color: gold"
-                                  ></stop>
-                                </linearGradient>
-                                <polygon
-                                  data-side="center"
-                                  class="svg-empty-236"
-                                  points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 212.9,181.1 213.9,181 306.5,241 "
-                                  style="fill: transparent; stroke: black"
-                                ></polygon>
-                                <polygon
-                                  data-side="left"
-                                  class="svg-empty-236"
-                                  points="281.1,129.8 364,55.7 255.5,46.8 214,-59 172.5,46.8 64,55.4 146.8,129.7 121.1,241 213.9,181.1 213.9,181 306.5,241 "
-                                  style="stroke-opacity: 0"
-                                ></polygon>
-                                <polygon
-                                  data-side="right"
-                                  class="svg-empty-236"
-                                  points="364,55.7 255.5,46.8 214,-59 213.9,181 306.5,241 281.1,129.8 "
-                                  style="stroke-opacity: 0"
-                                ></polygon>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- number of rating -->
-                        <p class="nbr__rat">2100 Review (s)</p>
-                        <!-- end number of rating -->
-                      </div>
-                    </div>
-                    <div class="g__rating--global">
-                      <div
-                        class="g__container rr-booking"
-                        style="display: flex"
-                      >
-                        <div class="rr__logo logo-bk">
-                          <span class="rt_book">Book</span
-                          ><span class="rt_ing">ing</span>
-                        </div>
-                        <div class="g__rating-num">
-                          <span class="">8.4</span>
-                        </div>
-                      </div>
-                      <div class="g__container rr-exp" style="display: flex">
-                        <div class="rr__logo logo-ex">
-                          <span class="rt_expedia">Expedia</span>
-                        </div>
+          </div>
+          <button class="rr__promo--apply apply--calendar">Apply</button>
+        </div>
 
-                        <div class="g__rating-num">
-                          <span class="">9.0</span>
-                        </div>
-                      </div>
-                      <div
-                        class="g__container rr-ta last_item"
-                        style="display: flex"
-                      >
-                        <div class="rr__logo logo-tp">
-                          <span class="rt_trip">trip</span>
-                          <span class="rt_advisor">advisor</span>
-                        </div>
-                        <div class="g__rating-num">
-                          <span class="">9.2</span>
-                        </div>
-                        <div class="g__rating-icon">
-                          <span
-                            class="ui_bubble_rating bubble_4"
-                            data-clicksource="BubbleRatingTrackingOnly"
-                          ></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- END RATING -->
+        <div class="rr__component promoResult rr__update--promo">
+          <div>
+            <h4>PromoCode ?</h4>
+            <p>
+              <span class="rr__code_type">Discout - </span>
+              <span> NEWYEAR25</span>
+            </p>
+            <p>
+              <span class="rr__code_type">Discout - </span>
+              <span> NEWYEAR25</span>
+            </p>
+          </div>
+          <div>
+            <span >
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <path
+                  id="Vector"
+                  d="M7.719,1.2.878,8.441A2.541,2.541,0,0,0,.319,9.633l-.308,2.7a1.273,1.273,0,0,0,1.558,1.475l2.683-.458a2.393,2.393,0,0,0,1.158-.625l6.842-7.242c1.183-1.25,1.717-2.675-.125-4.417C10.294-.659,8.9-.051,7.719,1.2Z"
+                  transform="translate(3.331 1.801)"
+                  fill="none"
+                  stroke="#656565"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  id="Vector-2"
+                  data-name="Vector"
+                  d="M0,0A5.105,5.105,0,0,0,4.542,4.292"
+                  transform="translate(9.908 4.208)"
+                  fill="none"
+                  stroke="#656565"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  id="Vector-3"
+                  data-name="Vector"
+                  d="M0,0H20V20H0Z"
+                  fill="none"
+                  opacity="0"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
 
-                <div class="rr__xtease">
-                  <h4 class="rr__xtease_title">Comparateur de prix</h4>
-                  <div class="rr__xtease_body">
-                    <div class="lds-ripple">
-                      <div></div>
-                      <div></div>
-                    </div>
-                    <div class="rr__xtease_body--portail bk">
-                      <!-- <div class="rr__xtease_body-img">
-                        <img src="img/bk.png" alt="" />
-                      </div> -->
-                      <p class="rr__xtease_body-name">Booking</p>
-                      <div class="rr__xtease_body--p xt__price">
-                        <span class="rr__xtease_body--price">210</span>
-                        <span class="rr__xtease_body--currency">€</span>
-                      </div>
-                    </div>
-                    <div class="rr__xtease_body--portail ex">
-                      <!-- <div class="rr__xtease_body-img">
-                        <img src="img/ex.png" alt="" />
-                      </div> -->
-                      <p class="rr__xtease_body-name">Expedia</p>
-                      <div class="rr__xtease_body--p xt__price">
-                        <span class="rr__xtease_body--price">209</span>
-                        <span class="rr__xtease_body--currency">€</span>
-                      </div>
-                    </div>
-                    <div class="rr__xtease_body--portail hrs">
-                      <!-- <div class="rr__xtease_body-img">
-                        <img src="img/hrs.png" alt="" />
-                      </div> -->
-                      <p class="rr__xtease_body-name">Hrs</p>
-                      <div class="rr__xtease_body--p xt__price">
-                        <span class="rr__xtease_body--price">217</span>
-                        <span class="rr__xtease_body--currency">€</span>
-                      </div>
-                    </div>
+        <div class="rr__component promoEdit">
+          <h4>Promo Code </h4>
+          <div class="rr__promocode">
+            <div class="rr__promocode--select">
+              <select class="rr__promo--input" name="" id="">
+                <option value="Groupe code ">Promo code</option>
+                <option value="Groupe code ">Groupe code</option>
+              </select>
+              <input
+                type="text"
+                class="rr__promo--input"
+                placeholder="Enter Code"
+              />
+            </div>
+            <input
+              type="text"
+              class="rr__promo--input"
+              placeholder="Agent Id"
+            />
+          </div>
+          <button class="rr__promo--apply apply--promo">Apply</button>
+        </div>
+
+        <div class="rr__xtease_container">
+          <div class="rr__xtease_loader rr__hide">Loading ...</div>
+          <div class="rr__xtease rr__hide">
+            <h5>Price comparaison</h5>
+            <div class="xtease">
+              <div class="rr__xtease_body">
+                <div
+                  class="rr__xtease_body--portail bk RealRate-xtease-item-booking xt__portals"
+                >
+                  <p class="rr__xtease_body-name">Booking</p>
+                  <div class="rr__xtease_body--p xt__price">
+                    <span class="rr__xtease_body--price">--</span>
+                    <span class="rr__xtease_body--currency">--</span>
                   </div>
                 </div>
-                <div class="rr__submit">
-                  <button class="rr__submit_button">Book Direct</button>
-                  <div class="rr__submit_p price">
-                    <span class="rr__submit--price">198</span>
-                    <span class="rr__submit--currency">€</span>
+                <div
+                  class="rr__xtease_body--portail ex RealRate-xtease-item-expedia xt__portals"
+                >
+                  <p class="rr__xtease_body-name">Expedia</p>
+                  <div class="rr__xtease_body--p xt__price">
+                    <span class="rr__xtease_body--price">--</span>
+                    <span class="rr__xtease_body--currency">--</span>
                   </div>
                 </div>
-                <div class="rr__modifiy">
-                  <a href="#"
-                    ><span class="icon-settings"></span>Modify or cancel your
-                    reservation</a
-                  >
+                <div
+                  class="rr__xtease_body--portail ag RealRate-xtease-item-ag xt__portals"
+                >
+                  <p class="rr__xtease_body-name">Agoda</p>
+                  <div class="rr__xtease_body--p xt__price">
+                    <span class="rr__xtease_body--price">--</span>
+                    <span class="rr__xtease_body--currency">--</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        
+
+        <div class="rr__submit">
+          <input type="submit" class="rr__submit_button" value="Book Direct" />
+          <div class="rr__submit_p">
+            <span class="rr__submit--price">--</span>
+            <span class="rr__submit--currency currency">--</span>
+          </div>
+        </div>
       </div>
+      <!-- HOME VIEW -->
+      <!-- RATING VIEW -->
+      <div class="rr__ratings rr_view" style="display: none"> ratings</div>
+      <!-- RATING VIEW -->
+      <div class="rr__maps rr_view" style="display: none">Maps</div>
+      <div class="rr__offers rr_view" style="display: none">Offers</div>
+      <!-- <div id="rr__calender"></div> -->
     </div>
 
-    <!-- script js -->
-
-    <!-- main js -->
-
     <script src="js/jquery.js"></script>
-    <script>
-      var lat_maps = 48.8726199;
-      var lng_maps = 2.3211823;
-      var markersArray = [];
-
-      $(document).ready(function () {
-        var pyrmont = new google.maps.LatLng(lat_maps, lng_maps);
-        var options_maps = {
-          zoom: 8,
-          scaleControl: true,
-          center: pyrmont,
-          disableDefaultUI: true,
-        };
-
-        var map2 = new google.maps.Map(
-          document.getElementById("infos_maps"),
-          options_maps
-        );
-
-        var icon_map = "https://demo.globres.io/RR-new-map/img/flag.png";
-
-        var marker = new google.maps.Marker({
-          position: { lat: 48.8726199, lng: 2.3211823 },
-          map: map2,
-          icon: icon_map,
-        });
-
-        // type_holder
-        // <div><label><input type="checkbox" class="types" value="mosque" />Mosque</label></div>
-
-        // var types = ['accounting', 'airport', 'amusement_park', 'aquarium', 'art_gallery', 'atm', 'bakery', 'bank', 'bar', 'beauty_salon', 'bicycle_store', 'book_store', 'bowling_alley', 'bus_station', 'cafe', 'campground', 'car_dealer', 'car_rental', 'car_repair', 'car_wash', 'casino', 'cemetery', 'church', 'city_hall', 'clothing_store', 'convenience_store', 'courthouse', 'dentist', 'department_store', 'doctor', 'electrician', 'electronics_store', 'embassy', 'fire_station', 'florist', 'funeral_home', 'furniture_store', 'gas_station', 'gym', 'hair_care', 'hardware_store', 'hindu_temple', 'home_goods_store', 'hospital', 'insurance_agency', 'jewelry_store', 'laundry', 'lawyer', 'library', 'liquor_store', 'local_government_office', 'locksmith', 'lodging', 'mel_delivery', 'meal_takeaway', 'mosque', 'movie_rental', 'movie_theater', 'moving_company', 'museum', 'night_club', 'painter', 'park', 'parking', 'pet_store', 'pharmacy', 'physiotherapist', 'plumber', 'police', 'post_office', 'real_estate_agency', 'restaurant', 'roofing_contractor', 'rv_park', 'school', 'shoe_store', 'shopping_mall', 'spa', 'stadium', 'storage', 'store', 'subway_station', 'synagogue', 'taxi_stand', 'train_station', 'transit_station', 'travel_agency', 'university', 'veterinary_care', 'zoo'];
-        var types = [
-          "airport",
-          "bank",
-          "bar",
-          "bus_station",
-          "cafe",
-          "hospital",
-          "night_club",
-          "parking",
-          "pharmacy",
-          "restaurant",
-          "shopping_mall",
-          "spa",
-          "subway_station",
-          "train_station",
-        ];
-        var html = "";
-
-        $.each(types, function (index, value) {
-          var name = value.replace(/_/g, " ");
-          html +=
-            '<div><label><input type="checkbox" class="types" value="' +
-            value +
-            '" />' +
-            capitalizeFirstLetter(name) +
-            "</label></div>";
-        });
-
-        $("#type_holder").html(html);
-      });
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      var map;
-      var infowindow;
-      var autocomplete;
-
-      var selectedTypes = [];
-
-      function initialize() {
-        var pyrmont = new google.maps.LatLng(lat_maps, lng_maps);
-
-        map = new google.maps.Map(document.getElementById("maps_big"), {
-          center: pyrmont,
-          zoom: 12,
-          disableDefaultUI: true,
-        });
-        var icon_map = "https://demo.globres.io/RR-new-map/img/flag.png";
-
-        var marker = new google.maps.Marker({
-          position: { lat: 48.8726199, lng: 2.3211823 },
-          map: map,
-          icon: icon_map,
-        });
-      }
-    </script>
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCV_1Qf2hZbZC6UKXQrz-aLo_wezcNUuV0&callback=initialize"
-      type="text/javascript"
-    ></script>
-    <script src="js/jquery-ui.min.js"></script>
     <script src="js/moment.js"></script>
     <script src="js/jquery.daterangepicker.min.js"></script>
-    <script src="js/slick.js"></script>
-    <script async defer src="js/main.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".rr__menu_button").click(function () {
-          $(".rr__menu").toggleClass("open");
-        });
-        $(".rr__close_menu").click(function () {
-          $(".rr__menu").toggleClass("open");
-        });
-        $(".rr__update_guest").click(function () {
-          $(".rr__infos__stay").toggleClass("open");
-          $(".guestResult").hide();
-        });
-        $(".rr__close_guest").click(function () {
-          $(".rr__infos__stay").toggleClass("open");
-          $(".guestResult").show();
-        });
-      });
-    </script>
+    <script src="js/BB-mobile.js"></script>
   </body>
 </html>

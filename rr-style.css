@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Urbanist:300,400,600,500,700');
 @import url("https://api.globres.io/RealRate/assets/lib/css/RRicon.css");
+@import 'css/BB-mobile.css';
+
 @media screen and (max-width: 600px) {
 
     .rr__button *,

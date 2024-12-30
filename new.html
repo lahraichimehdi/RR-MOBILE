@@ -6,6 +6,7 @@
     <title>RR Widget</title>
     <link rel="stylesheet" type="text/css" href="css/daterangepicker.min.css" />
     <link rel="stylesheet" href="rr-style.css" />
+    <link rel="stylesheet" href="BB-mobile.css" />
   </head>
   <body>
     <button class="rr__button_cta">
@@ -148,16 +149,16 @@
       </div>
       <!-- HOME VIEW -->
       <div class="rr__home rr_view">
-        <div class="rr__component guestResult">
+        <div class="rr__component guestResult rr__update--guest">
           <div>
             <h4>Guests</h4>
             <p>
-              <span class="nbRoom">Room 1 - </span>
-              <span> 2 adults, 1 children</span>
+              <span class="nbRoom">Room 1 </span><i> - </i>
+              <span> 1 adults, 0 children</span>
             </p>
           </div>
           <div>
-            <span class="rr__update--guest">
+            <span >
               <svg width="20" height="20" viewBox="0 0 20 20">
                 <path
                   id="Vector"
@@ -208,47 +209,7 @@
                 <div
                   class="rr__guests__item--adult value Booking__guests__item--adult"
                 >
-                  2
-                </div>
-                <div class="rr__guests__item--up Booking__guests__item--up">
-                  <span class="RRicon RRicon-add"></span>
-                </div>
-              </div>
-            </div>
-            <div class="rr__guests__col Adults">
-              <label class="rr__label">Child</label>
-
-              <div class="rr__guests__item Booking__guests__item">
-                <div class="rr__guests__item--down Booking__guests__item--down">
-                  <span class="RRicon RRicon-less"></span>
-                </div>
-                <div
-                  class="rr__guests__item--adult value Booking__guests__item--adult"
-                >
-                  0
-                </div>
-                <div class="rr__guests__item--up Booking__guests__item--up">
-                  <span class="RRicon RRicon-add"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="rr__roomLine">
-            <div class="rr__roomLine--title">
-              <h4>Room - 2</h4>
-              <span class="rr__roomLine--remove"> Remove </span>
-            </div>
-            <div class="rr__guests__col Adults">
-              <label class="rr__label">Adult</label>
-
-              <div class="rr__guests__item Booking__guests__item">
-                <div class="rr__guests__item--down Booking__guests__item--down">
-                  <span class="RRicon RRicon-less"></span>
-                </div>
-                <div
-                  class="rr__guests__item--adult value Booking__guests__item--adult"
-                >
-                  2
+                  1
                 </div>
                 <div class="rr__guests__item--up Booking__guests__item--up">
                   <span class="RRicon RRicon-add"></span>
@@ -276,7 +237,7 @@
           <button class="rr__promo--apply apply--room">Apply</button>
         </div>
 
-        <div class="rr__component calendarResult">
+        <div class="rr__component calendarResult rr__update--calendar">
           <div>
             <h4>Arrival - Departure</h4>
             <p>
@@ -284,7 +245,7 @@
             </p>
           </div>
           <div>
-            <span class="rr__update--calendar">
+            <span >
               <svg width="20" height="20" viewBox="0 0 20 20">
                 <path
                   id="Vector"
@@ -334,7 +295,7 @@
           <button class="rr__promo--apply apply--calendar">Apply</button>
         </div>
 
-        <div class="rr__component promoResult">
+        <div class="rr__component promoResult rr__update--promo">
           <div>
             <h4>PromoCode ?</h4>
             <p>
@@ -347,7 +308,7 @@
             </p>
           </div>
           <div>
-            <span class="rr__update--promo">
+            <span >
               <svg width="20" height="20" viewBox="0 0 20 20">
                 <path
                   id="Vector"
@@ -405,40 +366,44 @@
           <button class="rr__promo--apply apply--promo">Apply</button>
         </div>
 
-        <div class="rr__xtease">
-          <h5>Price comparaison</h5>
-          <div class="xtease">
-            <div class="rr__xtease_body">
-              <div
-                class="rr__xtease_body--portail bk RealRate-xtease-item-booking xt__portals"
-              >
-                <p class="rr__xtease_body-name">Booking</p>
-                <div class="rr__xtease_body--p xt__price">
-                  <span class="rr__xtease_body--price">--</span>
-                  <span class="rr__xtease_body--currency">--</span>
+        <div class="rr__xtease_container">
+          <div class="rr__xtease_loader rr__hide">Loading ...</div>
+          <div class="rr__xtease rr__hide">
+            <h5>Price comparaison</h5>
+            <div class="xtease">
+              <div class="rr__xtease_body">
+                <div
+                  class="rr__xtease_body--portail bk RealRate-xtease-item-booking xt__portals"
+                >
+                  <p class="rr__xtease_body-name">Booking</p>
+                  <div class="rr__xtease_body--p xt__price">
+                    <span class="rr__xtease_body--price">--</span>
+                    <span class="rr__xtease_body--currency">--</span>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="rr__xtease_body--portail ex RealRate-xtease-item-expedia xt__portals"
-              >
-                <p class="rr__xtease_body-name">Expedia</p>
-                <div class="rr__xtease_body--p xt__price">
-                  <span class="rr__xtease_body--price">--</span>
-                  <span class="rr__xtease_body--currency">--</span>
+                <div
+                  class="rr__xtease_body--portail ex RealRate-xtease-item-expedia xt__portals"
+                >
+                  <p class="rr__xtease_body-name">Expedia</p>
+                  <div class="rr__xtease_body--p xt__price">
+                    <span class="rr__xtease_body--price">--</span>
+                    <span class="rr__xtease_body--currency">--</span>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="rr__xtease_body--portail hrs RealRate-xtease-item-hrs xt__portals"
-              >
-                <p class="rr__xtease_body-name">Hrs</p>
-                <div class="rr__xtease_body--p xt__price">
-                  <span class="rr__xtease_body--price">--</span>
-                  <span class="rr__xtease_body--currency">--</span>
+                <div
+                  class="rr__xtease_body--portail ag RealRate-xtease-item-ag xt__portals"
+                >
+                  <p class="rr__xtease_body-name">Agoda</p>
+                  <div class="rr__xtease_body--p xt__price">
+                    <span class="rr__xtease_body--price">--</span>
+                    <span class="rr__xtease_body--currency">--</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        
 
         <div class="rr__submit">
           <input type="submit" class="rr__submit_button" value="Book Direct" />
@@ -456,6 +421,7 @@
       <div class="rr__offers rr_view" style="display: none">Offers</div>
       <!-- <div id="rr__calender"></div> -->
     </div>
+
     <script src="js/jquery.js"></script>
     <script src="js/moment.js"></script>
     <script src="js/jquery.daterangepicker.min.js"></script>
@@ -502,12 +468,6 @@
       jQuery(".apply--promo").click(function () {
         jQuery(".promoResult").show();
         jQuery(".promoEdit").hide();
-      });
-      jQuery(".rr__button_cta").click(function () {
-        jQuery(".rr__container").toggleClass("open");
-      });
-      jQuery(".rr__container--close").click(function () {
-        jQuery(".rr__container").toggleClass("open");
       });
     </script>
   </body>
