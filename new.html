@@ -6,7 +6,7 @@
     <title>RR Widget</title>
     <link rel="stylesheet" type="text/css" href="css/daterangepicker.min.css" />
     <link rel="stylesheet" href="rr-style.css" />
-    <link rel="stylesheet" href="BB-mobile.css" />
+    <link rel="stylesheet" href="css/BB-mobile.css" />
   </head>
   <body>
     <button class="rr__button_cta">
@@ -158,7 +158,7 @@
             </p>
           </div>
           <div>
-            <span >
+            <span>
               <svg width="20" height="20" viewBox="0 0 20 20">
                 <path
                   id="Vector"
@@ -245,7 +245,7 @@
             </p>
           </div>
           <div>
-            <span >
+            <span>
               <svg width="20" height="20" viewBox="0 0 20 20">
                 <path
                   id="Vector"
@@ -308,7 +308,7 @@
             </p>
           </div>
           <div>
-            <span >
+            <span>
               <svg width="20" height="20" viewBox="0 0 20 20">
                 <path
                   id="Vector"
@@ -403,7 +403,6 @@
             </div>
           </div>
         </div>
-        
 
         <div class="rr__submit">
           <input type="submit" class="rr__submit_button" value="Book Direct" />
@@ -468,6 +467,12 @@
       jQuery(".apply--promo").click(function () {
         jQuery(".promoResult").show();
         jQuery(".promoEdit").hide();
+      });
+      jQuery(".rr__button_cta").click(function () {
+        jQuery(".rr__container").toggleClass("open");
+      });
+      jQuery(".rr__container--close").click(function () {
+        jQuery(".rr__container").toggleClass("open");
       });
     </script>
   </body>
