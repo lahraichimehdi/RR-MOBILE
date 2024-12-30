@@ -60,7 +60,7 @@
             </g>
           </svg>
         </span>
-        <h5>check availability</h5>
+        <h4>check availability</h4>
         <span class="rr__container--close">
           <svg width="33.941" height="33.941" viewBox="0 0 33.941 33.941">
             <g transform="translate(-152.735 -526.087) rotate(45)">
@@ -132,13 +132,13 @@
           </svg>
         </span>
         <ul class="rr__menu--nav">
-          <li class="rr__menu--item" data-content="rr__home">
+          <li class="rr__menu--item" data-title="" data-content="rr__home">
             Check Availability
           </li>
           <li class="rr__menu--item" data-content="rr__reservation">
             Find Booking
           </li>
-          <li class="rr__menu--item" data-content="rr__reservation">
+          <li class="rr__menu--item" data-content="rr__cancelbooking">
             Cancel Reservation
           </li>
         </ul>
@@ -1319,10 +1319,43 @@
       <div class="rr__offers rr_view" style="display: none">Offers</div>
       <!-- OFFERS VIEW -->
       <!-- FIND BOOKING VIEW -->
-      <div class="rr__reservation rr_view" style="display: none"
-        >FIND BOOKING</div
-      >
+      <div class="rr__reservation rr_view" style="display: none">
+        <form action="#" class="rr__form">
+          <div class="rr_form">
+            <label for="rr__item_number">
+              Enter itinerary, confirmation, or item number
+              <span>*</span>
+            </label>
+            <input type="text" id="rr__item_number" />
+          </div>
+
+          <div class="rr_form">
+            <label for="rr__email">Email Address <span>*</span></label>
+            <input type="email" id="rr__email" />
+          </div>
+          <button class="rr_cancel_reserv-send">Search</button>
+        </form>
+      </div>
       <!-- FIND BOOKING VIEW -->
+      <!-- CANCEL BOOKING VIEW -->
+      <div class="rr__cancelbooking rr_view" style="display: none">
+        <form action="#" class="rr__form">
+          <div class="rr_form">
+            <label for="rr__item_number">
+              Enter itinerary, confirmation, or item number
+              <span>*</span>
+            </label>
+            <input type="text" id="rr__item_number" />
+          </div>
+
+          <div class="rr_form">
+            <label for="rr__email">Email Address <span>*</span></label>
+            <input type="email" id="rr__email" />
+          </div>
+          <button class="rr_cancel_reserv-send">Search</button>
+        </form>
+      </div>
+      <!-- CANCEL BOOKING VIEW -->
     </div>
 
     <script src="js/jquery.js"></script>
@@ -1382,8 +1415,10 @@
       // Add click event to menu items
       $(".rr__menu--item").click(function () {
         const contentId = $(this).data("content");
-        console.log(contentId);
+        const title = $(this).text();
+        console.log($(this).text());
         $(".rr_view").hide();
+        $(`.rr__container--header h4`).text(title);
         $(`.${contentId}`).show();
         $(".rr__menu").toggleClass("open");
       });
