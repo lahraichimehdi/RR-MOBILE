@@ -132,19 +132,23 @@
           </svg>
         </span>
         <ul class="rr__menu--nav">
-          <li class="rr__menu--item" data-content="availability">
+          <li class="rr__menu--item" data-content="rr__home">
             Check Availability
           </li>
-          <li class="rr__menu--item" data-content="booking">Find Booking</li>
-          <li class="rr__menu--item" data-content="reservation">
+          <li class="rr__menu--item" data-content="rr__reservation">
+            Find Booking
+          </li>
+          <li class="rr__menu--item" data-content="rr__reservation">
             Cancel Reservation
           </li>
         </ul>
         <hr />
         <ul class="rr__menu--nav">
-          <li class="rr__menu--item" data-content="find-us">Find us</li>
-          <li class="rr__menu--item" data-content="rating">Public rating</li>
-          <li class="rr__menu--item" data-content="offers">Offers</li>
+          <li class="rr__menu--item" data-content="rr__maps">Find us</li>
+          <li class="rr__menu--item" data-content="rr__ratings">
+            Public rating
+          </li>
+          <li class="rr__menu--item" data-content="rr__offers">Offers</li>
         </ul>
       </div>
       <!-- HOME VIEW -->
@@ -468,9 +472,8 @@
         </div>
       </div>
       <!-- RATING VIEW -->
-
       <!-- MAPS VIEW -->
-      <div class="rr__maps rr_view">
+      <div class="rr__maps rr_view" style="display: none">
         <div class="rr_places">
           <div class="rr_places_container">
             <div
@@ -1061,7 +1064,6 @@
               data-cat-name="transportation"
               data-place-name="Feldeggstrasse"
               data-lf-id="417"
-              data-geoloc='{"lat":"47.360071032982155","long":"8.552483036799567"}'
             >
               <div class="rr_places_item--left">
                 <div class="rr_places_item--icon">
@@ -1129,10 +1131,10 @@
                     <span>Pavillon Le Corbusier</span>
                     <div class="rr_places_distance">3.2 km</div>
                   </div>
-                  <div class="rr_places_desc"
-                    >© Foto Zürich Tourism -
-                    https://zt.zuerich.com/en/media/media -</div
-                  >
+                  <div class="rr_places_desc">
+                    © Foto Zürich Tourism -
+                    https://zt.zuerich.com/en/media/media
+                  </div>
                 </div>
               </div>
             </div>
@@ -1158,10 +1160,9 @@
                     <span>Restaurant Fischstube</span>
                     <div class="rr_places_distance">3.5 km</div>
                   </div>
-                  <div class="rr_places_desc"
-                    >© Foto Zürich Tourism -
-                    https://zt.zuerich.com/en/media/media -</div
-                  >
+                  <div class="rr_places_desc">
+                    Foto Zürich Tourism - https://zt.zuerich.com/en/media/media
+                  </div>
                 </div>
               </div>
             </div>
@@ -1314,8 +1315,14 @@
         </div>
       </div>
       <!-- MAPS VIEW -->
+      <!-- OFFERS VIEW -->
       <div class="rr__offers rr_view" style="display: none">Offers</div>
-      <!-- <div id="rr__calender"></div> -->
+      <!-- OFFERS VIEW -->
+      <!-- FIND BOOKING VIEW -->
+      <div class="rr__reservation rr_view" style="display: none"
+        >FIND BOOKING</div
+      >
+      <!-- FIND BOOKING VIEW -->
     </div>
 
     <script src="js/jquery.js"></script>
@@ -1370,6 +1377,15 @@
       });
       jQuery(".rr__container--close").click(function () {
         jQuery(".rr__container").toggleClass("open");
+      });
+
+      // Add click event to menu items
+      $(".rr__menu--item").click(function () {
+        const contentId = $(this).data("content");
+        console.log(contentId);
+        $(".rr_view").hide();
+        $(`.${contentId}`).show();
+        $(".rr__menu").toggleClass("open");
       });
     </script>
   </body>
