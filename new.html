@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="rr-style.css" />
   </head>
   <body>
+    <button class="rr__button_cta">
+      <span class="rr__button_cta--top">book direct </span>
+      <span class="rr__button_cta--bottom">Best Price Guaranteed</span>
+    </button>
     <div class="rr__container">
       <div class="rr__container--header">
         <span class="rr__menu--trigger">
@@ -498,6 +502,12 @@
       jQuery(".apply--promo").click(function () {
         jQuery(".promoResult").show();
         jQuery(".promoEdit").hide();
+      });
+      jQuery(".rr__button_cta").click(function () {
+        jQuery(".rr__container").toggleClass("open");
+      });
+      jQuery(".rr__container--close").click(function () {
+        jQuery(".rr__container").toggleClass("open");
       });
     </script>
   </body>
