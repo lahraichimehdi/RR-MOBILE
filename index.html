@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RR Widget</title>
     <link rel="stylesheet" type="text/css" href="css/daterangepicker.min.css" />
-    <link rel="stylesheet" href="rr-style.css" />
-    <link rel="stylesheet" href="BB-mobile.css" />
+    <link rel="stylesheet" href="/css/rr-style.css" />
+    <link rel="stylesheet" href="/css/BB-mobile.css" />
   </head>
   <body>
-
+    <button class="rr__button_cta">
+      <span class="rr__button_cta--top">book direct </span>
+      <span class="rr__button_cta--bottom">Best Price Guaranteed</span>
+    </button>
     <div class="rr__container">
       <div class="rr__container--header">
         <span class="rr__menu--trigger">
@@ -147,19 +150,15 @@
       <!-- HOME VIEW -->
       <div class="rr__home rr_view">
         <div class="rr__component guestResult rr__update--guest">
-          <div>
-            <h4>Guests</h4>
-
-            <div class="rr__guestes--container">
-              <p>
-                <span class="nbRoom">Room 1 </span><i> - </i>
-                <span> 1 adults, 0 children</span>
-              </p>
-            </div>
-
+          <h4>Guests</h4>
+          <div class="rr__guests--info">
+            <p>
+              <span class="nbRoom">Room 1 </span><i> - </i>
+              <span> 1 adults, 0 children</span>
+            </p>
           </div>
           <div>
-            <span >
+            <span>
               <svg width="20" height="20" viewBox="0 0 20 20">
                 <path
                   id="Vector"
@@ -194,47 +193,54 @@
           </div>
         </div>
         <div class="rr__component guestEdit">
-          <div class="rr__roomLine">
-            <div class="rr__roomLine--title">
-              <h4>Room - 1</h4>
-              <span class="rr__roomLine--remove"> Remove </span>
-            </div>
 
-            <div class="rr__guests__col Adults">
-              <label class="rr__label">Adult</label>
-
-              <div class="rr__guests__item Booking__guests__item">
-                <div class="rr__guests__item--down Booking__guests__item--down">
-                  <span class="RRicon RRicon-less"></span>
-                </div>
-                <div
-                  class="rr__guests__item--adult value Booking__guests__item--adult"
-                >
-                  1
-                </div>
-                <div class="rr__guests__item--up Booking__guests__item--up">
-                  <span class="RRicon RRicon-add"></span>
+          <div class="rr__roomLine--container">
+            <div class="rr__roomLine" data-room="1" >
+              <div class="rr__roomLine--title">
+                <h4>Room 1</h4>
+                <span class="rr__roomLine--remove"> Remove </span>
+              </div>
+  
+              <div class="rr__guests__col Adults">
+                <label class="rr__label">Adult</label>
+  
+                <div class="rr__guests__item Booking__guests__item">
+                  <div class="rr__guests__item--down Booking__guests__item--down">
+                    <span class="RRicon RRicon-less"></span>
+                  </div>
+                  <div
+                    class="rr__guests__item--adult value Booking__guests__item--adult"
+                  >
+                    1
+                  </div>
+                  <div class="rr__guests__item--up Booking__guests__item--up">
+                    <span class="RRicon RRicon-add"></span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="rr__guests__col Adults">
-              <label class="rr__label">Child</label>
-
-              <div class="rr__guests__item Booking__guests__item">
-                <div class="rr__guests__item--down Booking__guests__item--down">
-                  <span class="RRicon RRicon-less"></span>
-                </div>
-                <div
-                  class="rr__guests__item--adult value Booking__guests__item--adult"
-                >
-                  0
-                </div>
-                <div class="rr__guests__item--up Booking__guests__item--up">
-                  <span class="RRicon RRicon-add"></span>
+              <div class="rr__guests__col Childs">
+                <label class="rr__label">Child</label>
+  
+                <div class="rr__guests__item Booking__guests__item">
+                  <div class="rr__guests__item--down Booking__guests__item--down">
+                    <span class="RRicon RRicon-less"></span>
+                  </div>
+                  <div
+                    class="rr__guests__item--child value Booking__guests__item--child"
+                  >
+                    0
+                  </div>
+                  <div class="rr__guests__item--up Booking__guests__item--up">
+                    <span class="RRicon RRicon-add"></span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          
+          <button type="button" class="rr__add_room rr__roomLine-add">
+            + Add room
+          </button>
           <button class="rr__promo--apply apply--room">Apply</button>
         </div>
 
@@ -246,7 +252,7 @@
             </p>
           </div>
           <div>
-            <span >
+            <span>
               <svg width="20" height="20" viewBox="0 0 20 20">
                 <path
                   id="Vector"
@@ -309,7 +315,7 @@
             </p>
           </div>
           <div>
-            <span >
+            <span>
               <svg width="20" height="20" viewBox="0 0 20 20">
                 <path
                   id="Vector"
@@ -404,7 +410,6 @@
             </div>
           </div>
         </div>
-        
 
         <div class="rr__submit">
           <input type="submit" class="rr__submit_button" value="Book Direct" />

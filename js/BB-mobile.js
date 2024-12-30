@@ -1,3 +1,11 @@
+const Guests = [
+    {
+        RoomNum:1,
+        Adults:1,
+        Children:0
+    }
+]
+
 jQuery("#rr__calender").dateRangePicker({
     language: "en",
     inline: true,
@@ -25,6 +33,8 @@ jQuery('body').on("click", ".rr__update--guest", function () {
 jQuery('body').on("click", ".apply--room", function () {
     jQuery(".guestResult").show();
     jQuery(".guestEdit").hide();
+    applyGuestsToHTML();
+    
 });
 
 // Update calendar
@@ -47,46 +57,169 @@ jQuery('body').on("click", ".apply--promo", function () {
     jQuery(".promoEdit").hide();
 });
 
+jQuery(".rr__button_cta").click(function () {
+    jQuery(".rr__container").toggleClass("open");
+  });
+
+  jQuery(".rr__container--close").click(function () {
+    jQuery(".rr__container").toggleClass("open");
+});
+
 jQuery('body').on("click", ".rr__roomLine--remove", function () {
-    if(jQuery(".rr__roomLine").length > 1) jQuery(this).closest('.rr__roomLine').remove();
+
+    
+    if(jQuery(".rr__roomLine").length > 1) {
+
+        jQuery(this).closest('.rr__roomLine').remove();
+        const roomNum = jQuery(this).closest('.rr__roomLine').data('room');
+        Guests.splice(Guests.findIndex(guest => guest.RoomNum === roomNum), 1);
+
+        Guests.forEach((guest, index) => {
+            guest.RoomNum = index + 1;
+        });
+        jQuery('.rr__roomLine').each(function(index){
+            jQuery(this).data('room', index + 1);
+            jQuery(this).find('.rr__roomLine--title h4').text(`Room ${index + 1}`);
+        })        
+
+    }
+
 });
 
 // Handle increment
 jQuery('body').on("click", ".rr__guests__item--up", function () {
-    let valueDisplay = $(this).siblings('.rr__guests__item--adult');
+
+    console.log("increment");
+    let valueDisplay = jQuery(this).siblings('.value'); // Select the sibling element with class "value"
     let value = parseInt(valueDisplay.text(), 10);
     value++;
     valueDisplay.text(value);
+    // Update the Guests object
+    const type = valueDisplay.hasClass('Booking__guests__item--adult') ? 'Adults' : 'Children';
+    const roomNum = jQuery(this).closest('.rr__roomLine').data('room');
+    updateGuests(roomNum, type, value); // Pass RoomNum = 1 as an example
 });
 
 // Handle decrement
 jQuery('body').on("click", ".rr__guests__item--down", function () {
-
-    let valueDisplay = $(this).siblings('.rr__guests__item--adult');
+    console.log("decrement");
+    let valueDisplay = jQuery(this).siblings('.value'); // Select the sibling element with class "value"
     let value = parseInt(valueDisplay.text(), 10);
-    if (value > 0) { // Ensure the value doesn't go below 0
-        value--;
-        valueDisplay.text(value);
+
+    // Check if this is the "Adults" section
+    if (valueDisplay.hasClass('Booking__guests__item--adult')) {
+        if (value > 1) { // Min value for Adults is 1
+            value--;
+            valueDisplay.text(value);
+        }
+    } else {
+        // For other sections like "Children," min value is 0
+        if (value > 0) {
+            value--;
+            valueDisplay.text(value);
+        }
     }
+
+    // Update the Guests object
+    const type = valueDisplay.hasClass('Booking__guests__item--adult') ? 'Adults' : 'Children';
+    const roomNum = jQuery(this).closest('.rr__roomLine').data('room');
+    updateGuests(roomNum, type, value); // Pass RoomNum = 1 as an example
 });
+
 
 // Handle click apply calendar
 jQuery('body').on("click", ".apply--calendar", function () {
     loadTotalPriceBetweenTwoDates();
 });
 
+jQuery('body').on("click", ".rr__roomLine-add", function () {
+    const RoomLength = jQuery(".rr__roomLine").length;
+    if(RoomLength < 5)  addRoom();
+});
 // =====
 
-const Guets = [
-    {
-        RoomNum:1,
-        Adults:1,
-        Children:0
-    }
-]
 
-const generateGuestsHTML = () => {
-    
+
+const updateGuests = (roomNum, type, value) => {
+    // Find the room in the Guests array
+    const room = Guests.find(r => r.RoomNum === roomNum);
+
+    if (room) {
+        if (type === 'Adults') {
+            room.Adults = value;
+        } else if (type === 'Children') {
+            room.Children = value;
+        }
+    }
+}
+
+const applyGuestsToHTML = () => { 
+
+    const container = jQuery('.rr__guests--info');
+    let newGuestsHtml = ''; 
+
+    Guests.forEach(guest => {
+        newGuestsHtml += `
+            <p>
+                <span class="nbRoom">Room ${guest.RoomNum}</span><i> - </i>
+                <span>${guest.Adults} adults, ${guest.Children} children</span>
+            </p>
+        `;
+    });
+    container.html(newGuestsHtml);
+}
+
+const addRoom = () =>{
+
+    const newRoomNum = Guests.length + 1;
+    // Add a new room object to the Guests array
+    Guests.push({
+        RoomNum: newRoomNum,
+        Adults: 1,
+        Children: 0
+    });
+
+    newRoomHtml = `
+        <div class="rr__roomLine" data-room="${newRoomNum}">
+            <div class="rr__roomLine--title">
+              <h4>Room ${newRoomNum}</h4>
+              <span class="rr__roomLine--remove"> Remove </span>
+            </div>
+
+            <div class="rr__guests__col Adults">
+              <label class="rr__label">Adult</label>
+
+              <div class="rr__guests__item Booking__guests__item">
+                <div class="rr__guests__item--down Booking__guests__item--down">
+                  <span class="RRicon RRicon-less"></span>
+                </div>
+                <div class="rr__guests__item--adult value Booking__guests__item--adult">
+                  1
+                </div>
+                <div class="rr__guests__item--up Booking__guests__item--up">
+                  <span class="RRicon RRicon-add"></span>
+                </div>
+              </div>
+            </div>
+            <div class="rr__guests__col Childs">
+              <label class="rr__label">Child</label>
+
+              <div class="rr__guests__item Booking__guests__item">
+                <div class="rr__guests__item--down Booking__guests__item--down">
+                  <span class="RRicon RRicon-less"></span>
+                </div>
+                <div class="rr__guests__item--child value Booking__guests__item--child">
+                  0
+                </div>
+                <div class="rr__guests__item--up Booking__guests__item--up">
+                  <span class="RRicon RRicon-add"></span>
+                </div>
+              </div>
+            </div>
+          </div>`
+
+    jQuery('.rr__roomLine--container').append(newRoomHtml);
+    console.log("Added Room:", Guests);
 }
 
 

@@ -567,4 +567,7 @@
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.57, 0.37, 0.54, 0.01);
+    width: 100%;
+    align-items: center;
+    font-size: 15px;
 }
