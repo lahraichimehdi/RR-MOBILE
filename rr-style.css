@@ -535,6 +535,21 @@
     .promoEdit {
         display: none;
     }
+
+    .rr__add_room {
+        margin: 0;
+        width: 100%;
+        padding: 10px;
+        color: black;
+        background-color: #fff;
+        font-size: 14px;
+        border: 0;
+        border-radius: 4px;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 10px;
+    }
 }
 
 .rr__button_cta {
