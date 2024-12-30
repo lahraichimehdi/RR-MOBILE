@@ -11,7 +11,6 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-
     }
 
     .rr__container {
@@ -549,6 +548,43 @@
         cursor: pointer;
         font-weight: bold;
         margin-top: 10px;
+    }
+
+    .rt__popup_body {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rt__popup_body--total {
+        position: relative;
+        flex-basis: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .rt__popup_body--total .rat {
+        font-size: 50px;
+        font-weight: 700;
+        margin-right: 10px;
+    }
+
+    .rt__popup_body--sub {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 5px 0px;
+    }
+
+    .nbr__rat {
+        font-size: 12px;
+        text-align: left;
     }
 }
 
