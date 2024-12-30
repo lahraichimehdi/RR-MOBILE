@@ -6,6 +6,18 @@ const Guests = [
     }
 ]
 
+const platformsName = {
+    "bk":"Booking",
+    "ex":"Expedia",
+    "hrs":"HRS",
+    "lr":"LateRooms",
+    "tc":"TravelClick",
+    "hotels":"Hotels",
+    "mms":"MMS",
+    "ag":"Agoda",
+    "pl":"Priceline"
+}
+
 jQuery("#rr__calender").dateRangePicker({
     language: "en",
     inline: true,
@@ -270,8 +282,18 @@ const loadXteaseData = () => {
                 for (const platformCode in platforms) {
                     if (Object.hasOwnProperty.call(platforms, platformCode)) {
                         const {price,currency} = platforms[platformCode];
-                        jQuery(`.${platformCode} .rr__xtease_body--price`).text(price)
-                        jQuery(`.${platformCode} .rr__xtease_body--currency`).text(currency)
+                        
+                        const platformHTML = `
+                            <div class="rr__xtease_body--portail ${platformCode} RealRate-xtease-item-${platformsName[platformCode]} xt__portals">
+                                <p class="rr__xtease_body-name">${platformsName[platformCode]}</p>
+                                <div class="rr__xtease_body--p xt__price">
+                                <span class="rr__xtease_body--price">${price}</span>
+                                <span class="rr__xtease_body--currency">${currency}</span>
+                                </div>
+                            </div>`
+                        jQuery('.rr__xtease_body').append(platformHTML);
+                        // jQuery(`.${platformCode} .rr__xtease_body--price`).text(price)
+                        // jQuery(`.${platformCode} .rr__xtease_body--currency`).text(currency)
                     }
                 }
             }
