@@ -29,6 +29,15 @@ jQuery("#rr__calender").dateRangePicker({
     startDate: new Date(),
   });
 
+jQuery("#rr__calender").on("datepicker-change", function (event, obj) {
+    const date1 = obj.date1; // Start date
+    const date2 = obj.date2; // End date
+  
+    console.log("Selected Start Date:", date1);
+    console.log("Selected End Date:", date2);
+    updateDisplayedDates(date1, date2);
+});
+
 // Toggle menu
 jQuery('body').on("click", ".rr__menu--trigger", function () {
     jQuery(".rr__menu").toggleClass("open");
@@ -234,7 +243,6 @@ const addRoom = () =>{
     console.log("Added Room:", Guests);
 }
 
-
 const loadXteaseData = () => {
 
     jQuery('.rr__xtease_loader').removeClass('rr__hide');
@@ -390,7 +398,34 @@ const loadTotalPriceBetweenTwoDates = () => {
     xhr.send(form);
 }
 
+const updateDisplayedDates = (startDate, endDate) => {
 
+    const formattedStart = formatDate(startDate);
+    const formattedEnd = formatDate(endDate);
+    jQuery(".rr__selected-dates-lbl").text(`${formattedStart} - ${formattedEnd}`);
+}
+
+const formatDate = (date) => {
+    const day = date.getDate().toString().padStart(2, "0");
+    const month = date.toLocaleString("en", { month: "short" }).toUpperCase();
+    const year = date.getFullYear();
+    return `${day} ${month} ${year}`;
+};
+
+const loadRRDefault = () => {
+
+    // Calculate today and tomorrow's dates
+    const today = new Date();
+    const tomorrow = new Date();
+    tomorrow.setDate(today.getDate() + 1);
+
+    // Set default date range
+    jQuery("#rr__calender").data("dateRangePicker").setDateRange(today, tomorrow);
+    updateDisplayedDates(today, tomorrow);
+
+}
+
+loadRRDefault();
 loadXteaseData();
 // loadCalendarPricing();
 loadTotalPriceBetweenTwoDates();
