@@ -417,7 +417,7 @@
       </div>
       <!-- HOME VIEW -->
       <!-- RATING VIEW -->
-      <div class="rr__ratings rr_view">
+      <div class="rr__ratings rr_view" style="display: none">
         <div class="rt__popup_body--total">
           <div class="rat">--<sub>/--</sub></div>
           <div class="">
@@ -436,7 +436,8 @@
               <span class="rt_book">Book</span><span class="rt_ing">ing</span>
             </div>
             <div class="g__rating-num">
-              <span class="">--</span>
+              <span class="g__rating--result">9.0</span>
+              <span class="g__rating--coef">/ 10</span>
             </div>
           </div>
 
@@ -446,7 +447,8 @@
             </div>
             <div class="g__rating-num">
               <div class="g__rating-num">
-                <span class="">--</span>
+                <span class="g__rating--result">9.2</span>
+                <span class="g__rating--coef">/ 10</span>
               </div>
             </div>
           </div>
@@ -458,14 +460,740 @@
             </div>
             <div class="g__rating-num">
               <div class="g__rating-num">
-                <span class="">--</span>
+                <span class="g__rating--result">9.0</span>
+                <span class="g__rating--coef">/ 10</span>
               </div>
             </div>
           </div>
         </div>
       </div>
       <!-- RATING VIEW -->
-      <div class="rr__maps rr_view" style="display: none">Maps</div>
+
+      <!-- MAPS VIEW -->
+      <div class="rr__maps rr_view">
+        <div class="rr_places">
+          <div class="rr_places_container">
+            <div
+              class="rr_places_item"
+              data-cat-name="transportation"
+              data-place-name="Becknhof"
+              data-lf-id="339"
+              data-geoloc='{"lat":"47.38389569523998","long":"8.54047102794171"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
+                    alt="transportation - Becknhof"
+                    src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Becknhof</span>
+                    <div class="rr_places_distance">0.0 km</div>
+                  </div>
+                  <div class="rr_places_desc">Tram lines 11 and 14</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="EMA"
+              house=""
+              apartments=""
+              data-place-name="Downtown"
+              data-lf-id="341"
+              data-geoloc='{"lat":"47.38340296622699","long":"8.540546148632663"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
+                    alt="EMA House Apartments - Downtown"
+                    src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Downtown</span>
+                    <div class="rr_places_distance">0.0 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="restaurants"
+              data-place-name="Restaurant"
+              drei=""
+              stuben=""
+              data-lf-id="343"
+              data-geoloc='{"lat":"47.38327648906217","long":"8.541620787987432"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                    alt="restaurants - Restaurant Drei Stuben"
+                    src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Restaurant Drei Stuben</span>
+                    <div class="rr_places_distance">0.1 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="EMA"
+              house=""
+              apartments=""
+              data-place-name="Unterstrass"
+              data-lf-id="345"
+              data-geoloc='{"lat":"47.384185697196486","long":"8.542163520649504"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
+                    alt="EMA House Apartments - Unterstrass"
+                    src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Unterstrass</span>
+                    <div class="rr_places_distance">0.2 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="cafés"
+              data-place-name="Primitivo"
+              data-lf-id="347"
+              data-geoloc='{"lat":"47.38501882866828","long":"8.536537215702632"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
+                    alt="cafés - Primitivo"
+                    src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Primitivo</span>
+                    <div class="rr_places_distance">0.3 km</div>
+                  </div>
+                  <div class="rr_places_desc"
+                    >© Foto Zürich Tourism -
+                    https://zt.zuerich.com/en/media/media -</div
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="museum"
+              data-place-name="Swiss"
+              national=""
+              museum=""
+              data-lf-id="349"
+              data-geoloc='{"lat":"47.37891611338774","long":"8.540634661497913"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
+                    alt="museum - Swiss National Museum"
+                    src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Swiss National Museum</span>
+                    <div class="rr_places_distance">0.5 km</div>
+                  </div>
+                  <div class="rr_places_desc"
+                    >© Foto Zürich Tourism -
+                    https://zt.zuerich.com/en/media/media -</div
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="restaurants"
+              data-place-name="Moudi's"
+              lecker=""
+              cafe=""
+              data-lf-id="351"
+              data-geoloc='{"lat":"47.38780801974507","long":"8.539251627041741"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                    alt="restaurants - Moudi's Lecker Cafe"
+                    src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Moudi's Lecker Cafe</span>
+                    <div class="rr_places_distance">0.5 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="restaurants"
+              data-place-name="Restaurant"
+              spitz=""
+              data-lf-id="353"
+              data-geoloc='{"lat":"47.37893433172426","long":"8.540949538033514"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                    alt="restaurants - Restaurant Spitz"
+                    src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Restaurant Spitz</span>
+                    <div class="rr_places_distance">0.5 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="restaurants"
+              data-place-name="Baranco"
+              data-lf-id="389"
+              data-geoloc='{"lat":"47.379281130710886","long":"8.515826236028705"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                    alt="restaurants - Baranco"
+                    src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Baranco</span>
+                    <div class="rr_places_distance">1.9 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="pharmacy"
+              data-place-name="Lochergut"
+              apotheke=""
+              drogerie=""
+              data-lf-id="391"
+              data-geoloc='{"lat":"47.375606204667356","long":"8.517613794444468"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/013-pharmacy.png"
+                    alt="pharmacy - Lochergut Apotheke Drogerie"
+                    src="https://uploads.globres.io/rr/mv2/categories/013-pharmacy.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Lochergut Apotheke Drogerie</span>
+                    <div class="rr_places_distance">1.9 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="transportation"
+              data-place-name="Hardplatz"
+              data-lf-id="393"
+              data-geoloc='{"lat":"47.38233721724169","long":"8.5152534504834"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
+                    alt="transportation - Hardplatz"
+                    src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Hardplatz</span>
+                    <div class="rr_places_distance">1.9 km</div>
+                  </div>
+                  <div class="rr_places_desc">Tram line 8</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="restaurants"
+              data-place-name="Rosi"
+              data-lf-id="395"
+              data-geoloc='{"lat":"47.37645166967265","long":"8.516320733730595"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                    alt="restaurants - Rosi"
+                    src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Rosi</span>
+                    <div class="rr_places_distance">2.0 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="cafés"
+              data-place-name="169"
+              west=""
+              data-lf-id="397"
+              data-geoloc='{"lat":"47.373889713482924","long":"8.518037583476154"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
+                    alt="cafés - 169 West"
+                    src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>169 West</span>
+                    <div class="rr_places_distance">2.0 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="transportation"
+              data-place-name="Lochergut"
+              data-lf-id="399"
+              data-geoloc='{"lat":"47.37559530648692","long":"8.516953971018825"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
+                    alt="transportation - Lochergut"
+                    src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Lochergut</span>
+                    <div class="rr_places_distance">2.0 km</div>
+                  </div>
+                  <div class="rr_places_desc">Tram lines 2 and 3</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="museum"
+              data-place-name="Opernhaus"
+              zürich=""
+              data-lf-id="401"
+              data-geoloc='{"lat":"47.36517348926949","long":"8.546685725075875"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
+                    alt="museum - Opernhaus Zürich"
+                    src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Opernhaus Zürich</span>
+                    <div class="rr_places_distance">2.1 km</div>
+                  </div>
+                  <div class="rr_places_desc"
+                    >© Foto Zürich Tourism -
+                    https://zt.zuerich.com/en/media/media -</div
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="restaurants"
+              data-place-name="Restaurant"
+              du=""
+              théâtre=""
+              data-lf-id="403"
+              data-geoloc='{"lat":"47.36401844737668","long":"8.547416356493155"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                    alt="restaurants - Restaurant Du Théâtre"
+                    src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Restaurant Du Théâtre</span>
+                    <div class="rr_places_distance">2.2 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="cafés"
+              data-place-name="Gärtnerei"
+              data-lf-id="405"
+              data-geoloc='{"lat":"47.36370127917126","long":"8.5494302411484"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
+                    alt="cafés -  Gärtnerei"
+                    src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span> Gärtnerei</span>
+                    <div class="rr_places_distance">2.3 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="transportation"
+              data-place-name="Kreuzstrasse"
+              data-lf-id="407"
+              data-geoloc='{"lat":"47.36286353174445","long":"8.550044908790143"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
+                    alt="transportation - Kreuzstrasse"
+                    src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Kreuzstrasse</span>
+                    <div class="rr_places_distance">2.4 km</div>
+                  </div>
+                  <div class="rr_places_desc">Tram lines 2 and 4</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="EMA"
+              house=""
+              apartments=""
+              data-place-name="Seefeld"
+              data-lf-id="409"
+              data-geoloc='{"lat":"47.36108020093152","long":"8.550333916611656"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
+                    alt="EMA House Apartments - Seefeld"
+                    src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Seefeld</span>
+                    <div class="rr_places_distance">2.6 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="EMA"
+              house=""
+              apartments=""
+              data-place-name="Seefeld"
+              superior=""
+              data-lf-id="411"
+              data-geoloc='{"lat":"47.361270971256054","long":"8.550881087257574"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
+                    alt="EMA House Apartments - Seefeld Superior"
+                    src="https://uploads.globres.io/rr/mv2/categories/61b2214b7f285_.jpeg"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Seefeld Superior</span>
+                    <div class="rr_places_distance">2.6 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="restaurants"
+              data-place-name="Ristorante"
+              frascati=""
+              data-lf-id="413"
+              data-geoloc='{"lat":"47.360878988647094","long":"8.548006442468383"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                    alt="restaurants - Ristorante Frascati"
+                    src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Ristorante Frascati</span>
+                    <div class="rr_places_distance">2.6 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="restaurants"
+              data-place-name="Restaurant"
+              razzia=""
+              data-lf-id="415"
+              data-geoloc='{"lat":"47.360779618561125","long":"8.551699831770335"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                    alt="restaurants - Restaurant Razzia"
+                    src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Restaurant Razzia</span>
+                    <div class="rr_places_distance">2.7 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="transportation"
+              data-place-name="Feldeggstrasse"
+              data-lf-id="417"
+              data-geoloc='{"lat":"47.360071032982155","long":"8.552483036799567"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
+                    alt="transportation - Feldeggstrasse"
+                    src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Feldeggstrasse</span>
+                    <div class="rr_places_distance">2.8 km</div>
+                  </div>
+                  <div class="rr_places_desc">Tram lines 2 and 4</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="cafés"
+              data-place-name="Monocle"
+              data-lf-id="419"
+              data-geoloc='{"lat":"47.35971626598162","long":"8.550754691309438"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
+                    alt="cafés - Monocle"
+                    src="https://uploads.globres.io/rr/mv2/categories/008-coffee.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Monocle</span>
+                    <div class="rr_places_distance">2.8 km</div>
+                  </div>
+                  <div class="rr_places_desc">© Foto Monocle</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="museum"
+              data-place-name="Pavillon"
+              le=""
+              corbusier=""
+              data-lf-id="421"
+              data-geoloc='{"lat":"47.35610412422353","long":"8.550776148972739"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
+                    alt="museum - Pavillon Le Corbusier"
+                    src="https://uploads.globres.io/rr/mv2/categories/017-museum.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Pavillon Le Corbusier</span>
+                    <div class="rr_places_distance">3.2 km</div>
+                  </div>
+                  <div class="rr_places_desc"
+                    >© Foto Zürich Tourism -
+                    https://zt.zuerich.com/en/media/media -</div
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="restaurants"
+              data-place-name="Restaurant"
+              fischstube=""
+              data-lf-id="423"
+              data-geoloc='{"lat":"47.353025739140946","long":"8.550600961695777"}'
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                    alt="restaurants - Restaurant Fischstube"
+                    src="https://uploads.globres.io/rr/mv2/categories/007-service.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Restaurant Fischstube</span>
+                    <div class="rr_places_distance">3.5 km</div>
+                  </div>
+                  <div class="rr_places_desc"
+                    >© Foto Zürich Tourism -
+                    https://zt.zuerich.com/en/media/media -</div
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="rr_places_item"
+              data-cat-name="transportation"
+              data-place-name="Zürich"
+              airport=""
+            >
+              <div class="rr_places_item--left">
+                <div class="rr_places_item--icon">
+                  <img
+                    loading="eager"
+                    data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
+                    alt="transportation - Zürich Airport"
+                    src="https://uploads.globres.io/rr/mv2/categories/002-bus.png"
+                  />
+                </div>
+                <div class="rr_places_item--info">
+                  <div class="rr_places_header">
+                    <span>Zürich Airport</span>
+                    <div class="rr_places_distance">7.8 km</div>
+                  </div>
+                  <div class="rr_places_desc"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="g_maps">hello map</div>
+      </div>
+      <!-- MAPS VIEW -->
       <div class="rr__offers rr_view" style="display: none">Offers</div>
       <!-- <div id="rr__calender"></div> -->
     </div>
