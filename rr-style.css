@@ -645,7 +645,7 @@
         flex: initial;
         display: flex;
         position: absolute;
-        top: 40px;
+        top: 10px;
         padding-left: 10px;
     }
 
@@ -735,6 +735,117 @@
         margin: 0;
         width: auto !important;
     }
+
+    .rr__popup__places {
+        position: absolute;
+        bottom: 0;
+        padding: 10px;
+        box-shadow: 0 3px 14px rgb(0 0 0 / 48%);
+        width: 100%;
+    }
+
+    .rr_popup_img {
+        height: 120px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 6px;
+    }
+
+    .rr_popup_txt {
+        margin-top: 10px;
+    }
+
+    .rr__place_name {
+        font-size: 14px;
+        font-weight: bold;
+        width: 100%;
+    }
+
+    .rr_popup_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        line-height: 1;
+    }
+
+    .rr_popup_txt .rr_popup_title {
+        text-transform: capitalize;
+        text-align: left;
+        letter-spacing: 0;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    .rr__place_categorie {
+        font-size: 12px;
+        color: black;
+        font-weight: 300;
+        line-height: 1.4;
+        text-transform: capitalize;
+        margin-top: 5px;
+    }
+
+    .rr_popup_img img {
+        height: 100% !important;
+        width: 100%;
+    }
+
+    .rr_popup_action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rr_popup_action a {
+        text-decoration: none;
+        width: 34px;
+        height: 34px;
+        padding: 2px;
+        background: #dff6ffa3;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-left: 15px;
+        font-size: 14px;
+        color: #2196f3;
+    }
+
+    .rr_popup_action-item svg {
+        fill: #3f51b5;
+        width: 15px !important;
+    }
+
+    .rr__place_desc {
+        font-size: 12px;
+        letter-spacing: 0px;
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: justify;
+        opacity: 0.6;
+    }
+
+    .rr_places_distance {
+        font-weight: bold;
+        opacity: 1;
+        font-size: 12px;
+        color: #607d8b;
+        white-space: nowrap;
+        margin-left: 2px;
+        float: right;
+    }
+}
+
+#g_maps {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .rr__button_cta {
