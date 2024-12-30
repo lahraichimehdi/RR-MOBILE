@@ -150,12 +150,14 @@
       <!-- HOME VIEW -->
       <div class="rr__home rr_view">
         <div class="rr__component guestResult rr__update--guest">
-          <h4>Guests</h4>
-          <div class="rr__guests--info">
-            <p>
-              <span class="nbRoom">Room 1 </span><i> - </i>
-              <span> 1 adults, 0 children</span>
-            </p>
+          <div>
+            <h4>Guests</h4>
+            <div class="rr__guests--info">
+              <p>
+                <span class="nbRoom">Room 1 </span><i> - </i>
+                <span> 1 adults, 0 children</span>
+              </p>
+            </div>
           </div>
           <div>
             <span>
@@ -305,14 +307,7 @@
         <div class="rr__component promoResult rr__update--promo">
           <div>
             <h4>PromoCode ?</h4>
-            <p>
-              <span class="rr__code_type">Discout - </span>
-              <span> NEWYEAR25</span>
-            </p>
-            <p>
-              <span class="rr__code_type">Discout - </span>
-              <span> NEWYEAR25</span>
-            </p>
+            <div class="rr__promo--info"></div>
           </div>
           <div>
             <span>
@@ -355,8 +350,8 @@
           <div class="rr__promocode">
             <div class="rr__promocode--select">
               <select class="rr__promo--input" name="" id="">
-                <option value="Groupe code ">Promo code</option>
-                <option value="Groupe code ">Groupe code</option>
+                <option value="Groupe code" data-name="promoCode">Promo code</option>
+                <option value="Groupe code" data-name="groupCode">Groupe code</option>
               </select>
               <input
                 type="text"
@@ -364,11 +359,6 @@
                 placeholder="Enter Code"
               />
             </div>
-            <input
-              type="text"
-              class="rr__promo--input"
-              placeholder="Agent Id"
-            />
           </div>
           <button class="rr__promo--apply apply--promo">Apply</button>
         </div>

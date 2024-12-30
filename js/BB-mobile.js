@@ -1,10 +1,28 @@
-const Guests = [
-    {
-        RoomNum:1,
-        Adults:1,
-        Children:0
-    }
-]
+const BookingDetails = {
+    guests:[
+        {
+            RoomNum:1,
+            Adults:1,
+            Children:0
+        }
+    ],
+    dates:{
+        start: getToday(),
+        end: getTomorrow(),
+    },
+    promoFields:{}
+}
+
+// Helper functions to calculate today and tomorrow in "YYYY-MM-DD" format
+function getToday(){
+    return new Date();
+}
+  
+function getTomorrow(){
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    return tomorrow;
+}
 
 const platformsName = {
     "bk":"Booking",
@@ -18,6 +36,7 @@ const platformsName = {
     "pl":"Priceline"
 }
 
+// initial calendar 
 jQuery("#rr__calender").dateRangePicker({
     language: "en",
     inline: true,
@@ -25,17 +44,15 @@ jQuery("#rr__calender").dateRangePicker({
     alwaysOpen: true,
     stickyMonths: true,
     hoveringTooltip: false,
-    format: "DD.MM.YYYY",
     startDate: new Date(),
+    format: "YYYY-MM-DD",
   });
 
+//  on datepicker change 
 jQuery("#rr__calender").on("datepicker-change", function (event, obj) {
-    const date1 = obj.date1; // Start date
-    const date2 = obj.date2; // End date
-  
-    console.log("Selected Start Date:", date1);
-    console.log("Selected End Date:", date2);
-    updateDisplayedDates(date1, date2);
+    BookingDetails.dates.start = obj.date1; // Start date
+    BookingDetails.dates.end = obj.date2; // End date
+    updateDisplayedDates();
 });
 
 // Toggle menu
@@ -55,7 +72,7 @@ jQuery('body').on("click", ".apply--room", function () {
     jQuery(".guestResult").show();
     jQuery(".guestEdit").hide();
     applyGuestsToHTML();
-    
+    loadTotalPriceBetweenTwoDates()
 });
 
 // Update calendar
@@ -66,6 +83,8 @@ jQuery('body').on("click", ".rr__update--calendar", function () {
 jQuery('body').on("click", ".apply--calendar", function () {
     jQuery(".calendarResult").show();
     jQuery(".calendarEdit").hide();
+    loadTotalPriceBetweenTwoDates()
+
 });
 
 // Update promo
@@ -73,19 +92,46 @@ jQuery('body').on("click", ".rr__update--promo", function () {
     jQuery(".promoResult").hide();
     jQuery(".promoEdit").show();
 });
+
+// Apply promo code event
 jQuery('body').on("click", ".apply--promo", function () {
+
+    jQuery('.rr__promo--info').html('');
+    const selectedPromoName = jQuery(".rr__promocode--select select option:selected").data('name')
+    const selectedPromoText = jQuery(".rr__promocode--select select option:selected").text();
+    const selectedPromoValue = jQuery(".rr__promocode--select input[type='text']").val();
+
+    if(selectedPromoName && selectedPromoValue){
+        
+        BookingDetails.promoFields = {
+            type:selectedPromoName,
+            value:selectedPromoValue
+        }
+        jQuery(".promoResult").show();
+        jQuery(".promoEdit").hide();
+        jQuery('.rr__promo--info').html(`
+            <p>
+                <span class="rr__code_type">${selectedPromoText} - </span>
+                <span> ${selectedPromoValue} </span>
+            </p>
+        `);
+    }
+
     jQuery(".promoResult").show();
     jQuery(".promoEdit").hide();
+    loadTotalPriceBetweenTwoDates()
+
 });
 
 jQuery(".rr__button_cta").click(function () {
     jQuery(".rr__container").toggleClass("open");
-  });
+});
 
-  jQuery(".rr__container--close").click(function () {
+jQuery(".rr__container--close").click(function () {
     jQuery(".rr__container").toggleClass("open");
 });
 
+// reomve room line
 jQuery('body').on("click", ".rr__roomLine--remove", function () {
 
     
@@ -93,9 +139,9 @@ jQuery('body').on("click", ".rr__roomLine--remove", function () {
 
         jQuery(this).closest('.rr__roomLine').remove();
         const roomNum = jQuery(this).closest('.rr__roomLine').data('room');
-        Guests.splice(Guests.findIndex(guest => guest.RoomNum === roomNum), 1);
+        BookingDetails.guests.splice(BookingDetails.guests.findIndex(guest => guest.RoomNum === roomNum), 1);
 
-        Guests.forEach((guest, index) => {
+        BookingDetails.guests.forEach((guest, index) => {
             guest.RoomNum = index + 1;
         });
         jQuery('.rr__roomLine').each(function(index){
@@ -148,22 +194,18 @@ jQuery('body').on("click", ".rr__guests__item--down", function () {
 });
 
 
-// Handle click apply calendar
-jQuery('body').on("click", ".apply--calendar", function () {
-    loadTotalPriceBetweenTwoDates();
-});
-
+// add room line
 jQuery('body').on("click", ".rr__roomLine-add", function () {
     const RoomLength = jQuery(".rr__roomLine").length;
     if(RoomLength < 5)  addRoom();
 });
-// =====
 
 
+// ================== Functions ==================
 
 const updateGuests = (roomNum, type, value) => {
     // Find the room in the Guests array
-    const room = Guests.find(r => r.RoomNum === roomNum);
+    const room = BookingDetails.guests.find(r => r.RoomNum === roomNum);
 
     if (room) {
         if (type === 'Adults') {
@@ -179,7 +221,7 @@ const applyGuestsToHTML = () => {
     const container = jQuery('.rr__guests--info');
     let newGuestsHtml = ''; 
 
-    Guests.forEach(guest => {
+    BookingDetails.guests.forEach(guest => {
         newGuestsHtml += `
             <p>
                 <span class="nbRoom">Room ${guest.RoomNum}</span><i> - </i>
@@ -192,9 +234,9 @@ const applyGuestsToHTML = () => {
 
 const addRoom = () =>{
 
-    const newRoomNum = Guests.length + 1;
+    const newRoomNum = BookingDetails.guests.length + 1;
     // Add a new room object to the Guests array
-    Guests.push({
+    BookingDetails.guests.push({
         RoomNum: newRoomNum,
         Adults: 1,
         Children: 0
@@ -355,21 +397,23 @@ const loadCalendarPricing = () => {
 
 const loadTotalPriceBetweenTwoDates = () => {
 
+    const roomNumber = BookingDetails.guests.length;
+    const adultsNumber = BookingDetails.guests.reduce((acc, guest) => acc + guest.Adults, 0);
+    const childrenNumber = BookingDetails.guests.reduce((acc, guest) => acc + guest.Children, 0);
+
     const form = new FormData();
     form.append('action', 'getTotal');
-    form.append('Start', '2025-06-09');
-    form.append('End', '2025-06-12');
+    form.append('Start', formatToISODate(BookingDetails.dates.start));
+    form.append('End', formatToISODate(BookingDetails.dates.end));
     form.append('Currency', 'CHF');
     form.append('HotelId', '60669');
-    form.append('Adults', '1');
-    form.append('Children', '0');
+    form.append('Adults', adultsNumber);
+    form.append('Children', childrenNumber);
+    form.append('Rooms', roomNumber);
     form.append('Guests', '{"1":{"room":1,"adults":1,"childs":0}}');
-    form.append('Rooms', '1');
-    form.append('PromoCode', '');
-    form.append('IATACode', '');
-    form.append('GroupCode', '');
-    form.append('CouponCode', '');
     form.append('TotalPriceType', 'stay');
+    // if (BookingDetails.promoFields && BookingDetails.promoFields.type === "promoCode" && BookingDetails.promoFields.value) form.append('PromoCode',BookingDetails.promoFields.value );
+    // if (BookingDetails.promoFields && BookingDetails.promoFields.type === "groupCode" && BookingDetails.promoFields.value) form.append('GroupCode',BookingDetails.promoFields.value );
 
     let xhr = new XMLHttpRequest();
     // xhr.withCredentials = true;
@@ -381,9 +425,13 @@ const loadTotalPriceBetweenTwoDates = () => {
             const response = JSON.parse(xhr.response)
             if(response){
                 const {DirectPrice} = response
-                jQuery('.rr__submit_p .rr__submit--price').text(DirectPrice.AmountAfterTax)
-                jQuery('.rr__submit_p .rr__submit--currency').text(DirectPrice.CurrencyCode)
-                console.log(DirectPrice)
+                if(DirectPrice){
+                    jQuery('.rr__submit_p .rr__submit--price').text(DirectPrice?.AmountAfterTax)
+                    jQuery('.rr__submit_p .rr__submit--currency').text(DirectPrice?.CurrencyCode)
+                }else{
+                    jQuery('.rr__submit_p .rr__submit--price').text('--')
+                    jQuery('.rr__submit_p .rr__submit--currency').text('--')
+                }
             }
 
         } else {
@@ -398,10 +446,10 @@ const loadTotalPriceBetweenTwoDates = () => {
     xhr.send(form);
 }
 
-const updateDisplayedDates = (startDate, endDate) => {
-
-    const formattedStart = formatDate(startDate);
-    const formattedEnd = formatDate(endDate);
+const updateDisplayedDates = () => {
+    
+    const formattedStart = formatDate(BookingDetails.dates.start);
+    const formattedEnd = formatDate(BookingDetails.dates.end);
     jQuery(".rr__selected-dates-lbl").text(`${formattedStart} - ${formattedEnd}`);
 }
 
@@ -411,21 +459,20 @@ const formatDate = (date) => {
     const year = date.getFullYear();
     return `${day} ${month} ${year}`;
 };
+function formatToISODate(date) {
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, "0"); // Months are zero-based
+    const day = date.getDate().toString().padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+}
 
 const loadRRDefault = () => {
 
-    // Calculate today and tomorrow's dates
-    const today = new Date();
-    const tomorrow = new Date();
-    tomorrow.setDate(today.getDate() + 1);
-
-    // Set default date range
-    jQuery("#rr__calender").data("dateRangePicker").setDateRange(today, tomorrow);
-    updateDisplayedDates(today, tomorrow);
-
+    jQuery("#rr__calender").data("dateRangePicker").setDateRange(BookingDetails.dates.start,BookingDetails.dates.end);
+    updateDisplayedDates();
+    loadTotalPriceBetweenTwoDates();
 }
 
 loadRRDefault();
 loadXteaseData();
-// loadCalendarPricing();
-loadTotalPriceBetweenTwoDates();
