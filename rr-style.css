@@ -586,6 +586,40 @@
         font-size: 12px;
         text-align: left;
     }
+
+    .g__container {
+        padding-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 34px;
+        position: relative;
+    }
+
+    .g__rating--global {
+        padding: 0 10px;
+    }
+
+    .rr__container .g__container::after {
+        content: "";
+        width: 100%;
+        background-color: rgb(210, 210, 210);
+        height: 4px;
+        border-radius: 5px;
+        bottom: 15px;
+        position: absolute;
+    }
+
+    .rr__container .g__container::before {
+        content: "";
+        width: 90%;
+        background-color: rgb(255, 204, 0);
+        height: 4px;
+        border-radius: 5px;
+        bottom: 15px;
+        position: absolute;
+        z-index: 2;
+    }
 }
 
 .rr__button_cta {
