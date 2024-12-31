@@ -702,6 +702,7 @@
         display: inline-block;
         width: 200px;
         box-shadow: 0 0 10px #d7d7d7;
+        background-color: white;
     }
 
     .rr_places_item--left {
