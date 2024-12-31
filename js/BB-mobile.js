@@ -352,8 +352,6 @@ const loadXteaseData = () => {
                                 </div>
                             </div>`
                         jQuery('.rr__xtease_body').append(platformHTML);
-                        // jQuery(`.${platformCode} .rr__xtease_body--price`).text(price)
-                        // jQuery(`.${platformCode} .rr__xtease_body--currency`).text(currency)
                     }
                 }
             }
@@ -456,6 +454,63 @@ const loadTotalPriceBetweenTwoDates = () => {
     xhr.send(form);
 }
 
+const loadRatingData = () => {
+
+    const PlatformNames = ['Booking','Expedia','TripAdvisor'];
+
+    const form = new FormData();
+    form.append('action', 'rating');
+    form.append('token', 'KMgzx<4W{MH|TQ>');
+    form.append('hotel_id', '60669');
+    form.append('version', 'v2');
+    form.append('rr_id', '');
+    form.append('provider', '0');
+
+    let xhr = new XMLHttpRequest();
+    // xhr.withCredentials = true;
+
+    xhr.open('POST', 'https://api.globres.io/RealRate/api');
+    xhr.onload = function() {
+
+        const response = JSON.parse(xhr.response)
+        if(response.Platforms){
+            
+            const platforms = response.Platforms
+            let ratingContent = "";
+            let totalReviews = 0;
+            let totalRating = 0;
+
+            platforms.map( (platform) => {
+                
+                totalReviews += parseInt(platform.TotalReviews);
+                const platformAverageRating = (platform.platform_id == 3) ? platform.Average_rating * 2 : platform.Average_rating;
+                totalRating = totalRating + ( parseFloat(platformAverageRating) / 2 )
+                ratingContent += `
+                <div class="g__container">
+                    <div class="rr__logo">
+                        <span>${PlatformNames[platform.platform_id - 1]}</span>
+                    </div>
+                    <div class="g__rating-num">
+                        <span class="g__rating--result">${platformAverageRating}</span>
+                        <span class="g__rating--coef">/ 10</span>
+                    </div>
+                </div>`
+
+            })
+            
+            jQuery(".g__rating--global").html(ratingContent);
+            jQuery('.rt__popup_body--total .rat').html(parseFloat(totalRating / 3).toFixed(2) + '<sub>/5</sub>');
+            jQuery(".nbr__rat").html(totalReviews + " Reviews");
+        }
+
+    };
+    xhr.onerror = function() {
+        console.error('Error get rating');
+    };
+
+    xhr.send(form);
+}
+
 const updateDisplayedDates = () => {
     
     const formattedStart = formatDate(BookingDetails.dates.start);
@@ -486,3 +541,4 @@ const loadRRDefault = () => {
 
 loadRRDefault();
 loadXteaseData();
+loadRatingData();
