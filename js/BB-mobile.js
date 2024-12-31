@@ -63,6 +63,16 @@ jQuery('body').on("click", ".rr__menu--close", function () {
     jQuery(".rr__menu").toggleClass("open");
 });
 
+// Add click event to menu items
+jQuery("body").on("click",".rr__menu--item",function () {
+    const contentId = jQuery(this).data("content");
+    const title = jQuery(this).text();
+    jQuery(".rr_view").hide();
+    jQuery(`.rr__container--header h4`).text(title);
+    jQuery(`.${contentId}`).show();
+    jQuery(".rr__menu").toggleClass("open");
+  });
+
 // Update guest
 jQuery('body').on("click", ".rr__update--guest", function () {
     jQuery(".guestResult").hide();

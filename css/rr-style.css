@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Urbanist:300,400,600,500,700');
 @import url("https://api.globres.io/RealRate/assets/lib/css/RRicon.css");
-@import 'css/BB-mobile.css';
+@import './css/BB-mobile.css';
 
 @media screen and (max-width: 600px) {
 
     .rr__button *,
     .rr__container * {
-        font-family: 'Urbanist', sans-serif;
+        font-family: 'Urbanist', monospace, sans-serif;
         font-weight: 300;
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-
     }
 
     .rr__container {
@@ -20,11 +19,11 @@
         position: fixed;
         bottom: 0;
         left: 0%;
-        top: -100%;
+        top: 100%;
         right: 0;
         display: flex;
         flex-direction: column;
-        transition: all 0.4s cubic-bezier(0.51, 0.16, 0.43, 0.73);
+        transition: all 0.3s cubic-bezier(0.51, 0.16, 0.43, 0.73);
         background-color: white;
     }
 
@@ -60,7 +59,7 @@
         width: 100%;
     }
 
-    .rr__container--header h5 {
+    .rr__container--header h4 {
         text-transform: uppercase !important;
         letter-spacing: 1px;
         font-weight: bold;
@@ -173,6 +172,11 @@
         align-items: center;
         padding: 10px 0;
         border-bottom: 1px dashed #c1c1c1;
+    }
+
+    .rr__xtease_body--portail:last-child {
+        border: 0;
+        padding-bottom: 0;
     }
 
     .rr__submit {
@@ -550,16 +554,355 @@
         font-weight: bold;
         margin-top: 10px;
     }
+
+    .rt__popup_body {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rt__popup_body--total {
+        position: relative;
+        flex-basis: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .rt__popup_body--total .rat {
+        font-size: 50px;
+        font-weight: 700;
+        margin-right: 10px;
+    }
+
+    .rt__popup_body--sub {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 5px 0px;
+    }
+
+    .nbr__rat {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .g__container {
+        padding-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 34px;
+        position: relative;
+    }
+
+    .g__rating--global {
+        padding: 0 15px;
+    }
+
+    .g__rating--result {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .g__rating--coef {
+        font-size: .9rem;
+    }
+
+    .rr__container .g__container::after {
+        content: "";
+        width: 100%;
+        background-color: rgb(210, 210, 210);
+        height: 4px;
+        border-radius: 5px;
+        bottom: 15px;
+        position: absolute;
+    }
+
+    .rr__container .g__container::before {
+        content: "";
+        width: 90%;
+        background-color: rgb(255, 204, 0);
+        height: 4px;
+        border-radius: 5px;
+        bottom: 15px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    /* MAPS */
+    .rr_places {
+        padding: 0;
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex: initial;
+        display: flex;
+        position: absolute;
+        top: 10px;
+        padding-left: 10px;
+    }
+
+    .rr_places_distance {
+        font-weight: bold;
+        opacity: 1;
+        font-size: 12px;
+        color: #607d8b;
+        white-space: nowrap;
+        margin-left: 2px;
+    }
+
+    .rr_places_header {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    .rr_places_header span {
+        font-weight: 500;
+        line-height: 1;
+        font-weight: 500;
+        line-height: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 190px;
+    }
+
+    .rr__maps.rr_view {
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .rr_places_container {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .rr_places_item {
+        border: 1px solid #d4d4d48c;
+        border-radius: 6px;
+        overflow: hidden;
+        margin-right: 10px;
+        transition-property: visibility, opacity, transform;
+        transition-duration: 0.45s;
+        transition-timing-function: cubic-bezier(1, -0.03, 0.21, 0.38);
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        width: 200px;
+        box-shadow: 0 0 10px #d7d7d7;
+    }
+
+    .rr_places_item--left {
+        padding: 10px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .rr_places_item--icon {
+        width: 40px;
+        margin-right: 5px;
+    }
+
+    .rr_places_item--info {
+        flex: 1;
+        width: calc(100% - 40px);
+    }
+
+    .rr_places_desc {
+        opacity: 0.6;
+        font-size: 11px;
+        line-height: 1.4;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .rr_places_item--left img {
+        max-width: 30px;
+        margin: 0;
+        width: auto !important;
+    }
+
+    .rr__popup__places {
+        position: absolute;
+        bottom: 0;
+        padding: 10px;
+        box-shadow: 0 3px 14px rgb(0 0 0 / 48%);
+        width: 100%;
+    }
+
+    .rr_popup_img {
+        height: 120px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 6px;
+    }
+
+    .rr_popup_txt {
+        margin-top: 10px;
+    }
+
+    .rr__place_name {
+        font-size: 14px;
+        font-weight: bold;
+        width: 100%;
+    }
+
+    .rr_popup_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        line-height: 1;
+    }
+
+    .rr_popup_txt .rr_popup_title {
+        text-transform: capitalize;
+        text-align: left;
+        letter-spacing: 0;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    .rr__place_categorie {
+        font-size: 12px;
+        color: black;
+        font-weight: 300;
+        line-height: 1.4;
+        text-transform: capitalize;
+        margin-top: 5px;
+    }
+
+    .rr_popup_img img {
+        height: 100% !important;
+        width: 100%;
+    }
+
+    .rr_popup_action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rr_popup_action a {
+        text-decoration: none;
+        width: 34px;
+        height: 34px;
+        padding: 2px;
+        background: #dff6ffa3;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-left: 15px;
+        font-size: 14px;
+        color: #2196f3;
+    }
+
+    .rr_popup_action-item svg {
+        fill: #3f51b5;
+        width: 15px !important;
+    }
+
+    .rr__place_desc {
+        font-size: 12px;
+        letter-spacing: 0px;
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: justify;
+        opacity: 0.6;
+    }
+
+    .rr_places_distance {
+        font-weight: bold;
+        opacity: 1;
+        font-size: 12px;
+        color: #607d8b;
+        white-space: nowrap;
+        margin-left: 2px;
+        float: right;
+    }
+
+    .rr__form {
+        padding: 15px;
+    }
+
+    .rr_form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .rr_form label {
+        text-transform: capitalize;
+        font-size: 14px;
+        text-align: left;
+        font-weight: bold;
+        letter-spacing: 0;
+    }
+
+    .rr_form label span {
+        color: red;
+    }
+
+    .rr_form input {
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #000;
+        border-radius: 0;
+        font-size: 14px;
+        outline: none;
+    }
+
+    .rr_cancel_reserv-send {
+        background-color: black;
+        color: white;
+        padding: 15px;
+        border: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        width: 100%;
+    }
+}
+
+#g_maps {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .rr__button_cta {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.3;
     position: relative;
     overflow: hidden;
     padding: 10px 25px 10px 25px;
     line-height: 1.3;
-    background-color: #333;
+    background-color: #000;
+    width: 100%;
     text-align: center;
     color: #fff;
     border: 0;
@@ -567,7 +910,4 @@
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.57, 0.37, 0.54, 0.01);
-    width: 100%;
-    align-items: center;
-    font-size: 15px;
 }
