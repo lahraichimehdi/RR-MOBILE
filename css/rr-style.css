@@ -637,7 +637,10 @@
 
     /* MAPS */
     .rr_places {
-        padding: 0;
+        left: 0;
+        z-index: 99999999;
+        /* background-color: #fff; */
+        padding: 10px 0px;
         width: 100%;
         white-space: nowrap;
         overflow-x: auto;
@@ -645,7 +648,7 @@
         flex: initial;
         display: flex;
         position: absolute;
-        top: 10px;
+        /* top: 0; */
         padding-left: 10px;
     }
 
@@ -681,6 +684,7 @@
     .rr__maps.rr_view {
         padding-bottom: 0;
         position: relative;
+        margin-top: -10px;
     }
 
     .rr_places_container {
@@ -702,6 +706,7 @@
         display: inline-block;
         width: 200px;
         box-shadow: 0 0 10px #d7d7d7;
+        background: #fff;
     }
 
     .rr_places_item--left {

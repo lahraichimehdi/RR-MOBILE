@@ -13,6 +13,8 @@ const BookingDetails = {
     promoFields:{}
 }
 
+let GBMap;
+
 // Helper functions to calculate today and tomorrow in "YYYY-MM-DD" format
 function getToday(){
     return new Date();
@@ -23,6 +25,29 @@ function getTomorrow(){
     tomorrow.setDate(tomorrow.getDate() + 1);
     return tomorrow;
 }
+
+
+const updateDisplayedDates = () => {
+    
+    const formattedStart = formatDate(BookingDetails.dates.start);
+    const formattedEnd = formatDate(BookingDetails.dates.end);
+    jQuery(".rr__selected-dates-lbl").text(`${formattedStart} - ${formattedEnd}`);
+}
+
+const formatDate = (date) => {
+    const day = date.getDate().toString().padStart(2, "0");
+    const month = date.toLocaleString("en", { month: "short" }).toUpperCase();
+    const year = date.getFullYear();
+    return `${day} ${month} ${year}`;
+};
+function formatToISODate(date) {
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, "0"); // Months are zero-based
+    const day = date.getDate().toString().padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+}
+
 
 const platformsName = {
     "bk":"Booking",
@@ -66,6 +91,14 @@ jQuery('body').on("click", ".rr__menu--close", function () {
 // Add click event to menu items
 jQuery("body").on("click",".rr__menu--item",function () {
     const contentId = jQuery(this).data("content");
+
+        if(contentId === "rr__maps"){
+            setTimeout(() => {
+                GBMap.invalidateSize()
+            }, 10);
+        }
+
+
     const title = jQuery(this).text();
     jQuery(".rr_view").hide();
     jQuery(`.rr__container--header h4`).text(title);
@@ -511,25 +544,59 @@ const loadRatingData = () => {
     xhr.send(form);
 }
 
-const updateDisplayedDates = () => {
-    
-    const formattedStart = formatDate(BookingDetails.dates.start);
-    const formattedEnd = formatDate(BookingDetails.dates.end);
-    jQuery(".rr__selected-dates-lbl").text(`${formattedStart} - ${formattedEnd}`);
+const loadMapData = () => {
+
+        // Initialize the map and set its view
+        GBMap = L.map('g_maps',{
+            zoomControl: false
+        }).setView([51.505, -0.09], 13);
+
+        // Add a tile layer to the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(GBMap);
+
 }
 
-const formatDate = (date) => {
-    const day = date.getDate().toString().padStart(2, "0");
-    const month = date.toLocaleString("en", { month: "short" }).toUpperCase();
-    const year = date.getFullYear();
-    return `${day} ${month} ${year}`;
-};
-function formatToISODate(date) {
-    const year = date.getFullYear();
-    const month = (date.getMonth() + 1).toString().padStart(2, "0"); // Months are zero-based
-    const day = date.getDate().toString().padStart(2, "0");
+const loadPlacesData = () => {
 
-    return `${year}-${month}-${day}`;
+
+    const data = '{"entity_id":"6175cbc107c40b1e5a10b53f"}';
+
+    let xhr = new XMLHttpRequest();
+    // xhr.withCredentials = true;
+    xhr.open('POST', 'https://api-rr-designer.globres.io/widget/places');
+
+    xhr.onload = function() {
+        const response = JSON.parse(xhr.response)
+        if(response.data){
+            const places = response.data;
+            places.map((place) => {
+                
+                var icon_marker = ((place.categoryDetail[0].category_icon == "") || (place.categoryDetail[0].category_icon == undefined)) ? default_marker_path : category_path + place.categoryDetail[0].category_icon;
+
+                const placeHTML = `
+                    <div class="rr_places_item" data-cat-name="${place.categoryDetail[0].category_name}" data-place-name="${place.place_name}">
+                        <div class="rr_places_item--left">
+                            <div class="rr_places_item--icon">
+                            <img loading="eager" data-src="https://uploads.globres.io/rr/mv2/categories/002-bus.png" alt="${place.categoryDetail[0].category_name + ' - ' + place.place_name}" src="https://uploads.globres.io/rr/mv2/categories/002-bus.png">
+                            </div>
+                            <div class="rr_places_item--info">
+                            <div class="rr_places_header">
+                                <span>${place.place_name}</span>
+                                <div class="rr_places_distance">0.0 km</div>
+                            </div>
+                            <div class="rr_places_desc">${place.place_description}</div>
+                            </div>
+                        </div>
+                    </div>`
+                jQuery('.rr_places_container').append(placeHTML);   
+            })
+        }
+        console.log(response);
+    };
+
+    xhr.send(data);
 }
 
 const loadRRDefault = () => {
@@ -537,8 +604,10 @@ const loadRRDefault = () => {
     jQuery("#rr__calender").data("dateRangePicker").setDateRange(BookingDetails.dates.start,BookingDetails.dates.end);
     updateDisplayedDates();
     loadTotalPriceBetweenTwoDates();
+    loadXteaseData();
+    loadRatingData();
+    loadMapData();
+    loadPlacesData();
 }
 
 loadRRDefault();
-loadXteaseData();
-loadRatingData();
