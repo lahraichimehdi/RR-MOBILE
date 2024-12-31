@@ -451,6 +451,11 @@
         flex-direction: row;
         gap: 10px;
         margin-bottom: 10px;
+        outline: none;
+    }
+
+    .rr__container select {
+        outline: non;
     }
 
     .rr__promocode {
