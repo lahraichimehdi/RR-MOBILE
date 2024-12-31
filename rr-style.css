@@ -524,6 +524,7 @@
         margin: 0 10px;
         font-variant-numeric: tabular-nums;
         font-weight: 600;
+        font-family: 'Courier New', Courier, monospace;
     }
 
     .rr__roomLine--title {
@@ -884,6 +885,10 @@
         font-weight: 700;
         font-size: 14px;
         width: 100%;
+    }
+
+    .rr__age {
+        margin-top: 10px;
     }
 }
 
