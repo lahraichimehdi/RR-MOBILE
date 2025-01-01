@@ -2,6 +2,10 @@
 @import url("https://api.globres.io/RealRate/assets/lib/css/RRicon.css");
 @import './css/BB-mobile.css';
 
+.rr__container {
+    display: none;
+}
+
 @media screen and (max-width: 600px) {
 
     .rr__button *,
