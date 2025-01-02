@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Urbanist:300,400,600,500,700');
 @import url("https://api.globres.io/RealRate/assets/lib/css/RRicon.css");
-@import './css/BB-mobile.css';
+/* @import './css/BB-mobile.css'; */
 
 .rr__container {
     display: none;
@@ -622,8 +622,8 @@
         display: flex;
         align-items: center;
         justify-content: start;
-        padding: 30px 0;
-        margin-bottom: 30px;
+        padding: 20px 0;
+        margin-bottom: 20px;
         border-bottom: 1px solid #e7e7e7;
     }
 
@@ -658,7 +658,7 @@
         justify-content: space-between;
         min-height: 34px;
         position: relative;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     /* .g__rating--global {

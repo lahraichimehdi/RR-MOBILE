@@ -11,7 +11,6 @@
     />
 
     <link rel="stylesheet" href="rr-style.css" />
-    <!-- <link rel="stylesheet" href="css/BB-mobile.css" /> -->
   </head>
   <body>
     <button class="rr__button_cta">
@@ -1832,6 +1831,17 @@
       jQuery(".promoEdit .rr__component--close").click(function () {
         jQuery(".promoEdit").hide();
         jQuery(".promoResult").show();
+      });
+
+      // Add click event to menu items
+      $(".rr__menu--item").click(function () {
+        const contentId = $(this).data("content");
+        const title = $(this).text();
+        // console.log($(this).text());
+        $(".rr_view").hide();
+        $(`.rr__container--header h4`).text(title);
+        $(`.${contentId}`).show();
+        $(".rr__menu").toggleClass("open");
       });
 
       $(".rr-rating").starRating({
