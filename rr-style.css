@@ -526,7 +526,6 @@
     }
 
     .rr__guests__col {
-
         width: 100% !important;
         flex-direction: row !important;
         justify-content: space-between !important;
@@ -534,6 +533,10 @@
         border: 0;
         display: flex;
         align-items: center;
+    }
+
+    .rr__guests__col.Adults {
+        margin-bottom: 10px;
     }
 
     .rr__label {
