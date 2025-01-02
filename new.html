@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RR Widget</title>
     <link rel="stylesheet" type="text/css" href="css/daterangepicker.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://api.globres.io/RealRate/assets/lib/css/star-rating-svg.css"
+    />
+
     <link rel="stylesheet" href="rr-style.css" />
     <!-- <link rel="stylesheet" href="css/BB-mobile.css" /> -->
   </head>
@@ -320,7 +325,6 @@
                   <path d="M0,0H24V24H0Z" fill="none" opacity="0" />
                 </g>
               </svg>
-
               Cancel Reservation
             </li>
           </ul>
@@ -743,14 +747,15 @@
       <!-- HOME VIEW -->
       <!-- RATING VIEW -->
       <div class="rr__ratings rr_view" style="display: none">
+        <h2>Ratings and reviews</h2>
         <div class="rt__popup_body--total">
-          <div class="rat">--<sub>/--</sub></div>
+          <div class="rat">8.7</div>
           <div class="">
             <div class="rt__popup_body--sub">
-              <div class="rr-rating" data-rating=""></div>
+              <div class="rr-rating" data-rating=""> </div>
             </div>
             <!-- number of rating -->
-            <p class="nbr__rat">-- 200 Reviews</p>
+            <p class="nbr__rat">Based on 2097 Reviews</p>
             <!-- end number of rating -->
           </div>
         </div>
@@ -762,7 +767,7 @@
             </div>
             <div class="g__rating-num">
               <span class="g__rating--result">9.0</span>
-              <span class="g__rating--coef">/ 10</span>
+              <!-- <span class="g__rating--coef">/ 10</span> -->
             </div>
           </div>
 
@@ -773,7 +778,7 @@
             <div class="g__rating-num">
               <div class="g__rating-num">
                 <span class="g__rating--result">9.2</span>
-                <span class="g__rating--coef">/ 10</span>
+                <!-- <span class="g__rating--coef">/ 10</span> -->
               </div>
             </div>
           </div>
@@ -786,7 +791,7 @@
             <div class="g__rating-num">
               <div class="g__rating-num">
                 <span class="g__rating--result">9.0</span>
-                <span class="g__rating--coef">/ 10</span>
+                <!-- <span class="g__rating--coef">/ 10</span> -->
               </div>
             </div>
           </div>
@@ -825,8 +830,6 @@
             <div
               class="rr_places_item"
               data-cat-name="EMA"
-              house=""
-              apartments=""
               data-place-name="Downtown"
               data-lf-id="341"
               data-geoloc='{"lat":"47.38340296622699","long":"8.540546148632663"}'
@@ -879,8 +882,6 @@
             <div
               class="rr_places_item"
               data-cat-name="EMA"
-              house=""
-              apartments=""
               data-place-name="Unterstrass"
               data-lf-id="345"
               data-geoloc='{"lat":"47.384185697196486","long":"8.542163520649504"}'
@@ -1276,8 +1277,6 @@
             <div
               class="rr_places_item"
               data-cat-name="EMA"
-              house=""
-              apartments=""
               data-place-name="Seefeld"
               data-lf-id="409"
               data-geoloc='{"lat":"47.36108020093152","long":"8.550333916611656"}'
@@ -1303,8 +1302,6 @@
             <div
               class="rr_places_item"
               data-cat-name="EMA"
-              house=""
-              apartments=""
               data-place-name="Seefeld"
               superior=""
               data-lf-id="411"
@@ -1580,10 +1577,7 @@
                         }
                       </style>
                       <g>
-                        <g
-                          id="Icons-Communication"
-                          transform="translate(-85.000000, -126.000000)"
-                        >
+                        <g transform="translate(-85.000000, -126.000000)">
                           <g
                             id="rr_phone"
                             transform="translate(85.000000, 126.000000)"
@@ -1677,6 +1671,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/moment.js"></script>
     <script src="js/jquery.daterangepicker.min.js"></script>
+    <script src="https://api.globres.io/RealRate/assets/lib/js/star-rating-svg.js"></script>
     <script>
       jQuery("#rr__calender").dateRangePicker({
         language: "en",
@@ -1732,11 +1727,22 @@
       $(".rr__menu--item").click(function () {
         const contentId = $(this).data("content");
         const title = $(this).text();
-        console.log($(this).text());
+        // console.log($(this).text());
         $(".rr_view").hide();
         $(`.rr__container--header h4`).text(title);
         $(`.${contentId}`).show();
         $(".rr__menu").toggleClass("open");
+      });
+      $(".rr-rating").starRating({
+        totalStars: 5,
+        readOnly: true,
+        initialRating: 3.5,
+        // strokeColor: "#FDB72C",
+        activeColor: "#FDB72C",
+        emptyColor: "lightgray",
+        useGradient: false,
+        strokeWidth: 0,
+        starSize: 25,
       });
     </script>
   </body>
