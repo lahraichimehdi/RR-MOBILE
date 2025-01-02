@@ -63,8 +63,18 @@
         justify-content: flex-end;
     }
 
+
     .rr__menu--container {
         flex: 1;
+    }
+
+    .rr__menu--item {
+        display: flex;
+        align-items: center;
+    }
+
+    .rr__menu--item svg {
+        margin-right: 10px;
     }
 
     .rr__roomLine {
