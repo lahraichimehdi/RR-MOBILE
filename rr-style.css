@@ -577,6 +577,10 @@
         margin: 10px 0;
     }
 
+    .rr__roomLine:first-child .rr__roomLine--remove {
+        display: none;
+    }
+
     .rr__roomLine--remove {
         color: red;
         font-size: 10px;
