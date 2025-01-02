@@ -953,6 +953,11 @@
     .g__container span {
         font-weight: 500;
     }
+
+    .rr__component--close {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 #g_maps {

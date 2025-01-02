@@ -516,6 +516,38 @@
           </div>
         </div>
         <div class="rr__component guestEdit">
+          <div class="rr__component--close">
+            <svg width="30" height="30" viewBox="0 0 33.941 33.941">
+              <g transform="translate(-152.735 -526.087) rotate(45)">
+                <g>
+                  <path
+                    d="M0,0H12"
+                    transform="translate(498 264)"
+                    fill="none"
+                    stroke="#292d32"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  ></path>
+                  <path
+                    d="M0,12V0"
+                    transform="translate(504 258)"
+                    fill="none"
+                    stroke="#292d32"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  ></path>
+                  <path
+                    d="M0,0H24V24H0Z"
+                    transform="translate(492 252)"
+                    fill="none"
+                    opacity="0"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
           <div class="rr__roomLine">
             <div class="rr__roomLine--title">
               <h4>Room - 1</h4>
@@ -620,7 +652,40 @@
             </span>
           </div>
         </div>
+
         <div class="rr__component calendarEdit">
+          <div class="rr__component--close">
+            <svg width="30" height="30" viewBox="0 0 33.941 33.941">
+              <g transform="translate(-152.735 -526.087) rotate(45)">
+                <g>
+                  <path
+                    d="M0,0H12"
+                    transform="translate(498 264)"
+                    fill="none"
+                    stroke="#292d32"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  ></path>
+                  <path
+                    d="M0,12V0"
+                    transform="translate(504 258)"
+                    fill="none"
+                    stroke="#292d32"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  ></path>
+                  <path
+                    d="M0,0H24V24H0Z"
+                    transform="translate(492 252)"
+                    fill="none"
+                    opacity="0"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
           <div class="rr__calendar">
             <div id="rr__calender"></div>
           </div>
@@ -674,8 +739,39 @@
             </span>
           </div>
         </div>
-
         <div class="rr__component promoEdit">
+          <div class="rr__component--close">
+            <svg width="30" height="30" viewBox="0 0 33.941 33.941">
+              <g transform="translate(-152.735 -526.087) rotate(45)">
+                <g>
+                  <path
+                    d="M0,0H12"
+                    transform="translate(498 264)"
+                    fill="none"
+                    stroke="#292d32"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  ></path>
+                  <path
+                    d="M0,12V0"
+                    transform="translate(504 258)"
+                    fill="none"
+                    stroke="#292d32"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  ></path>
+                  <path
+                    d="M0,0H24V24H0Z"
+                    transform="translate(492 252)"
+                    fill="none"
+                    opacity="0"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
           <h4>Promo Code </h4>
           <div class="rr__promocode">
             <div class="rr__promocode--select">
@@ -1723,16 +1819,21 @@
         jQuery(".rr__container").toggleClass("open");
       });
 
-      // Add click event to menu items
-      $(".rr__menu--item").click(function () {
-        const contentId = $(this).data("content");
-        const title = $(this).text();
-        // console.log($(this).text());
-        $(".rr_view").hide();
-        $(`.rr__container--header h4`).text(title);
-        $(`.${contentId}`).show();
-        $(".rr__menu").toggleClass("open");
+      jQuery(".guestEdit .rr__component--close").click(function () {
+        jQuery(".guestEdit").hide();
+        jQuery(".guestResult").show();
       });
+
+      jQuery(".calendarEdit .rr__component--close").click(function () {
+        jQuery(".calendarEdit").hide();
+        jQuery(".calendarResult").show();
+      });
+
+      jQuery(".promoEdit .rr__component--close").click(function () {
+        jQuery(".promoEdit").hide();
+        jQuery(".promoResult").show();
+      });
+
       $(".rr-rating").starRating({
         totalStars: 5,
         readOnly: true,
