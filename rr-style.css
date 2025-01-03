@@ -745,6 +745,7 @@
     .rr__maps.rr_view {
         padding-bottom: 0;
         position: relative;
+        margin-top: -10px;
     }
 
     .rr_places_container {
