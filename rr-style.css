@@ -991,7 +991,49 @@
     .rr__rating_progress {
         height: 4px;
         background-color: #feb72c;
+    }
 
+    /* OFFERS */
+    .rr__offers.rr_view {
+        margin-top: -10px;
+        position: relative;
+        padding-bottom: 0;
+    }
+
+    .rr__offers_nav {
+        height: 4px;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        padding: 0 10px;
+        display: flex;
+        gap: 10px;
+        overflow: hidden;
+    }
+
+    .rr__offers_nav--item {
+        border-radius: 5px;
+        height: 100%;
+        box-shadow: 0 5px 10px #000000b6;
+        background-color: rgb(0 0 0 / 55%);
+        flex: 1;
+    }
+
+    .rr__offers_nav--item.active {
+        background-color: #fff;
+    }
+
+    .rr__offers_item {
+        height: 100%;
+    }
+
+    .rr__offers_item--img {
+        height: 100%;
+        background-image: url('img/Image-6.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 }
 
