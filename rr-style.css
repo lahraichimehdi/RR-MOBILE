@@ -139,6 +139,13 @@
         font-weight: 700;
     }
 
+    .rr__menu--nav li a {
+        color: #000000;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
     .rr__menu hr {
         opacity: 0.2;
     }
@@ -1017,4 +1024,18 @@
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.57, 0.37, 0.54, 0.01);
+}
+
+@media screen and (min-height: 900px) {
+    .calendarEdit {
+        display: block !important;
+    }
+
+    .calendarEdit .rr__component--close {
+        display: none !important;
+    }
+
+    .calendarResult {
+        display: none !important;
+    }
 }
