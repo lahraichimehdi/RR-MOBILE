@@ -1035,6 +1035,49 @@
         background-size: cover;
         background-position: center;
     }
+
+    .rr__offers_item--info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 14%, rgba(0, 0, 0, 0.625109418767507) 61%, rgba(0, 0, 0, 0) 100%);
+        padding: 15px;
+        color: #fff;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .rr__offers_item--desc {
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+    .rr__offers_item--title {
+        letter-spacing: .5px;
+        font-size: 16px;
+        line-height: 1;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .rr__offers_item--btn a {
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        border-radius: 5px;
+    }
+
+    .rr__offers_item--btn a svg {
+        margin-right: 10px;
+    }
 }
 
 #g_maps {
