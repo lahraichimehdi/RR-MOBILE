@@ -1001,9 +1001,9 @@
     }
 
     .rr__offers_nav {
-        height: 4px;
+        height: 5px;
         position: absolute;
-        top: 10px;
+        top: 15px;
         left: 0;
         width: 100%;
         padding: 0 10px;
