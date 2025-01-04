@@ -657,11 +657,21 @@
     .g__container {
         padding-bottom: 30px;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: stretch;
         min-height: 34px;
         position: relative;
         margin-bottom: 5px;
+    }
+
+    .g__container_r {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 5px;
+        width: 100%;
     }
 
     /* .g__rating--global {
@@ -677,7 +687,7 @@
         font-size: .9rem;
     }
 
-    .rr__container .g__container::after {
+    /* .rr__container .g__container::after {
         content: "";
         width: 100%;
         background-color: rgb(210, 210, 210);
@@ -696,7 +706,7 @@
         bottom: 15px;
         position: absolute;
         z-index: 2;
-    }
+    } */
 
     /* MAPS */
     .rr_places {
@@ -961,6 +971,20 @@
     .rr__component--close {
         display: flex;
         justify-content: flex-end;
+    }
+
+    .rr__rating_bar {
+        height: 4px;
+        width: 100%;
+        background: #eee;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .rr__rating_progress {
+        height: 4px;
+        background-color: #feb72c;
+
     }
 }
 
