@@ -1037,6 +1037,7 @@
     }
 
     .rr__offers_item--info {
+
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -1049,9 +1050,15 @@
         text-align: center;
     }
 
+    .rr__offers_item--content {
+        display: none;
+    }
+
     .rr__offers_item--desc {
         font-size: 12px;
         letter-spacing: 1px;
+        text-align: justify;
+        text-align-last: auto;
         margin-bottom: 10px;
     }
 
@@ -1060,7 +1067,7 @@
         font-size: 18px;
         line-height: 1;
         font-weight: bold;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .rr__offers_item--btn a {
@@ -1077,8 +1084,16 @@
         border-radius: 5px;
     }
 
+    .rr__offers_item--toggle.active {
+        transform: rotate(180deg);
+    }
+
     .rr__offers_item--btn a svg {
         margin-right: 10px;
+    }
+
+    .rr__offers_item--toggle {
+        margin-bottom: 10px;
     }
 }
 

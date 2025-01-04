@@ -1779,7 +1779,7 @@
             <!-- img -->
           </div>
           <div class="rr__offers_item--info">
-            <div>
+            <div class="rr__offers_item--toggle">
               <span>
                 <svg width="24" height="24" viewBox="0 0 24 24">
                   <g transform="translate(-172 -282)">
@@ -1800,7 +1800,7 @@
                 </svg>
               </span>
             </div>
-            <div>
+            <div class="rr__offers_item--content">
               <div class="rr__offers_item--title">
                 Welcome to the EMA House Serviced Apartments Zurich
               </div>
@@ -1808,7 +1808,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
                 labore iste quibusdam mollitia odio neque ducimus repellendus,
                 optio nisi? Exercitationem fuga assumenda corporis veritatis,
-                similique animi consequatur? Placeat, nesciunt accusantium.
+                similique animi consequatur.
               </div>
               <div class="rr__offers_item--btn">
                 <a href="#" target="_blank">
@@ -1978,6 +1978,11 @@
         useGradient: false,
         strokeWidth: 0,
         starSize: 25,
+      });
+
+      $(".rr__offers_item--toggle").click(function () {
+        $(this).toggleClass("active");
+        $(this).next().slideToggle(200);
       });
     </script>
   </body>
