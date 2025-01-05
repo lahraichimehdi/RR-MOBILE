@@ -1100,6 +1100,22 @@
         padding: 15px;
     }
 
+    .rr_popup_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        line-height: 1;
+    }
+
+    .leaflet-popup {
+        max-width: none;
+    }
+
+    .rr__container .leaflet-popup {
+        margin-bottom: 30px;
+    }
+
     .leaflet-popup-content-wrapper,
     .leaflet-popup-tip {
         box-shadow: 0 3px 14px rgb(0 0 0 / 48%);
