@@ -1120,6 +1120,22 @@
     .leaflet-popup-tip {
         box-shadow: 0 3px 14px rgb(0 0 0 / 48%);
     }
+
+    a.rr__place_go {
+        display: block;
+        border: 1px solid #9e9e9e70;
+        padding: 12px 10px;
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background: #000;
+        line-height: 1;
+        margin-top: 12px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.5s ease-in-out;
+    }
 }
 
 #g_maps {
