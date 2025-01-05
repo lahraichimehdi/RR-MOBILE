@@ -9,8 +9,35 @@
       rel="stylesheet"
       href="https://api.globres.io/RealRate/assets/lib/css/star-rating-svg.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="rr-style.css" />
+    <style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body>
     <button class="rr__button_cta">
@@ -1748,11 +1775,11 @@
                     >
                       <path
                         d="M12,2C8.4,2,5.1,4,3.4,7h2.4c0.9-1.1,2.1-2,3.4-2.5C8.9,5.2,8.7,6.1,8.5,7h2.1C11,5,11.7,4,12,4s1,1,1.5,3h2.1
-                                                                c-0.2-0.9-0.4-1.8-0.8-2.5C16.1,5,17.3,5.9,18.2,7h2.4C18.9,4,15.6,2,12,2z M1.4,9.4l1.2,5.3h1.2l0.8-3.1l0.7,3.1h1.1l1.2-5.3H6.3
-                                                                l-0.5,3.4L5,9.4H4l-0.7,3.4L2.6,9.4H1.4z M8.9,9.4l1,5.3h1.3l0.7-3.1l0.7,3.1h1.2l1.2-5.3h-1.2l-0.6,3.4l-0.7-3.4h-1l-0.7,3.4
-                                                                l-0.6-3.4H8.9z M16.4,9.4l1.2,5.3h1.2l0.7-3.1l0.7,3.1h1.2l1.2-5.3h-1.2l-0.6,3.4L20,9.4h-1l-0.7,3.4l-0.6-3.4H16.4z M3.4,17
-                                                                c1.7,3,5,5,8.6,5s6.9-2,8.6-5h-2.4c-0.9,1.1-2.1,2-3.4,2.5c0.3-0.7,0.6-1.6,0.8-2.5h-2.1c-0.5,2-1.1,3-1.5,3s-1-1-1.5-3h-2
-                                                                c0.2,0.9,0.4,1.8,0.8,2.5C7.9,19,6.7,18.1,5.8,17H3.4z"
+                            c-0.2-0.9-0.4-1.8-0.8-2.5C16.1,5,17.3,5.9,18.2,7h2.4C18.9,4,15.6,2,12,2z M1.4,9.4l1.2,5.3h1.2l0.8-3.1l0.7,3.1h1.1l1.2-5.3H6.3
+                            l-0.5,3.4L5,9.4H4l-0.7,3.4L2.6,9.4H1.4z M8.9,9.4l1,5.3h1.3l0.7-3.1l0.7,3.1h1.2l1.2-5.3h-1.2l-0.6,3.4l-0.7-3.4h-1l-0.7,3.4
+                            l-0.6-3.4H8.9z M16.4,9.4l1.2,5.3h1.2l0.7-3.1l0.7,3.1h1.2l1.2-5.3h-1.2l-0.6,3.4L20,9.4h-1l-0.7,3.4l-0.6-3.4H16.4z M3.4,17
+                            c1.7,3,5,5,8.6,5s6.9-2,8.6-5h-2.4c-0.9,1.1-2.1,2-3.4,2.5c0.3-0.7,0.6-1.6,0.8-2.5h-2.1c-0.5,2-1.1,3-1.5,3s-1-1-1.5-3h-2
+                            c0.2,0.9,0.4,1.8,0.8,2.5C7.9,19,6.7,18.1,5.8,17H3.4z"
                       ></path>
                     </svg>
                   </a>
@@ -1768,16 +1795,20 @@
       <!-- MAPS VIEW -->
       <!-- OFFERS VIEW -->
       <div class="rr__offers rr_view" style="display: none">
-        <!-- NAV -->
-        <div class="rr__offers_nav">
-          <div class="rr__offers_nav--item active"></div>
-          <div class="rr__offers_nav--item"></div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+          </div>
         </div>
         <!-- NAV -->
-        <div class="rr__offers_item">
-          <div class="rr__offers_item--img">
-            <!-- img -->
-          </div>
+        <!-- <div class="rr__offers_nav">
+          <div class="rr__offers_nav--item active"></div>
+          <div class="rr__offers_nav--item"></div>
+        </div> -->
+        <!-- NAV -->
+        <!-- <div class="rr__offers_item">
+          <div class="rr__offers_item--img"> </div>
           <div class="rr__offers_item--info">
             <div class="rr__offers_item--toggle">
               <span>
@@ -1844,11 +1875,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <!-- OFFERS VIEW -->
       <!-- FIND BOOKING VIEW -->
-      <div class="rr__reservation rr_view" style="display: none">
+      <!-- <div class="rr__reservation rr_view" style="display: none">
         <form action="#" class="rr__form">
           <div class="rr_form">
             <label for="rr__item_number">
@@ -1864,10 +1895,10 @@
           </div>
           <button class="rr_cancel_reserv-send">Search</button>
         </form>
-      </div>
+      </div> -->
       <!-- FIND BOOKING VIEW -->
       <!-- CANCEL BOOKING VIEW -->
-      <div class="rr__cancelbooking rr_view" style="display: none">
+      <!-- <div class="rr__cancelbooking rr_view" style="display: none">
         <form action="#" class="rr__form">
           <div class="rr_form">
             <label for="rr__item_number">
@@ -1883,7 +1914,7 @@
           </div>
           <button class="rr_cancel_reserv-send">Search</button>
         </form>
-      </div>
+      </div> -->
       <!-- CANCEL BOOKING VIEW -->
     </div>
 
@@ -1984,6 +2015,7 @@
         $(this).toggleClass("active");
         $(this).next().slideToggle(200);
       });
+      var swiper = new Swiper(".mySwiper", {});
     </script>
   </body>
 </html>
