@@ -37,6 +37,51 @@
         height: 100%;
         object-fit: cover;
       }
+      .swiper-slide::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: transparent;
+      }
+
+      .swiper-slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: transparent;
+      }
+      /* Pagination (Dots as Stories Progress) */
+      .swiper-pagination {
+        top: 20px;
+      }
+      .swiper-horizontal
+        > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+      .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+        top: 20px;
+      }
+
+      /* Dots Styling */
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        opacity: 0.5;
+        transition: background 0.3s, transform 0.3s;
+        border-radius: 50%;
+      }
+
+      /* Active Dot */
+      .swiper-pagination-bullet-active {
+        background: white !important;
+        opacity: 1;
+        transform: scale(1.3);
+      }
     </style>
   </head>
   <body>
@@ -1946,6 +1991,7 @@
               </div>
             </div>
           </div>
+          <div class="swiper-pagination"></div>
         </div>
         <!-- NAV -->
         <!-- <div class="rr__offers_nav">
@@ -2161,7 +2207,26 @@
         $(this).toggleClass("active");
         $(this).next().slideToggle(200);
       });
-      var swiper = new Swiper(".mySwiper", {});
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true, // Only highlight the active one
+        },
+      });
+
+      document.querySelectorAll(".swiper-slide").forEach((slide) => {
+        slide.addEventListener("click", (e) => {
+          const { clientX } = e;
+          const width = window.innerWidth;
+          if (clientX < width / 2) {
+            swiper.slidePrev();
+          } else {
+            swiper.slideNext();
+          }
+        });
+      });
     </script>
   </body>
 </html>
