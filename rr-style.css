@@ -51,6 +51,7 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 10px;
+        z-index: 99;
     }
 
     .rr__menu--close {
@@ -1025,6 +1026,7 @@
     }
 
     .rr__offers_item {
+        width: 100%;
         height: 100%;
     }
 
@@ -1084,8 +1086,13 @@
         border-radius: 5px;
     }
 
-    .rr__offers_item--toggle.active {
+    .rr__offers_item--toggle.active span {
         transform: rotate(180deg);
+        display: inline-block;
+    }
+
+    .rr__offers_item--btn {
+        margin-top: 5px;
     }
 
     .rr__offers_item--btn a svg {
