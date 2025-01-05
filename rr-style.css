@@ -1095,6 +1095,15 @@
     .rr__offers_item--toggle {
         margin-bottom: 10px;
     }
+
+    .popupHotel {
+        padding: 15px;
+    }
+
+    .leaflet-popup-content-wrapper,
+    .leaflet-popup-tip {
+        box-shadow: 0 3px 14px rgb(0 0 0 / 48%);
+    }
 }
 
 #g_maps {
