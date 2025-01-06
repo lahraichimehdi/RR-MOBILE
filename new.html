@@ -114,9 +114,9 @@
         gap: 3px;
       }
 
-      .day::before {
+      .day span {
         position: absolute;
-        content: "";
+        /* content: ""; */
         top: 0;
         left: 0;
         width: 100%;
@@ -132,12 +132,12 @@
         0%,
         100% {
           transform: translateY(0);
-          opacity: 0.9;
+          /* opacity: 0.9; */
         }
         50% {
           /* transform: translate(-6px); */
           opacity: 1;
-          background-color: #fff;
+          background-color: #e3e3e3;
         }
       }
 
@@ -2286,8 +2286,8 @@
       });
 
       document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll(".loader").forEach((loader) => {
-          let dotsCount = 5; // Number of dots
+        document.querySelectorAll(".day").forEach((loader) => {
+          let dotsCount = 1; // Number of dots
           for (let i = 0; i < dotsCount; i++) {
             let dot = document.createElement("span");
             dot.style.animationDelay = `${i * 0.1}s`; // Auto delay for each dot
@@ -2297,11 +2297,11 @@
 
         // Simulate loading effect
         setTimeout(() => {
-          document.querySelectorAll(".loading").forEach((cell) => {
-            cell.classList.remove("loading"); // Remove loader
-            cell.innerHTML = "25"; // Replace with actual date
+          document.querySelectorAll(".day span").forEach((cell) => {
+            cell.remove(); // Remove loader
+            // cell.innerHTML = "25"; // Replace with actual date
           });
-        }, 2000); // Simulate 2 seconds loading time
+        }, 2400); // Simulate 2 seconds loading time
       });
 
       //   document.querySelectorAll(".swiper-slide").forEach((slide) => {
