@@ -993,8 +993,22 @@
                   </div>
                 </div>
               </div>
+              <div class="rr_loader">
+                <div class="loader"></div>
+              </div>
             </div>
           </div>
+
+          <!-- <div class="animated-loader">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div> -->
         </div>
 
         <div class="rr__submit">
@@ -2303,6 +2317,10 @@
           });
         }, 2400); // Simulate 2 seconds loading time
       });
+
+      setTimeout(() => {
+        jQuery(".rr_loader").hide();
+      }, 4000);
 
       //   document.querySelectorAll(".swiper-slide").forEach((slide) => {
       //     slide.addEventListener("click", (e) => {
