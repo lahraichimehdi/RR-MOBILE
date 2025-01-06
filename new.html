@@ -64,16 +64,22 @@
         > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
       .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
         top: 20px;
+        bottom: inherit;
+        width: 90% !important;
       }
 
       /* Dots Styling */
       .swiper-pagination-bullet {
-        width: 10px;
-        height: 10px;
+        width: 160px;
+        height: 5px;
         background: rgba(255, 255, 255, 0.5);
         opacity: 0.5;
         transition: background 0.3s, transform 0.3s;
-        border-radius: 50%;
+        border-radius: 0px;
+      }
+      .swiper-pagination-clickable .swiper-pagination-bullet {
+        left: 0 !important;
+        transform: scale(1);
       }
 
       /* Active Dot */
