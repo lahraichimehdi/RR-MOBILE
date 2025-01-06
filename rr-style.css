@@ -1088,7 +1088,20 @@
 
     .rr__offers_item--toggle.active span {
         transform: rotate(180deg);
-        display: inline-block;
+
+    }
+
+    .rr__offers_item--toggle--btn {
+        width: 35px;
+        height: 35px;
+        background-color: #eee;
+        color: #000000;
+        display: inline-flex;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px #333;
+        margin-bottom: 10px;
     }
 
     .rr__offers_item--btn {
