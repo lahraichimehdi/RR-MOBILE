@@ -75,7 +75,7 @@
         background: rgba(255, 255, 255, 0.5);
         opacity: 0.5;
         transition: background 0.3s, transform 0.3s;
-        border-radius: 0px;
+        border-radius: 5px;
       }
       .swiper-pagination-clickable .swiper-pagination-bullet {
         left: 0 !important;
@@ -87,6 +87,60 @@
         background: white !important;
         opacity: 1;
         transform: scale(1.3);
+      }
+    </style>
+    <style>
+      /* Basic Calendar Styling */
+      /* .calendar {
+        width: 100%;
+        border-collapse: collapse;
+      } */
+
+      .day {
+        /* width: 50px;
+        height: 50px; */
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+        font-size: 18px;
+        position: relative;
+      }
+
+      /* Wave Loader */
+      .loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+      }
+
+      .day::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+        border-radius: 0%;
+        animation: wave 1.2s infinite ease-in-out;
+      }
+
+      /* Wave animation */
+      @keyframes wave {
+        0%,
+        100% {
+          transform: translateY(0);
+          opacity: 0.9;
+        }
+        50% {
+          /* transform: translate(-6px); */
+          opacity: 1;
+        }
+      }
+
+      /* Hide loader when data is loaded */
+      .day:not(.loading) .loader {
+        display: none;
       }
     </style>
   </head>
@@ -2226,6 +2280,25 @@
           clickable: true,
           dynamicBullets: true, // Only highlight the active one
         },
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".loader").forEach((loader) => {
+          let dotsCount = 5; // Number of dots
+          for (let i = 0; i < dotsCount; i++) {
+            let dot = document.createElement("span");
+            dot.style.animationDelay = `${i * 0.1}s`; // Auto delay for each dot
+            loader.appendChild(dot);
+          }
+        });
+
+        // Simulate loading effect
+        setTimeout(() => {
+          document.querySelectorAll(".loading").forEach((cell) => {
+            cell.classList.remove("loading"); // Remove loader
+            cell.innerHTML = "25"; // Replace with actual date
+          });
+        }, 2000); // Simulate 2 seconds loading time
       });
 
       //   document.querySelectorAll(".swiper-slide").forEach((slide) => {
