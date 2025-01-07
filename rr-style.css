@@ -670,7 +670,7 @@
         flex-direction: column;
         align-items: stretch;
         justify-content: stretch;
-        min-height: 34px;
+        /* min-height: 34px; */
         position: relative;
         margin-bottom: 5px;
     }
@@ -984,7 +984,7 @@
     }
 
     .rr__rating_bar {
-        height: 4px;
+        height: 5px;
         width: 100%;
         background: #eee;
         border-radius: 10px;
@@ -992,8 +992,9 @@
     }
 
     .rr__rating_progress {
-        height: 4px;
+        height: 5px;
         background-color: #feb72c;
+        border-radius: 10px;
     }
 
     /* OFFERS */
@@ -1289,6 +1290,80 @@
                 200px 0 var(--shadowcolor),
                 200px 0 var(--shadowcolor);
         }
+    }
+
+
+    /* NEW XTEASE */
+    .new_xtease {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    .new_xtease_portail {
+        background-color: #ffff;
+        border: .5px solid #dedede;
+        color: #000;
+        text-align: center;
+        font-size: 14px;
+        border-radius: 2px;
+    }
+
+    .new_xtease_portail--title {
+        padding: 4px 10px;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #ebebeb;
+        font-weight: 500;
+    }
+
+    .new_xtease_portail--result {
+        font-weight: 700;
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .g__container__sub {
+        padding: 7px 20px;
+    }
+
+    .g__container__s {
+        margin-top: 10px;
+    }
+
+    .g__container__sub .rr__rating_progress {
+        background-color: hsla(0, 0%, 20%, 0.5);
+    }
+
+    /*  */
+    summary {
+        list-style: none;
+        /* Hide default marker */
+        cursor: pointer;
+        font-weight: bold;
+        /* display: flex; */
+        align-items: center;
+        position: relative;
+        width: 100%;
+        padding-right: 30px !important;
+    }
+
+    summary::before {
+        content: "\25B6";
+        /* Collapsed state */
+        font-size: 1.2em;
+        /* margin-right: 8px; */
+        transition: transform 0.2s ease-in-out;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    details[open] summary::before {
+        content: "▼";
+        /* Expanded state */
+        transform: rotate(0deg);
     }
 }
 
