@@ -390,9 +390,9 @@
         position: absolute;
         font-family: "RRicon" !important;
         visibility: visible;
-        font-size: 20px;
+        font-size: 16px;
         color: black;
-        top: 5px;
+        top: 10px;
     }
 
     .rr__container .date-picker-wrapper table .caption .next::before {
