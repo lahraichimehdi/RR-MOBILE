@@ -1440,6 +1440,18 @@
         opacity: 1;
         transform: scale(1.3);
     }
+
+    .calendarEdit {
+        display: block !important;
+    }
+
+    .calendarEdit .rr__component--close {
+        display: none !important;
+    }
+
+    .calendarResult {
+        display: none !important;
+    }
 }
 
 #g_maps {
