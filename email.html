@@ -17,6 +17,25 @@
         }
       }
     </style>
+    <style>
+      /* Dark Mode Media Query */
+      @media (prefers-color-scheme: dark) {
+        .light-logo {
+          display: none !important;
+        }
+        .dark-logo {
+          display: block !important;
+        }
+      }
+
+      /* Responsive Styles */
+      @media screen and (max-width: 600px) {
+        .main-container {
+          width: 100% !important;
+          padding: 20px !important;
+        }
+      }
+    </style>
   </head>
   <body style="margin: 0; padding: 10px; background-color: #f8f8f8">
     <table
@@ -41,6 +60,7 @@
             <!-- Logo Section -->
             <img
               src="img/image.png"
+              class="light-logo"
               style="
                 margin-bottom: 40px;
                 display: block;
@@ -51,7 +71,24 @@
                 margin-right: auto;
               "
               width="160"
-              alt="Logo"
+              alt="GlobRes Logo"
+            />
+
+            <!-- Dark Logo (Hidden by Default) -->
+            <img
+              src="img/dark-logo.png"
+              class="dark-logo"
+              style="
+                margin-bottom: 40px;
+                display: none;
+                outline: none;
+                border: none;
+                text-decoration: none;
+                margin-left: auto;
+                margin-right: auto;
+              "
+              width="160"
+              alt="GlobRes Logo"
             />
 
             <!-- Main Content Container -->
